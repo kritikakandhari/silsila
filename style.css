@@ -239,13 +239,13 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 
 /* ---------- QUOTE SCROLL (signature moment) ---------- */
 .quote-scroll{
-  position:relative; background:var(--ivory);
+  position:relative; background:var(--paper);
 }
 .quote-scroll .pin{
   position:relative; padding:60px 0;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden; background:
-    radial-gradient(ellipse at 50% 120%, rgba(200,162,78,.15), transparent 60%), var(--ivory);
+    radial-gradient(ellipse at 50% 120%, rgba(200,162,78,.15), transparent 60%), var(--paper);
 }
 .quote-scroll .pin::before,
 .quote-scroll .pin::after{
