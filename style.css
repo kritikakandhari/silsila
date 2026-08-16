@@ -336,7 +336,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .menu-download-btn svg{width:13px; height:13px; flex-shrink:0;}
 
 /* ---------- GALLERY ---------- */
-.gallery{background:var(--ivory);}
+.gallery{background:var(--paper);}
 .gallery-grid{
   display:grid; grid-template-columns:repeat(3, 1fr); gap:30px;
 }
