@@ -363,7 +363,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .visit .mandala-bg{opacity:.08;}
 .visit .wrap{position:relative; z-index:2; display:grid; grid-template-columns:1.1fr .9fr; gap:70px; align-items:start;}
 /* ---------- VALUES ---------- */
-.values { padding: 40px 0; background: var(--paper); border-top: 1px solid rgba(233,208,143,.2); border-bottom: 1px solid rgba(233,208,143,.2); }
+.values { padding: 40px 0; background: var(--ivory); border-top: 1px solid rgba(233,208,143,.2); border-bottom: 1px solid rgba(233,208,143,.2); }
 .values .wrap { max-width: 1080px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
 .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .val-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px 0; background: transparent; border: none; transition: transform .3s ease; }
