@@ -244,8 +244,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .quote-scroll .pin{
   position:relative; padding:60px 0;
   display:flex; align-items:center; justify-content:center;
-  overflow:hidden; background:
-    radial-gradient(ellipse at 50% 120%, rgba(200,162,78,.15), transparent 60%), var(--paper);
+  overflow:hidden;
 }
 .quote-scroll .pin::before,
 .quote-scroll .pin::after{
@@ -403,7 +402,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 }
 
 /* ---------- MARQUEE VALUES ---------- */
-.marquee-values { background: var(--paper); padding: 40px 0; overflow: hidden; border-top: 1px solid rgba(233,208,143,.2); border-bottom: 1px solid rgba(233,208,143,.2); }
+.marquee-values { background: var(--paper); padding: 40px 0; overflow: hidden; border-bottom: 1px solid rgba(233,208,143,.2); }
 .marquee-values .track { width: 100%; overflow: hidden; position: relative; display: flex; }
 .marquee-values .track-inner { display: flex; flex-wrap: nowrap; animation: marqueeScroll 25s linear infinite; width: max-content; }
 .marquee-values .track:hover .track-inner { animation-play-state: paused; }
