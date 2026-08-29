@@ -180,14 +180,22 @@ nav.links a:hover::after{width:100%;}
   animation:fadeUp 1.2s ease .6s both;
 }
 .scroll-cue{
-  position:absolute; bottom:66px; left:50%; transform:translateX(-50%); z-index:2;
-  width:20px; height:32px; border:1px solid var(--gold-light); border-radius:12px;
+  position:absolute; bottom:55px; left:50%; transform:translateX(-50%); z-index:2;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--gold-light);
+  filter:drop-shadow(0 2px 8px rgba(200,162,78,0.5));
+  animation:lotusFloat 2.4s ease-in-out infinite;
+  text-decoration:none;
 }
-.scroll-cue::before{
-  content:""; position:absolute; top:6px; left:50%; width:3px; height:6px; background:var(--gold-light);
-  border-radius:2px; transform:translateX(-50%); animation:scrollDot 1.8s ease infinite;
+.scroll-cue .lotus-cue{
+  width:32px;
+  height:32px;
+  fill:currentColor;
 }
-@keyframes scrollDot{0%{opacity:1; top:6px;} 70%{opacity:0; top:16px;} 100%{opacity:0; top:6px;}}
+@keyframes lotusFloat{
+  0%, 100%{ transform:translateX(-50%) translateY(0); opacity:0.85; }
+  50%{ transform:translateX(-50%) translateY(7px); opacity:1; filter:drop-shadow(0 4px 14px rgba(233,208,143,0.85)); }
+}
 @keyframes fadeDown{from{opacity:0; transform:translateY(-14px);} to{opacity:1; transform:translateY(0);}}
 @keyframes fadeUp{from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);}}
 
