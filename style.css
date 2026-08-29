@@ -508,7 +508,8 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   nav.links.open{transform:translateX(0);}
   .menu-toggle{display:block;}
   .story .wrap{grid-template-columns:1fr; gap:44px;}
-  .story-frame{max-width:380px; margin:0 auto;}
+  .story-text{order:1;}
+  .story-frame{order:2; max-width:380px; margin:0 auto;}
   .visit .wrap{grid-template-columns:1fr;}
 
   .menu-grid{grid-template-columns:1fr;}
