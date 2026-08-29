@@ -500,10 +500,10 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   .story .wrap{gap:48px;}
   .gallery-grid{gap:16px;}
 
-  /* 13 categories don't fit as pills without wrapping messily or needing a hidden scroll —
-     a dropdown is unambiguous on tablet/mobile, no discovery required */
-  .menu-tabs{display:none;}
-  .menu-select{display:block;}
+  /* Small sleek category pills on mobile/tablet */
+  .menu-select{display:none !important;}
+  .menu-tabs{display:flex; gap:6px; margin-bottom:26px; padding-bottom:18px;}
+  .menu-tab{padding:5px 12px; font-size:.66rem; letter-spacing:.05em;}
 }
 
 @media (max-width:960px){
@@ -580,6 +580,8 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   .menu-item .name{white-space:normal;}
   .menu-item .leader{display:none;}
   .menu-item .row{flex-wrap:wrap; justify-content:space-between;}
+  .menu-tabs{gap:5px; margin-bottom:20px; padding-bottom:14px;}
+  .menu-tab{padding:4px 10px; font-size:.62rem; letter-spacing:.03em;}
   .menu-download-btn{padding:7px 16px; font-size:.64rem; gap:6px; margin-top:18px;}
   .menu-download-btn svg{width:11px; height:11px;}
   .menu-emblem-inline{width:26px; height:26px; vertical-align:-6px; margin-right:7px;}
