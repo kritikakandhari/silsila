@@ -163,11 +163,15 @@ nav.links a:hover::after{width:100%;}
   font-family:'Times New Roman', Times, serif; font-size:1.1rem; letter-spacing:.2em;
   color:var(--gold); margin-bottom:28px; animation:fadeUp 1.2s ease .35s both;
 }
-.hero-btns{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; animation:fadeUp 1.2s ease .5s both;}
+.hero-btns{
+  display:flex; gap:12px; justify-content:center; align-items:center; flex-wrap:nowrap;
+  animation:fadeUp 1.2s ease .5s both; max-width:960px; margin:0 auto;
+}
 .btn{
-  display:inline-block; padding:14px 30px; text-decoration:none; font-size:.8rem;
-  letter-spacing:.16em; text-transform:uppercase; font-weight:600; border-radius:2px;
-  min-height:44px; box-sizing:border-box;
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:13px clamp(14px, 1.8vw, 24px); text-decoration:none; font-size:clamp(0.72rem, 0.85vw, 0.8rem);
+  letter-spacing:.14em; text-transform:uppercase; font-weight:600; border-radius:2px;
+  min-height:44px; white-space:nowrap; box-sizing:border-box;
   transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
 }
 .btn-gold{background:var(--gold); color:var(--maroon-black);}
@@ -545,6 +549,18 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   .menu-select{margin-bottom:30px;}
   .menu-grid{grid-template-columns:repeat(2,1fr); gap:0 40px;}
   .menu-item{padding:16px 0;}
+}
+
+@media (min-width:561px) and (max-width:880px){
+  .hero-btns{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(160px, 220px));
+    gap:12px;
+    justify-content:center;
+  }
+  .hero-btns .btn{
+    width:100%;
+  }
 }
 
 /* Large phones */
