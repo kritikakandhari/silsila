@@ -175,29 +175,31 @@ nav.links a:hover::after{width:100%;}
 .btn-outline{border:1px solid var(--gold-light); color:var(--ivory);}
 .btn-outline:hover{background:rgba(233,208,143,.12); transform:translateY(-2px);}
 .hero-tag{
-  position:absolute; bottom:28px; left:0; right:0; z-index:2; text-align:center;
-  color:var(--gold-light); font-size:.72rem; letter-spacing:.3em; text-transform:uppercase;
+  position:absolute; bottom:24px; left:0; right:0; z-index:2; text-align:center;
+  color:var(--gold-light); font-size:clamp(0.55rem, 2.5vw, 0.72rem);
+  letter-spacing:clamp(0.12em, 1.6vw, 0.28em); text-transform:uppercase;
+  white-space:nowrap; padding:0 12px;
   animation:fadeUp 1.2s ease .6s both;
 }
 .scroll-cue{
-  position:absolute; bottom:56px; left:50%; transform:translateX(-50%); z-index:2;
+  position:absolute; bottom:64px; left:50%; transform:translateX(-50%); z-index:2;
   display:flex; align-items:center; justify-content:center;
   animation:lotusFloat 2.4s ease-in-out infinite;
   text-decoration:none;
 }
 .scroll-cue .lotus-cue{
-  width:36px;
+  width:38px;
   height:auto;
-  filter:drop-shadow(0 2px 8px rgba(200,162,78,0.55));
+  filter:drop-shadow(0 2px 10px rgba(233,208,143,0.9)) drop-shadow(0 0 8px rgba(200,162,78,0.75)) brightness(1.2);
   transition:transform .3s ease, filter .3s ease;
 }
 .scroll-cue:hover .lotus-cue{
   transform:scale(1.15);
-  filter:drop-shadow(0 4px 14px rgba(233,208,143,0.9));
+  filter:drop-shadow(0 4px 18px rgba(233,208,143,1)) drop-shadow(0 0 12px rgba(255,215,0,0.95)) brightness(1.35);
 }
 @keyframes lotusFloat{
-  0%, 100%{ transform:translateX(-50%) translateY(0); opacity:0.9; }
-  50%{ transform:translateX(-50%) translateY(6px); opacity:1; filter:drop-shadow(0 4px 16px rgba(233,208,143,0.9)); }
+  0%, 100%{ transform:translateX(-50%) translateY(0); opacity:0.95; filter:drop-shadow(0 2px 10px rgba(233,208,143,0.85)) drop-shadow(0 0 6px rgba(200,162,78,0.7)) brightness(1.18); }
+  50%{ transform:translateX(-50%) translateY(6px); opacity:1; filter:drop-shadow(0 5px 20px rgba(233,208,143,1)) drop-shadow(0 0 14px rgba(255,215,0,0.9)) brightness(1.32); }
 }
 @keyframes fadeDown{from{opacity:0; transform:translateY(-14px);} to{opacity:1; transform:translateY(0);}}
 @keyframes fadeUp{from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);}}
@@ -575,6 +577,9 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   .story-text p.lede { font-size: 1.15rem; }
   .story-pillars { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 16px 28px; margin-top: 28px; }
   .story-pillars div { text-align: center; border: none; padding: 0; width: auto; max-width: none; }
+  .hero-tag{bottom:16px; font-size:clamp(0.48rem, 2.7vw, 0.64rem); letter-spacing:clamp(0.08em, 1.2vw, 0.18em);}
+  .scroll-cue{bottom:48px;}
+  .scroll-cue .lotus-cue{width:32px;}
   .story-sign { font-size: 1.15rem; margin-top: 32px; text-align: center; }
   .gallery-grid{gap:12px;}
   section{padding:76px 0;}
