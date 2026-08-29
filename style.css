@@ -393,29 +393,29 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 /* ---------- MENU HIGHLIGHTS ---------- */
 .menu-highlights { position: relative; padding: 80px 0; background: var(--maroon-black); color: var(--ivory); }
 .menu-highlights .mandala-bg { opacity: .04; }
-.menu-highlights .wrap { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
-.menu-high-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 40px; }
-a.high-card { text-decoration: none; color: inherit; cursor: pointer; }
+.menu-highlights .wrap { position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 36px); }
+.menu-high-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 36px; }
+a.high-card { text-decoration: none; color: inherit; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; }
 a.high-card:hover { border-color: rgba(233,208,143,.5); }
-.high-card { border: 1px solid rgba(233,208,143,.15); border-radius: 6px; padding: 30px 10px; text-align: center; background: transparent; transition: transform .3s, border-color .3s; }
+.high-card { border: 1px solid rgba(233,208,143,.15); border-radius: 6px; padding: 20px 8px 14px; text-align: center; background: transparent; transition: transform .3s, border-color .3s; }
 .high-card:hover { transform: translateY(-4px); border-color: rgba(233,208,143,.4); }
-.high-ic { width: 34px; height: 34px; color: var(--gold); margin-bottom: 16px; opacity: 1; }
-.high-card h3 { font-family: 'Cinzel', serif; font-size: 0.9rem; color: var(--ivory); margin: 0 0 16px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; }
-.high-card ul { list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #d9c6b4; line-height: 1.8; }
-.high-card ul li { margin-bottom: 4px; }
-.high-div { color: var(--gold); font-size: 0.7rem; margin-top: 20px; opacity: 0.4; }
+.high-ic { width: 28px; height: 28px; color: var(--gold); margin-bottom: 10px; opacity: 1; }
+.high-card h3 { font-family: 'Cinzel', serif; font-size: 0.78rem; color: var(--ivory); margin: 0 0 10px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; }
+.high-card ul { list-style: none; padding: 0; margin: 0; font-size: 0.74rem; color: #d9c6b4; line-height: 1.5; }
+.high-card ul li { margin-bottom: 3px; }
+.high-div { color: var(--gold); font-size: 0.65rem; margin-top: 10px; opacity: 0.4; }
 
-@media (max-width: 900px) {
-  .menu-high-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1024px) {
+  .menu-high-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
 }
 @media (max-width: 600px) {
   .menu-high-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 20px; }
-  .high-card { min-width: 0; padding: 12px 4px; border-radius: 4px; }
+  .high-card { min-width: 0; padding: 10px 4px 8px; border-radius: 4px; }
   .high-ic { width: 18px; height: 18px; margin-bottom: 6px; }
-  .high-card h3 { font-size: 0.5rem; margin-bottom: 6px; letter-spacing: 0; }
-  .high-card ul { font-size: 0.45rem; line-height: 1.4; }
+  .high-card h3 { font-size: 0.52rem; margin-bottom: 6px; letter-spacing: 0; }
+  .high-card ul { font-size: 0.45rem; line-height: 1.35; }
   .high-card ul li { margin-bottom: 2px; }
-  .high-div { margin-top: 8px; font-size: 0.5rem; }
+  .high-div { margin-top: 6px; font-size: 0.5rem; }
 }
 
 /* ---------- MARQUEE VALUES ---------- */

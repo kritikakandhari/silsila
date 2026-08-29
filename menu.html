@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=51">
+<link rel="stylesheet" href="style.css?v=52">
 </head>
 <body>
 
@@ -123,122 +123,151 @@ window.addEventListener('orientationchange', setVH);
 // ---- Menu data ----
 const MENU = [
   {
-    id:"fries", label:"Oh My Fries!", sub:"Beasuse its Fry-Yay!",
+    id:"fries", label:"Oh My Fries!", sub:"Because it's Fry-Yay!",
     items:[
-      {n:"The OG Fries", p:"$5.99", d:"Crispy golden fries tossed in our signature house seasoning. Golden, crispy & seasoned the SILSILA way!"},
-      {n:"Wild Loaded Fries", p:"$7.99", d:"A mountain of crispy fries layered with gooey cheese, colourful veggies, bold seasonings, and our signature house sauces. Messy, cheesy & totally worth it!"},
-      {n:"Peri-Peri Masala Fries", p:"$6.99", d:"Crispy golden fries tossed in fiery peri-peri masala. Crispy, fiery & loaded with a desi peri-peri kick!"},
-      {n:"Wild Loaded Chicken Fries", p:"$8.99", d:"Crispy golden fries piled with juicy seasoned chicken, melty cheese & signature sauces. Messy, loaded & wildly good."},
-      {n:"Buttery Butter Chicken Fries", p:"$8.99", d:"Crispy fries loaded with creamy butter chicken, melty cheese & a drizzle of signature butter sauce. Cheesy, saucy & fully loaded!"}
+      {n:"The OG Fries", p:"$7.99", d:"Crispy golden fries tossed in our signature house seasoning. Golden, crispy & seasoned the SILSILA way!"},
+      {n:"Peri-Peri Masala Fries", p:"$9.99", d:"Crispy golden fries tossed in fiery peri-peri masala. Crispy, fiery & loaded with a desi peri-peri kick!"},
+      {n:"Wild Loaded Fries", p:"$10.99", d:"A mountain of crispy fries layered with gooey cheese, colourful veggies, bold seasonings & signature house sauces. Messy, cheesy & totally worth it!"},
+      {n:"Wild Loaded Chicken Fries", p:"$12.99", d:"Crispy golden fries piled with juicy seasoned chicken, melty cheese & signature sauces. Messy, loaded & wildly good!"},
+      {n:"Buttery Butter Chicken Fries", p:"$13.99", d:"Crispy fries loaded with creamy butter chicken, cheesy mayo & a drizzle of signature butter sauce. Cheesy, saucy & fully loaded!"}
     ]
   },
   {
-    id:"nachos", label:"Nacho Time!", sub:"Crunchy, cheesy, loaded, and made for sharing!",
+    id:"nachos", label:"Nacho Time!", sub:"Crunchy, cheesy, loaded & made for sharing!",
     items:[
-      {n:"How About Veggie Nachos?", p:"$10.99", d:"Crispy tortilla chips piled high with melty gooey cheese, fresh veggies, zesty salsa, creamy sour cream, and bold house sauces. Crunchy, cheesy, saucy & seriously loaded!"},
-      {n:"Or… Crispy Chicken Nachos?", p:"$12.99", d:"Crunchy nachos loaded with juicy chicken, melty cheese, fresh toppings & signature sauces. Cheesy, saucy & loaded with crispy chicken goodness!"}
+      {n:"How About Veggie Nachos?", p:"$10.99", d:"Crispy tortilla chips piled high with gooey cheese, fresh veggies, zesty salsa, creamy sour cream & bold house sauces. Crunchy, cheesy, saucy & seriously loaded!"},
+      {n:"How About Crispy Paneer Nachos?", p:"$13.99", d:"Crispy tortilla chips piled high with gooey cheese, fresh veggies, crispy paneer, zesty salsa, creamy sour cream & bold house sauces. Crunchy, cheesy, crispy & paneer loaded!"},
+      {n:"Or… Crispy Chicken Nachos?", p:"$14.99", d:"Crunchy nachos loaded with juicy crispy chicken, melty cheese, fresh toppings & signature sauces. Cheesy, saucy & loaded with crispy chicken goodness!"}
     ]
   },
   {
-    id:"burger", label:"The Cheat Day Burger", sub:"Big Bite. Zero Regrets",
+    id:"momo", label:"Momo Showmo", sub:"Momo cravings? Let the Showmo begin!",
     items:[
-      {n:"Cravin’ A Hot Garlic Paneer Burger?", p:"$8.99", d:"Crispy paneer tossed in bold hot garlic sauce, layered with creamy coleslaw and topped with a hot banana pepper, all tucked into a soft toasted bun. Hot. Garlicky. Crunchy. Creamy. One wild bite!", tag:"Make any burger a meal box with House Special OG fries and a pop +$3.99"},
-      {n:"Feelin’ A Hot Garlic Chicken Burger", p:"$8.99", d:"Crispy chicken tossed in bold hot garlic sauce, layered with creamy coleslaw and topped with a tangy dill pickle, all tucked into a soft toasted bun. Hot. Garlicky. Crunchy. Creamy. One wild bite!", tag:"Make any burger a meal box with House Special OG fries and a pop +$3.99"},
-      {n:"Crispy Paneer Burger", p:"$8.99", d:"A golden, crispy paneer patty layered with fresh lettuce, creamy sauce, and flavorful seasonings, all tucked into a soft toasted bun. Crunchy, cheesy, and packed with delicious Indian-inspired flavors in every bite.", tag:"Make any burger a meal box with House Special OG fries and a pop +$3.99"},
-      {n:"Crispy Chicken Burger", p:"$7.99", d:"A crispy, golden-fried chicken fillet layered with fresh lettuce, creamy sauce, and juicy flavors, all tucked inside a soft toasted bun. Crunchy on the outside, tender on the inside, and irresistibly delicious in every bite. Golden, Crispy, Juicy!", tag:"Make any burger a meal box with House Special OG fries and a pop +$3.99"},
-      {n:"Crispy Mexicano Paneer Burger", p:"$8.99", d:"Crispy Mexican-style paneer patty topped with spicy sauce, fresh crunchy veggies, melted cheese, and crunchy tortilla chips, all packed in a soft toasted bun. Creamy, bold, and satisfying Mexican bite.", tag:"Make any burger a meal box with House Special OG fries and a pop +$3.99"},
-      {n:"Crispy Mexicano Chicken Burger", p:"$8.99", d:"Crispy Mexican-style chicken fillet topped with creamy sauce, fresh crunchy veggies, and melted cheese, all packed in a soft toasted bun for a bold, flavorful bite. Crunchy Mexican Delight!", tag:"Make any burger a meal box with House Special OG fries and a pop +$3.99"}
+      {n:"Steam Momo Showmo", p:"Veg $12.99 | Chicken $13.99", d:"Soft, juicy steamed momos packed with flavour & served with our signature momo chutney. Hot, juicy & delicious!"},
+      {n:"Kurkure Momo Showmo", p:"Veg $14.99 | Chicken $15.99", d:"Crispy, crunchy momos with a flavour-packed centre, served with our signature momo chutney. Crispy, flavourful & full-on crunchy!"},
+      {n:"Tandoori Momo Showmo", p:"Veg $14.99 | Chicken $15.99", d:"Smoky tandoori momos tossed in bold spices, charred to perfection & served with our signature mint mayo. Smoky, minty & bite-into-perfection!"},
+      {n:"Chilli Chilli Momo Showmo", p:"Veg $14.99 | Chicken $15.99", d:"Juicy momos tossed in a spicy, tangy chilli sauce with peppers & onions. Saucy, fiery & full of flavour!"},
+      {n:"Afghani Showmo Momo", p:"Veg $14.99 | Chicken $15.99", d:"Creamy, smoky momos coated in a rich Afghani-style marinade. Mild, velvety & full of flavour!"}
     ]
   },
   {
-    id:"wrap", label:"That’s A Wrap!", sub:"Flavour in every layer!",
+    id:"burger", label:"The Cheat Day Burger", sub:"Big Bite. Zero Regrets.",
     items:[
-      {n:"Crunchin’ Crunch Paneer Burrito Wrap", p:"$11.99", d:"Crispy paneer tossed in bold spices, wrapped with fragrant rice, fresh veggies, creamy sauce, black beans, and crunchy tortilla chips. A delicious mix of spicy, creamy, and crunchy flavours in every bite. Paneer, crunch & flavour in every layer!"},
-      {n:"Crunchin’ Crunch Chicken Burrito Wrap", p:"$11.99", d:"Crispy seasoned chicken wrapped with fresh veggies, creamy sauce, black beans, and crunchy tortilla chips in a soft toasted tortilla. A bold, flavorful bite with the perfect mix of crunch, spice, and freshness."},
-      {n:"Paneer Tikka-licous Burrito Wrap", p:"$12.99", d:"Smoky paneer tikka marinated in bold Indian spices, wrapped with fragrant rice, fresh veggies, creamy sauce, black beans, and flavorful toppings. A delicious combination of smoky, spicy, and creamy flavours in every bite."},
-      {n:"Better Butter Chicken Burrito Wrap", p:"$12.99", d:"Tender butter chicken tossed in a rich, creamy sauce, wrapped with fragrant rice, fresh veggies, black beans, and flavorful toppings in a soft tortilla. A delicious blend of creamy, savory, and satisfying flavours in every bite."}
+      {n:"Crispy Paneer Burger", p:"$9.99", d:"Golden crispy paneer layered with fresh lettuce, creamy sauce & signature seasonings, tucked into a soft toasted bun. Crunchy, cheesy & packed with Indian-inspired flavour!"},
+      {n:"Crispy Chicken Burger", p:"$10.99", d:"A crispy golden-fried chicken fillet layered with fresh lettuce & creamy sauce, all tucked into a soft toasted bun. Golden. Crispy. Juicy!"},
+      {n:"Crispy Mexicano Paneer Burger", p:"$10.99", d:"Crispy Mexican-style paneer topped with spicy sauce, crunchy veggies, melted cheese & tortilla chips, all packed into a soft toasted bun. Creamy, crunchy & seriously Mexicano!"},
+      {n:"Crispy Mexicano Chicken Burger", p:"$11.99", d:"Crispy Mexican-style chicken fillet topped with creamy sauce, crunchy veggies & melted cheese, all packed into a soft toasted bun. Crunchy Mexican delight!"},
+      {n:"Cravin' A Chilli Paneer Burger?", p:"$11.99", d:"Crispy paneer tossed in bold hot garlic sauce, layered with creamy coleslaw & topped with a hot banana pepper, all tucked into a soft toasted bun. Hot. Garlicky. Crunchy. Creamy. One wild bite!"},
+      {n:"Feelin' A Chilli Chicken Burger?", p:"$12.99", d:"Crispy chicken tossed in bold hot garlic sauce, layered with creamy coleslaw & topped with a tangy jalapeno, all tucked into a soft toasted bun. Hot. Garlicky. Crunchy. Creamy. One wild bite!"}
     ]
   },
   {
-    id:"bowlrito", label:"Have Some Bowlritos!", sub:"A satisfying mix of taste and crunch.",
+    id:"burgermeal", label:"Cheat Day Burger Meal Box", sub:"Big Bite. Big Flavours with OG Fries, Mac and Cheese and a Can of Pop",
     items:[
-      {n:"Crunchin’ Crunch Paneer Bowlrito", p:"$12.99", d:"Crispy paneer, crunchy tortilla chips, fresh veggies, creamy sauce, and flavorful rice served in a delicious bowlrito for the ultimate Mexican-inspired crunch. Paneer, crunch & flavour in every layer!", tag:"Upgrade any bowlrito to California style +$1.99"},
-      {n:"Crunchin’ Crunch Chicken Bowlrito", p:"$12.99", d:"Crispy seasoned chicken, fresh veggies, creamy sauce, and flavorful rice served in a delicious bowlrito for the ultimate Mexican-inspired crunch. Crunchy chicken. Loaded bowl. Serious cravings!", tag:"Upgrade any bowlrito to California style +$1.99"},
-      {n:"Paneer Tikka Lickalicious Bowlrito", p:"$12.99", d:"Smoky paneer tikka marinated in bold Indian spices, served over fragrant rice with fresh veggies and creamy sauces. Finished with flavorful toppings for a delicious and satisfying burrito bowl. Loaded & totally Tikkalicious bowlrito!", tag:"Upgrade any bowlrito to California style +$1.99"},
-      {n:"Better Butter Chicken Bowlrito", p:"$12.99", d:"Creamy butter chicken served over fragrant rice with fresh veggies, flavorful sauces, and crunchy toppings for a rich and satisfying burrito bowl. Butter chicken, but make it Bowlrito!", tag:"Upgrade any bowlrito to California style +$1.99"}
+      {n:"Crispy Paneer Burger Meal Box", p:"$17.99", d:"Golden crispy paneer layered with fresh lettuce, creamy sauce & signature seasonings, tucked into a soft toasted bun, with OG fries, Mac and Cheese, and a can of pop! Crunchy, cheesy & packed with Indian-inspired flavour!"},
+      {n:"Crispy Chicken Burger Meal Box", p:"$17.99", d:"A crispy golden-fried chicken fillet layered with fresh lettuce & creamy sauce, all tucked into a soft toasted bun, with OG fries, Mac and Cheese, and a can of pop! Golden. Crispy. Juicy!"},
+      {n:"Crispy Mexicano Paneer Burger Meal Box", p:"$17.99", d:"Crispy Mexican-style paneer topped with spicy sauce, crunchy veggies, melted cheese & tortilla chips, all packed into a soft toasted bun, with OG fries, Mac and Cheese, and a can of pop! Creamy, crunchy & seriously Mexicano!"},
+      {n:"Crispy Mexicano Chicken Burger Meal Box", p:"$17.99", d:"Crispy Mexican-style chicken fillet topped with creamy sauce, crunchy veggies & melted cheese, all packed into a soft toasted bun, with OG fries, Mac and Cheese, and a can of pop! Crunchy Mexican delight!"},
+      {n:"Cravin' A Chilli Paneer Burger Meal Box", p:"$17.99", d:"Crispy paneer tossed in bold hot garlic sauce, layered with creamy coleslaw & topped with a hot banana pepper, all tucked into a soft toasted bun, with OG fries, Mac and Cheese, and a can of pop! Hot. Garlicky. Crunchy. Creamy. One wild bite!"},
+      {n:"Feelin' A Chilli Chicken Burger Meal Box", p:"$17.99", d:"Crispy chicken tossed in bold hot garlic sauce, layered with creamy coleslaw & topped with a tangy jalapeno, all tucked into a soft toasted bun, with OG fries, Mac and Cheese, and a can of pop! Hot. Garlicky. Crunchy. Creamy. One wild bite!"}
+    ]
+  },
+  {
+    id:"wrap", label:"That's A Wrap!", sub:"Flavour in every layer!",
+    items:[
+      {n:"Crunchin' Crunch Paneer Burrito Wrap", p:"$11.99", d:"Crispy paneer tossed in bold spices, wrapped with fragrant rice, fresh veggies, creamy sauce, black beans in a soft toasted tortilla. Paneer, crunch & flavour in every layer!"},
+      {n:"Crunchin' Crunch Chicken Burrito Wrap", p:"$12.99", d:"Crispy seasoned chicken wrapped with fresh veggies, creamy sauce, black beans in a soft toasted tortilla. Crunch, spice & freshness in every bite!"},
+      {n:"Mexicana Paneer Burrito Wrap", p:"$12.99", d:"Spiced paneer wrapped with fragrant rice, black beans, fresh veggies, zesty salsa, creamy sauce, and crunchy tortilla chips. Desi paneer meets bold Mexicana flavour in every bite!"},
+      {n:"Mexicana Chicken Burrito Wrap", p:"$13.99", d:"Juicy seasoned chicken wrapped with fragrant rice, black beans, fresh veggies, zesty salsa, creamy sauce, and crunchy tortilla chips. Loaded, zesty & packed with Mexicana-style chicken goodness!"},
+      {n:"Chilli Paneer Burrito Wrap", p:"$13.99", d:"Smoky paneer tikka marinated in bold Indian spices, wrapped with fragrant rice, fresh veggies, creamy sauce, black beans & flavourful toppings. Smoky, spicy & totally Tikka-licious!"},
+      {n:"Chilli Chicken Burrito Wrap", p:"$14.99", d:"Tender butter chicken in a rich, creamy sauce, wrapped with fragrant rice, fresh veggies, black beans & flavourful toppings in a soft tortilla. Butter chicken wrapped up in pure comfort!"}
+    ]
+  },
+  {
+    id:"wrapmeal", label:"That's A Wrap Meal Box!", sub:"Flavour in every layer, with OG Fries, Mac and Cheese and a Can of Pop",
+    items:[
+      {n:"Crunchin' Crunch Paneer Burrito Wrap Meal Box", p:"$18.99", d:"Crispy paneer tossed in bold spices, wrapped with fragrant rice, fresh veggies, creamy sauce, black beans in a soft toasted tortilla, with OG fries, Mac and Cheese, and a can of pop! Paneer, crunch & flavour in every layer!"},
+      {n:"Crunchin' Crunch Chicken Burrito Wrap Meal Box", p:"$18.99", d:"Crispy seasoned chicken wrapped with fresh veggies, creamy sauce, black beans in a soft toasted tortilla, OG fries, Mac and Cheese, and a can of pop! Crunch, spice & freshness in every bite!"},
+      {n:"Mexicana Paneer Burrito Wrap Meal Box", p:"$18.99", d:"Spiced paneer wrapped with fragrant rice, black beans, fresh veggies, zesty salsa, creamy sauce, and crunchy tortilla chips, OG fries, Mac and Cheese, and a can of pop! Desi paneer meets bold Mexicana flavour in every bite!"},
+      {n:"Mexicana Chicken Burrito Wrap Meal Box", p:"$18.99", d:"Juicy seasoned chicken wrapped with fragrant rice, black beans, fresh veggies, zesty salsa, creamy sauce, and crunchy tortilla chips. Loaded, zesty & packed with Mexicana-style chicken goodness!"},
+      {n:"Chilli Paneer Burrito Wrap Meal Box", p:"$18.99", d:"Smoky paneer tikka marinated in bold Indian spices, wrapped with fragrant rice, fresh veggies, creamy sauce, black beans & flavourful toppings. Smoky, spicy & totally Tikka-licious!"},
+      {n:"Chilli Chicken Burrito Wrap Meal Box", p:"$18.99", d:"Tender butter chicken in a rich, creamy sauce, wrapped with fragrant rice, fresh veggies, black beans & flavourful toppings in a soft tortilla. Butter chicken wrapped up in pure comfort!"}
+    ]
+  },
+  {
+    id:"bowlrito", label:"Have Some Bowlritos!", sub:"A satisfying mix of taste & crunch.",
+    items:[
+      {n:"Crunchin' Crunch Paneer Bowlrito", p:"$14.99", d:"Crispy paneer, brown rice, black beans, cheese, fresh lettuce, tomatoes, red onions, green peppers, pickled jalapenos, banana peppers, corn, crunchy tortilla chips, fresh cilantro, creamy sauce, come together in this Mexican-inspired bowlrito. Paneer, crunch & flavour in every layer!"},
+      {n:"Crunchin' Crunch Chicken Bowlrito", p:"$15.99", d:"Crispy seasoned chicken, brown rice, black beans, cheese, fresh lettuce, tomatoes, red onions, green peppers, pickled jalapenos, banana peppers, corn, fresh cilantro, creamy sauce & crunchy tortilla chips loaded into one seriously craveable bowl. Crunchy chicken. Loaded bowl. Serious cravings!"},
+      {n:"Paneer Tikkalicious Bowlrito", p:"$16.99", d:"Smoky paneer tikka marinated in bold Indian spices, served over brown rice with black beans, cheese, fresh lettuce, tomatoes, red onions, green peppers, pickled jalapenos, banana peppers, corn, creamy sauces & flavourful toppings. Loaded & totally Tikkalicious!"},
+      {n:"Better Butter Chicken Tikkalicious Bowlrito", p:"$17.99", d:"Creamy butter chicken served over fragrant rice with black beans, cheese, fresh lettuce, tomatoes, red onions, green peppers, pickled jalapenos, banana peppers, corn, veggies, signature sauces & crunchy toppings. Butter chicken, but make it Bowlrito!"},
+      {n:"California, Here We Come!", p:"+$1.99", d:"Turn ANY Bowlrito into a fully loaded California-style creation! Make it bigger. Make it loaded. Make it California!"}
     ]
   },
   {
     id:"pasta", label:"Pasta La-Vista!", sub:"Goodbye cravings, PASTA LA-VISTA!",
     items:[
-      {n:"Creamy Garlicious Penne Pasta", p:"$10.99", d:"Tender penne pasta tossed in a rich, velvety garlic cream sauce, infused with fragrant herbs and Parmesan cheese. Creamy, savory, garlicky, and irresistibly comforting!"},
-      {n:"Pretty In Pink Sauce Penne Pasta", p:"$10.99", d:"A deliciously creamy penne pasta tossed in a rich pink sauce, blending the bold flavors of tomato and velvety cream with aromatic herbs and Parmesan. Creamy, Pink, Delicious!"},
-      {n:"Red Sauce Penne Pasta", p:"$10.99", d:"Tender penne pasta tossed in a rich, flavorful tomato sauce infused with aromatic garlic, herbs, and Italian seasoning. Fresh, savory, and comforting! Rich, Tangy, Delicious!"}
+      {n:"Creamy Garlicious Penne Pasta", p:"$12.99", d:"Tender penne pasta tossed in a rich, velvety garlic cream sauce, infused with fragrant herbs and Parmesan cheese. Creamy, savoury, garlicky & irresistibly comforting!"},
+      {n:"Pretty In Pink Sauce Penne Pasta", p:"$12.99", d:"Delicious penne pasta tossed in a rich pink sauce, blending bold tomato flavours with velvety cream, aromatic herbs and Parmesan. Creamy, pink & delicious!"},
+      {n:"Red Sauce Penne Pasta", p:"$12.99", d:"Tender penne pasta tossed in a rich tomato sauce infused with aromatic garlic, herbs and Italian seasoning. Rich, tangy & delicious!"}
     ]
   },
   {
     id:"snack", label:"Desi Snack Corner", sub:"A Corner Full of Desi Flavours",
     items:[
-      {n:"Crispy Veggie Cigars", p:"$9.99", d:"Golden, crunchy rolls stuffed with a flavourful mix of seasoned veggies and aromatic spices, fried until perfectly crisp. Served with a zesty house dip for the ultimate crunch. Crispy outside, flavour-packed inside!"},
-      {n:"Butter Bomb Pav Bhaji", p:"$10.99", d:"Mumbai-style buttery vegetable bhaji, slow-cooked with aromatic spices and finished with a generous dollop of butter and served piping hot with butter-toasted pav, fresh onions, cilantro, and a squeeze of lime. Buttery, spicy & totally bomb!"},
-      {n:"Cheese Please! Pav Bhaji", p:"$13.99", d:"Classic Mumbai-style buttery bhaji loaded with melty cheese and bold aromatic spices, served with butter-toasted pav, fresh onions, cilantro, and a squeeze of lime. Cheesy, buttery & impossible to resist!"},
-      {n:"Peanut Punch Chaat", p:"$6.99", d:"Crunchy masala peanuts tossed with fresh onions, tomatoes, cilantro, zesty lime, and a punch of bold Indian spices. Crunchy, tangy, spicy & full of desi punch!"}
+      {n:"Peanut Punch Chaat", p:"$8.99", d:"Crunchy masala peanuts tossed with fresh onions, tomatoes, cilantro, zesty lime and a punch of bold Indian spices. Crunchy, tangy, spicy & full of desi punch!"},
+      {n:"Crispy Veggie Cigars", p:"$10.99", d:"Golden, crunchy rolls stuffed with a flavourful mix of seasoned veggies and aromatic spices, fried until perfectly crisp. Served with a zesty house dip for the ultimate crunch. Crispy outside, flavour-packed inside!"},
+      {n:"Butter Bomb Pav Bhaji", p:"$11.99", d:"Mumbai-style buttery vegetable bhaji slow-cooked with aromatic spices, finished with a generous dollop of butter and served piping hot with butter-toasted pav, fresh onions, cilantro and a squeeze of lime. Buttery, spicy & totally bomb!"},
+      {n:"Paneer Tikka Kathi Roll", p:"$12.99", d:"Smoky paneer tikka wrapped in a warm, soft paratha with fresh onions, crisp veggies, mint chutney, and a creamy house sauce. Smoky, creamy & packed with a desi tikka kick!"},
+      {n:"Chicken Tikka Kathi Roll", p:"$13.99", d:"Juicy chicken tikka wrapped in a warm, soft paratha with fresh onions, crisp veggies, mint chutney, and a creamy house sauce. Smoky, saucy & wrapped with a desi kick!"},
+      {n:"Cheese Please! Pav Bhaji", p:"$13.99", d:"Classic Mumbai-style buttery bhaji loaded with melty cheese and bold aromatic spices, served with butter-toasted pav, fresh onions, cilantro and a squeeze of lime. Cheesy, buttery & impossible to resist!"},
+      {n:"Bun Maska Paneer Bhurji", p:"$14.99", d:"Soft, buttery toasted buns loaded with rich, Mumbai-style, packed with aromatic spices and topped with a generous smear of creamy maska. Served with Punjabi style paneer bhurji, fresh onions, cilantro & a squeeze of lime. Buttery. Masaledaar. Mumbai in every bite!"}
     ]
   },
   {
     id:"kulcha", label:"Oh My Kulcha-Kulcha!", sub:"Fluffy, flavourful & totally kulcha-licious!",
     items:[
-      {n:"Soya Soya Nutri Kulcha", p:"$10.99", d:"A Punjabi street-food favourite featuring spicy, masala-coated soya nutri simmered in a rich, flavourful gravy and served with soft, buttery toasted kulcha, fresh onions, and a squeeze of lime. Chatpata, buttery & full-on Punjabi!"},
-      {n:"Bhole Bhole Chole Kulche", p:"$10.99", d:"Delhi-style chatpate masala chole paired with soft, buttery toasted kulchas, fresh onions, tangy chutney, and a squeeze of lime. Spicy, tangy & full-on Dilli vibes!"}
+      {n:"Soya Soya Nutri Kulcha", p:"$14.99", d:"A Punjabi street-food favourite featuring spicy, masala-coated soya nutri simmered in a rich, flavourful gravy and served with soft, buttery toasted kulcha, fresh onions and a squeeze of lime. Chatpata, buttery & full-on Punjabi!"},
+      {n:"Bhole Bhole Chole Kulche", p:"$14.99", d:"Delhi-style chatpate masala chole paired with soft, buttery toasted kulchas, fresh onions, tangy chutney and a squeeze of lime. Spicy, tangy & full-on Dilli vibes!"}
     ]
   },
   {
     id:"ricebox", label:"Curry Over Rice Meal Box", sub:"Curry. Rice. Repeat!",
     items:[
-      {n:"Raj-Maa Rice Meal Box", p:"$9.99", d:"A comforting North Indian-style rajma curry slow-cooked with tomatoes, onions, and aromatic spices, served with fluffy steamed rice and your choice of pop. Hearty, homestyle & pure comfort in a box!"},
-      {n:"Chana Masala Rice Meal Box", p:"$9.99", d:"Flavourful chana masala simmered with tomatoes, onions, and bold Indian spices, paired with fluffy steamed rice and your choice of pop. Tangy, savoury flavours in every bite!"}
-    ]
-  },
-  {
-    id:"momo", label:"Momo Showmo", sub:"Momo cravings? Let the showmo begin!",
-    items:[
-      {n:"Steam Momo Showmo", p:"Veg $11.99 | Chicken $12.99", d:"Soft, juicy steamed momos packed with flavour & served with our signature momo chutney. Hot, Juicy & Delicious!"},
-      {n:"Kurkure Momo Showmo", p:"Veg $12.99 | Chicken $13.99", d:"Crispy, crunchy momos with a flavour-packed centre, served with our signature momo chutney. Crispy, flavourful and full on crunchy!"},
-      {n:"Tandoori Momo Showmo", p:"Veg $12.99 | Chicken $13.99", d:"Smoky tandoori momos tossed in bold spices, charred to perfection & served with our signature mint mayo. Smokey, minty and bite into Perfection!"},
-      {n:"Chilli Chilli Momo Showmo", p:"Veg $12.99 | Chicken $13.99", d:"Juicy momos tossed in a spicy, tangy chilli sauce with peppers & onions. Saucy, fiery & full of flavour!"},
-      {n:"Afghani Showmo Momo", p:"Veg $12.99 | Chicken $13.99", d:"Creamy, smoky momos coated in a rich Afghani-style marinade. Mild, velvety & full of flavour."}
+      {n:"Raj-Maa Rice Meal Box", p:"$10.99", d:"A comforting North Indian-style rajma curry slow-cooked with tomatoes, onions and aromatic spices, served with fluffy steamed rice and your choice of canned pop. Hearty, homestyle & pure comfort in a box!"},
+      {n:"Chana Masala Rice Meal Box", p:"$10.99", d:"Flavourful chana masala simmered with tomatoes, onions and bold Indian spices, paired with fluffy steamed rice and your choice of canned pop. Tangy, savoury & full of flavour!"}
     ]
   },
   {
     id:"flatbread", label:"The Flatbread Pizza Fever", sub:"Cheesy. Crispy. With a little desi twist.",
     items:[
-      {n:"Tomato Cheese Flatbread", p:"$11.99", d:"Crispy flatbread layered with zesty tomato sauce, juicy tomatoes, herbs, and loads of melty cheese, baked until golden and delicious. Simple, cheesy & oh-so-satisfying!"},
-      {n:"Veggie Garden Flatbread", p:"$12.99", d:"Crispy flatbread loaded with colourful garden-fresh veggies, zesty tomato sauce, melty cheese, and aromatic herbs, baked to cheesy perfection. Fresh, colourful & veggie-licious!"},
-      {n:"Tikkalicious Flatbread - Paneer", p:"$13.99", d:"Crispy flatbread loaded with smoky paneer tikka, melty cheese, crunchy onions and bell peppers, finished with bold Indian spices and our signature sauce. Cheesy, smoky & paneer-fectly Tikkalicious!"},
-      {n:"Tikkalicious Flatbread - Chicken", p:"$13.99", d:"Crispy flatbread loaded with juicy chicken tikka, melty cheese, crunchy onions and bell peppers, finished with bold Indian spices and our signature sauce. Cheesy, smoky & totally Tikkalicious!"}
+      {n:"Tomato Cheese Flatbread", p:"$11.99", d:"Crispy flatbread layered with zesty tomato sauce, juicy tomatoes, herbs and loads of melty cheese, baked until golden and delicious. Simple, cheesy & oh-so-satisfying!"},
+      {n:"Veggie Garden Flatbread", p:"$12.99", d:"Crispy flatbread loaded with colourful garden-fresh veggies, zesty tomato sauce, melty cheese and aromatic herbs, baked to cheesy perfection. Fresh, colourful & veggie-licious!"},
+      {n:"Tikkalicious Flatbread — Paneer", p:"$13.99", d:"Crispy flatbread loaded with smoky paneer tikka, melty cheese, crunchy onions and bell peppers, finished with bold Indian spices and our signature sauce. Cheesy, smoky & paneer-fectly Tikkalicious!"},
+      {n:"Tikkalicious Flatbread — Chicken", p:"$13.99", d:"Crispy flatbread loaded with juicy chicken tikka, melty cheese, crunchy onions and bell peppers, finished with bold Indian spices and our signature sauce. Cheesy, smoky & totally Tikkalicious!"}
     ]
   },
   {
-    id:"dips", label:"Dip It Dips", sub:"House special Dip it dips!",
+    id:"dips", label:"Dip It Dips", sub:"House Special Dip It Dips!",
     items:[
-      {n:"Salsa Situation Tomato Salsa", p:"$1.99", d:"Fresh, zesty tomato salsa with a vibrant blend of juicy tomatoes, onions, lime, and herbs. Fresh, tangy with a flavourful tomato kick."},
-      {n:"Mint To Be Mayo", p:"$1.99", d:"Creamy, refreshing mint mayo with a cool herby kick that pairs perfectly with every bite. Cool, creamy mayo with a refreshing minty twist."},
-      {n:"Say Cheesy Sauce!", p:"$2.99", d:"Rich, creamy, and irresistibly cheesy sauce made to add the perfect indulgent touch to every bite. Rich, creamy, and loaded with cheesy goodness."},
-      {n:"Silsila Tandoori Tease Mayo", p:"$2.99", d:"Creamy, smoky tandoori mayo with a bold Indian spice kick, perfect for adding rich, zesty flavour to every bite. Creamy, rich, zesty smoky tandoori flavours."}
+      {n:"Salsa Situation Tomato Salsa", p:"$2.99", d:"Fresh, zesty tomato salsa with a vibrant blend of juicy tomatoes, onions, lime and herbs. Fresh, tangy & packed with a flavourful tomato kick!"},
+      {n:"Mint To Be Mayo", p:"$1.99", d:"Creamy, refreshing mint mayo with a cool, herby kick that pairs perfectly with every bite. Cool, creamy mayo with a refreshing minty twist!"},
+      {n:"Jalapeño Mayo", p:"$1.99", d:"Creamy mayo blended with zesty jalapeños for a smooth, tangy kick. Creamy, zesty & just the right amount of heat!"},
+      {n:"Silsila Tandoori Tease Mayo", p:"$2.99", d:"Creamy, smoky tandoori mayo with a bold Indian spice kick, perfect for adding rich, zesty flavour to every bite. Creamy, rich, zesty & smoky!"}
     ]
   },
   {
-    id:"sips", label:"Sippin’ Silsila", sub:"Desi Sips, Happy Trips",
+    id:"sips", label:"Sippin' Silsila", sub:"Desi Sips, Happy Trips!",
     items:[
-      {n:"Chai - Fi", p:"$1.99", d:"A steaming cup of classic Indian-style chai, brewed with tea, milk, and warming aromatic flavours. Desi comfort, always connected!", tag:"Hot Edition"},
-      {n:"Bean Desi Coffee", p:"$3.99", d:"A rich and frothy Indian-style hot coffee, whipped to creamy perfection with milk and coffee. Bold beans with a full-on desi soul!", tag:"Hot Edition"},
-      {n:"Masala Majito", p:"$5.99", d:"A fizzy desi refresher with zesty lime, ginger ale, black salt, and a punch of Indian masala. Chatpata, bubbly & full-on refreshing!", tag:"Cold Edition"},
-      {n:"Lemon Mint Majito", p:"$5.99", d:"A cool and refreshing blend of zesty lemon and fresh mint, served chilled for the ultimate citrusy kick. Fresh, minty & oh-so-zesty!", tag:"Cold Edition"},
-      {n:"Sunset Mantra Majito", p:"$5.99", d:"A vibrant orange-flavoured refresher with citrusy sweetness and a sparkling finish. Bright, bubbly & sunset in every sip!", tag:"Cold Edition"},
-      {n:"Masala Cola Magic Majito", p:"$5.99", d:"Fizzy cola blended with zesty lime, fresh mint, and a hint of desi masala for a refreshing, tangy, and flavorful twist. Sip the Cola Masala Magic!", tag:"Cold Edition"},
-      {n:"Cold Coffee Ho Jaye?", p:"$5.99", d:"A chilled, creamy blend of rich coffee, cold milk, and just the right touch of sweetness, whipped until smooth and frothy. Thandi, creamy & full-on desi coffee vibes!", tag:"Cold Edition"},
-      {n:"Maharaja Mango Shake", p:"$6.99", d:"A rich and creamy mango shake blended with luscious mango, chilled milk, and just the right touch of sweetness, finished with a royal sprinkle. Thick, creamy & loaded with mango magic!", tag:"Cold Edition"},
-      {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops. Crack it. Sip it. Chill!", tag:"Cold Edition"}
+      {n:"Chai-Fi", p:"$3.99", d:"A steaming cup of classic Indian-style chai, brewed with tea, milk and warming aromatic spices. Desi comfort, always connected!", tag:"Hot Edition"},
+      {n:"Bean Desi Coffee", p:"$4.99", d:"A rich and frothy Indian-style hot coffee, whipped to creamy perfection with milk and coffee. Bold beans with a full-on desi soul!", tag:"Hot Edition"},
+      {n:"Masala Mojito", p:"$5.99", d:"A fizzy desi refresher with zesty lime, ginger ale, black salt and a punch of Indian masala. Chatpata, bubbly & full-on refreshing!", tag:"Cold Edition"},
+      {n:"Lemon Mint Mojito", p:"$5.99", d:"A cool and refreshing blend of zesty lemon and fresh mint, served chilled for the ultimate citrusy kick. Fresh, minty & oh-so-zesty!", tag:"Cold Edition"},
+      {n:"Sunset Mantra Mojito", p:"$5.99", d:"A vibrant orange-flavoured refresher with citrusy sweetness and a sparkling finish. Bright, bubbly & sunset in every sip!", tag:"Cold Edition"},
+      {n:"Masala Cola Magic Mojito", p:"$5.99", d:"Fizzy cola blended with zesty lime, fresh mint and a hint of desi masala for a refreshing, tangy twist. Sip the Cola Masala Magic!", tag:"Cold Edition"},
+      {n:"Cold Coffee Ho Jaye?", p:"$5.99", d:"A chilled, creamy blend of rich coffee, cold milk and just the right touch of sweetness, whipped until smooth and frothy. Thandi, creamy & full-on desi coffee vibes!", tag:"Cold Edition"},
+      {n:"Maharaja Mango Shake", p:"$6.99", d:"A rich and creamy mango shake blended with luscious mango, chilled milk and just the right touch of sweetness, finished with a royal sprinkle. Thick, creamy & loaded with mango magic!", tag:"Cold Edition"},
+      {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops — Coke, Diet Coke, Crush Orange, Sprite, Ginger Ale, Bottled Water. Crack it. Sip it. Chill!", tag:"Cold Edition"}
     ]
   }
 ];
