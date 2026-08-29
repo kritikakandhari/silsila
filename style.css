@@ -532,8 +532,31 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
 
 /* Large phones */
 @media (max-width:560px){
-  .hero-btns{flex-direction:column; align-items:center; width:100%;}
-  .hero-btns .btn{width:100%; max-width:280px; text-align:center;}
+  .hero-content{padding:75px 14px 30px;}
+  .hero-content h1.hero-img-title img{width:clamp(180px, 60vw, 260px);}
+  .hero-content .tagline{font-size:.9rem; letter-spacing:.18em; margin-bottom:2px;}
+  .hero-content .eyebrow{font-size:.72rem; letter-spacing:.14em; margin-bottom:6px;}
+  .hero-content .sub{margin-bottom:10px; font-size:.95rem;}
+  .hero-btns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    width:100%;
+    max-width:320px;
+    margin:0 auto;
+  }
+  .hero-btns .btn{
+    width:100%;
+    max-width:none;
+    padding:9px 6px;
+    font-size:.68rem;
+    letter-spacing:.08em;
+    min-height:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .hero-phone{margin-bottom:12px;}
   .story-text h2 { font-size: 1.8rem; margin-bottom: 16px; }
   .story-text p { font-size: 0.98rem; }
   .story-text p.lede { font-size: 1.15rem; }
