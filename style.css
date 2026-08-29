@@ -190,10 +190,12 @@ nav.links a:hover::after{width:100%;}
 .scroll-cue .lotus-cue{
   width:38px;
   height:auto;
-  transition:transform .3s ease;
+  filter:drop-shadow(0 2px 4px rgba(212,175,55,0.4)) contrast(1.1) brightness(1.08);
+  transition:transform .3s ease, filter .3s ease;
 }
 .scroll-cue:hover .lotus-cue{
   transform:scale(1.12);
+  filter:drop-shadow(0 3px 7px rgba(255,215,0,0.6)) contrast(1.15) brightness(1.18);
 }
 @keyframes lotusFloat{
   0%, 100%{ transform:translateX(-50%) translateY(0); opacity:0.95; }
