@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=57">
+<link rel="stylesheet" href="style.css?v=58">
 </head>
 <body>
 
@@ -62,8 +62,6 @@
       <select class="menu-select" id="menuSelect" aria-label="Choose menu category"></select>
     </div>
     <div id="menuPanels"></div>
-
-    <p class="menu-note reveal">Thin crust available on all flatbreads at no extra charge · Menu items and prices subject to change</p>
   </div>
 </section>
 
@@ -240,6 +238,7 @@ const MENU = [
   },
   {
     id:"flatbread", label:"The Flatbread Pizza Fever", sub:"Cheesy. Crispy. With a little desi twist.",
+    note:"Thin crust available on all flatbreads at no extra charge · Menu items and prices subject to change",
     items:[
       {n:"Tomato Cheese Flatbread", p:"$11.99", d:"Crispy flatbread layered with zesty tomato sauce, juicy tomatoes, herbs and loads of melty cheese, baked until golden and delicious. Simple, cheesy & oh-so-satisfying!"},
       {n:"Veggie Garden Flatbread", p:"$12.99", d:"Crispy flatbread loaded with colourful garden-fresh veggies, zesty tomato sauce, melty cheese and aromatic herbs, baked to cheesy perfection. Fresh, colourful & veggie-licious!"},
@@ -303,6 +302,7 @@ MENU.forEach((cat, i)=>{
     </div>`;
   });
   html += '</div>';
+  if(cat.note){ html += `<p class="menu-note" style="margin-top:32px; text-align:center; font-family:'Times New Roman', serif; font-style:italic; color:var(--gold-light); font-size:clamp(0.85rem, 2vw, 0.98rem); opacity:0.9;">${cat.note}</p>`; }
   panel.innerHTML = html;
   panelsEl.appendChild(panel);
 });
