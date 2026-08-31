@@ -122,7 +122,10 @@ nav.links a:hover::after{width:100%;}
   overflow:hidden;
 }
 .hero .bg{
-  position:absolute; inset:0; background-image:url('images/image_-164036047510574189.jpeg');
+  position:absolute; inset:0;
+  background-image:url('images/image_-164036047510574189.webp');
+  background-image:-webkit-image-set(url('images/image_-164036047510574189.webp') 1x, url('images/image_-164036047510574189.jpeg') 1x);
+  background-image:image-set(url('images/image_-164036047510574189.webp') type('image/webp'), url('images/image_-164036047510574189.jpeg') type('image/jpeg'));
   background-size:cover; background-position:center 20%;
   filter:saturate(1.05);
 }
