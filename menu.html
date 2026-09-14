@@ -1,19 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #ffffff;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SILSILA — A Culinary Affaire | Indian Fusion Kitchen, Edmonton</title>
+<meta name="description" content="SILSILA — A Culinary Affaire. Indian fusion cloud kitchen in Edmonton, Alberta. Bold flavours, global inspiration, Indian soul. Order via UberEats or DoorDash.">
+<link rel="icon" type="image/webp" href="images/logo.webp?v=3">
+<link rel="apple-touch-icon" href="images/logo.webp?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=67">
 </head>
 <body>
+
+<!-- decorative lotus icon (reused) -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="lotus-icon" viewBox="0 0 100 100">
+    <path fill="currentColor" d="M50 10c4 12 4 24 0 34-4-10-4-22 0-34zm-18 8c8 9 13 20 13 31-10-5-17-15-19-27 2-1 4-2 6-4zm36 0c2 2 4 3 6 4-2 12-9 22-19 27 0-11 5-22 13-31zM14 34c10 3 19 10 24 20-12 1-23-5-29-15 2-2 3-3 5-5zm72 0c2 2 3 3 5 5-6 10-17 16-29 15 5-10 14-17 24-20zM50 46c9 0 17 4 22 11-9 5-19 5-22 5s-13 0-22-5c5-7 13-11 22-11zm0 20c14 0 26 6 32 15-10 6-22 6-32 3-10 3-22 3-32-3 6-9 18-15 32-15z"/>
+  </symbol>
+</svg>
+
+<header class="site-nav" id="siteNav">
+  <div class="wrap">
+    <a href="index.html#top" class="nav-logo">
+      <img src="images/logo.webp?v=3" alt="Silsila emblem" class="nav-emblem" width="44" height="44" decoding="async">
+      <span class="wordmark">SILSILA</span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="faq.html">FAQ</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#order" class="nav-cta">Order Now</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+<section class="menu-section" id="menu">
+  <div class="mandala-bg"></div>
+  <div class="wrap" style="position:relative;">
+    <div class="section-head reveal">
+      <div class="eyebrow deva">एक सौ ग्यारह</div>
+      <h2><img src="images/logo.webp?v=3" alt="" class="menu-emblem-inline" width="32" height="32" decoding="async">The Menu</h2>
+      <p>Fusion built for takeout — every bowl, wrap and box designed to travel as beautifully as it tastes.</p>
+
+    </div>
+
+    <div class="menu-tabs-wrap reveal">
+      <div class="menu-tabs" id="menuTabs"></div>
+      <select class="menu-select" id="menuSelect" aria-label="Choose menu category"></select>
+    </div>
+    <div id="menuPanels"></div>
+  </div>
+</section>
+
+
+
+
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="images/logo.webp?v=3" alt="Silsila emblem" loading="lazy" decoding="async" width="76" height="76" style="width:76px;height:76px;border-radius:50%;box-shadow:0 0 0 1px rgba(233,208,143,.5); object-fit:cover;">
+      <div>
+        <div class="word">SILSILA</div>
+        <div class="sub" style="font-style:normal; font-size:0.75rem; letter-spacing:0.1em; margin-top:2px;">A CULINARY AFFAIRE</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <div class="t">Explore</div>
+        <a href="index.html#story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="faq.html">FAQ</a>
+        <a href="index.html#gallery">Gallery</a>
+      </div>
+      <div>
+        <div class="t">Order</div>
+        <a href="https://www.ubereats.com" target="_blank" rel="noopener">UberEats</a>
+        <a href="https://www.doordash.com" target="_blank" rel="noopener">DoorDash</a>
+      </div>
+      <div>
+        <div class="t">Connect</div>
+        <a href="https://instagram.com/silsilacanada" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:admin@silsilayeg.com">admin@silsilayeg.com</a>
+        <a href="tel:+18255220908">+1 825 522 0908</a>
+      </div>
+      <div>
+        <div class="t">Find Us</div>
+        <a href="https://maps.google.com/?q=15355+111+Ave+NW,+Edmonton,+Alberta,+Canada+T5P+0R7" target="_blank" rel="noopener">15355 111 Ave NW,<br>Edmonton, AB T5P 0R7</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SILSILA — A CULINARY AFFAIRE. Edmonton, Alberta.</span>
+    <span>Indian in soul. Modern in spirit.</span>
+  </div>
+</footer>
+
+<script>
+// ---- mobile viewport height fix (iOS Safari address-bar jump) ----
+const setVH = ()=>{
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+};
+setVH();
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', setVH);
+
+// ---- Menu data ----
+const MENU = [
+  {
+    id:"momo", label:"Momo Showmo", sub:"Momo cravings? Let the Showmo begin!",
+    items:[
+      {n:"Steam Momo Showmo", p:"Veg $13.99 | Chicken $15.99", d:"Soft, juicy steamed momos packed with flavour and served with our signature momo chutney. Simple, comforting & seriously satisfying!"},
+      {n:"Fried Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Golden, crispy momos with a juicy, flavour-packed centre, served with our signature spicy momo chutney. Crispy outside, juicy inside & made to crunch!"},
+      {n:"Tandoori Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Smoky, charred momos tossed in our signature tandoori blend and served with a cool, creamy house dip. Smoky, creamy & packed with flavour!"},
+      {n:"Chilli Chilli Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Juicy momos tossed with onions and bell peppers in a bold, spicy-tangy glaze with a creamy house finish. Saucy, fiery & full of flavour!"},
+      {n:"Momo Platter", p:"Veg $25.99 | Chicken $28.99", d:"Four flavours. One epic platter! 3 each of our Steam, Tandoori, Chilli Chilli & Kurkure momos, served with house momo chutney and creamy mayo to bring out every delicious flavour. Steamy, smoky, saucy & crispy. The ultimate momo feast!"}
+    ],
+    note:"MOMO + SIP DEAL: Add any Fizz & Refresher to your favourite momos for just $4.99"
+  },
+  {
+    id:"streetbites", label:"Loaded Street Bites", sub:"Crunchy. Cheesy. Seriously craveable.",
+    items:[
+      {n:"The OG Fries", p:"$9.99", d:"Crispy golden fries tossed in our signature house seasoning for that perfect savoury crunch. Simple, crispy & seasoned the SILSILA way!"},
+      {n:"Fiery Peri Fries", p:"$10.99", d:"Hot, crispy fries tossed in a bold peri-peri seasoning with a bright, zesty kick. Fiery, crunchy & seriously addictive!"},
+      {n:"SILSILA Loaded Fries", p:"$14.99", d:"Golden seasoned fries piled high with fresh veggies, jalapeños, sweet corn, creamy house sauce & grated mozzarella. Loaded, chatpata & full-on SILSILA flavour!"},
+      {n:"Chicken Jalwa Fries", p:"$15.99", d:"Crispy seasoned fries loaded with tender chicken, fresh veggies, creamy house sauce & grated mozzarella. Cheesy, saucy & loaded with full-on jalwa!"},
+      {n:"House Loaded Nachos", p:"$16.99", d:"Crispy tortilla chips loaded with fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces, finished with a fresh garnish. Crunchy, cheesy, saucy & seriously loaded!"},
+      {n:"The Paneer Stack", p:"$18.99", d:"Crispy tortilla chips piled high with seasoned paneer, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Crunchy, cheesy & stacked with paneer goodness!"},
+      {n:"Chicken Nacho Meltdown", p:"$20.99", d:"Crunchy tortilla chips loaded with flavourful chicken, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Cheesy, saucy & seriously loaded!"}
+    ]
+  },
+  {
+    id:"snacks", label:"Desi Snack Corner", sub:"Small bites. Big desi flavour.",
+    items:[
+      {n:"Beer Buddy Peanut Chaat", p:"$12.99", d:"Crunchy masala peanuts tossed with fresh veggies, herbs, zesty lime and a punch of bold Indian spices. Crunchy, tangy, spicy & full of desi punch!"},
+      {n:"Crispy Veggie Cigars", p:"$13.99", d:"Golden, crunchy rolls filled with a flavourful mix of seasoned veggies and aromatic spices, fried until perfectly crisp and served with a zesty house dip. Crispy outside, flavour-packed inside!"},
+      {n:"Paneer Cheese Pull", p:"$14.99", d:"Toasty garlic bread loaded with flavourful paneer tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"},
+      {n:"Chicken Cheese Pull", p:"$15.99", d:"Toasty garlic bread loaded with flavourful chicken tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"}
+    ]
+  },
+  {
+    id:"bowlrito", label:"Biryani Bowlritos", sub:"Biryani, but make it fusion!",
+    items:[
+      {n:"Chicken Biryani Burrito Bowl", p:"$18.99", d:"A bold Indian-Mexican fusion bowl loaded with fragrant biryani rice, tender chicken and fresh veggies, served with our creamy Mexican sour cream dip for the perfect cool, tangy finish. Biryani meets burrito vibes. Hearty, saucy & seriously satisfying!"}
+    ]
+  },
+  {
+    id:"burgers_rolls", label:"Burgers & Rolls", sub:"Big bites. Zero regrets.",
+    items:[
+      {n:"Crunchin’ Paneer Overload", p:"$13.99", d:"A fully loaded sesame bun stacked with a crispy paneer patty, creamy coleslaw, cheese, fresh veggies, creamy Indian-style macaroni and smoky house sauce. Big, bold & seriously satisfying. ONE WILD BITE!"},
+      {n:"Flamin’ Chicken Burger", p:"$14.99", d:"Crispy chicken coated in a fiery garlicky glaze, layered with creamy coleslaw and seasoned veggies inside a soft toasted bun. Hot, crunchy, garlicky & seriously craveable!"},
+      {n:"Any Burger Meal Box", p:"$19.99", d:"Includes OG Fries + a can of pop."},
+      {n:"Chilli Paneer Roll", p:"$15.99", d:"Bold chilli paneer wrapped in warm, soft naan with fresh veggies and a creamy house finish. Spicy, saucy, creamy & loaded with paneer flavour!"},
+      {n:"Butter Chicken Roll", p:"$16.99", d:"Tender butter chicken wrapped in warm, soft naan with fresh veggies and a creamy house finish. Rich, creamy, saucy & packed with butter chicken goodness!"},
+      {n:"Any Roll Meal Box", p:"$20.99", d:"Includes OG Fries + a can of pop."}
+    ]
+  },
+  {
+    id:"sips", label:"Sippin' Silsila", sub:"Desi Sips, Happy Trips!",
+    items:[
+      {n:"Desi Bean Hot Coffee", p:"$4.99", d:"Rich, frothy Indian-style coffee with a smooth, comforting finish. Bold, warm & full of desi soul!", tag:"Hot Edition"},
+      {n:"Cold Coffee Ho Jaye?", p:"$6.99", d:"A chilled, creamy coffee blended smooth and frothy for the perfect cool-down. Creamy, refreshing & full-on coffee vibes!", tag:"Cold Edition"},
+      {n:"Lemon Mint Mojito", p:"$6.99", d:"A cool citrus refresher with fresh mint and a sparkling finish. Fresh, zesty & super refreshing!", tag:"Refresher"},
+      {n:"Masala Mojito", p:"$7.99", d:"A fizzy, chatpata refresher with citrusy zing and a bold desi twist. Tangy, bubbly & full-on refreshing!", tag:"Refresher"},
+      {n:"Masala Cola Magic", p:"$7.99", d:"Classic fizzy cola gets a tangy desi makeover with a lively citrus kick. Bold, bubbly & full of masala magic!", tag:"Refresher"},
+      {n:"Strawberry Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. (Add EXTRA BOBA +$0.99). Sweet, fruity & bursting with berry vibes!", tag:"Refresher"},
+      {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. (Add EXTRA BOBA +$0.99). Sweet, bubbly & sunset-ready!", tag:"Refresher"},
+      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. (Add EXTRA BOBA +$0.99). Sweet, tangy & bursting with mango magic!", tag:"Refresher"},
+      {n:"Mango Matcha", p:"$8.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. (Add extra Mango chunks +$1.99). Earthy, creamy & loaded with mango magic!", tag:"Matcha Mania"},
+      {n:"Strawberry Matcha", p:"$8.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. (Add extra strawberry chunks +$1.99). Earthy, creamy & bursting with berry goodness!", tag:"Matcha Mania"},
+      {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops. Crack it. Sip it. Chill!", tag:"Cold Edition"}
+    ]
+  }
+];
+
+const tabsEl = document.getElementById('menuTabs');
+const selectEl = document.getElementById('menuSelect');
+const panelsEl = document.getElementById('menuPanels');
+
+MENU.forEach((cat, i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'menu-tab' + (i===0 ? ' active' : '');
+  btn.textContent = cat.label;
+  btn.dataset.target = cat.id;
+  btn.addEventListener('click', ()=> switchTab(cat.id));
+  tabsEl.appendChild(btn);
+
+  const opt = document.createElement('option');
+  opt.value = cat.id;
+  opt.textContent = cat.label;
+  selectEl.appendChild(opt);
+
+  const panel = document.createElement('div');
+  panel.className = 'menu-panel' + (i===0 ? ' active' : '');
+  panel.id = 'panel-' + cat.id;
+  let html = '';
+  if(cat.sub){ html += `<p class="panel-sub">${cat.sub}</p>`; }
+  html += '<div class="menu-grid">';
+  cat.items.forEach(it=>{
+    html += `<div class="menu-item">
+      <div class="row"><span class="name">${it.n}</span><span class="leader"></span><span class="price">${it.p}</span></div>
+      <div class="desc">${it.d}</div>
+      ${it.tag ? `<span class="tag">${it.tag}</span>` : ''}
+    </div>`;
+  });
+  html += '</div>';
+  if(cat.note){ html += `<p class="menu-note" style="margin-top:32px; text-align:center; font-family:'Times New Roman', serif; font-style:italic; color:var(--gold-light); font-size:clamp(0.85rem, 2vw, 0.98rem); opacity:0.9;">${cat.note}</p>`; }
+  panel.innerHTML = html;
+  panelsEl.appendChild(panel);
+});
+
+function switchTab(id){
+  document.querySelectorAll('.menu-tab').forEach(b=> b.classList.toggle('active', b.dataset.target===id));
+  document.querySelectorAll('.menu-panel').forEach(p=> p.classList.toggle('active', p.id==='panel-'+id));
+  if(selectEl.value !== id){ selectEl.value = id; }
+}
+selectEl.addEventListener('change', ()=> switchTab(selectEl.value));
+
+// ---- open tab from URL hash (e.g. menu.html#fries) ----
+const urlHash = window.location.hash.replace('#','');
+if(urlHash && document.getElementById('panel-'+urlHash)){
+  switchTab(urlHash);
+}
+
+// ---- nav scroll state ----
+const navEl = document.getElementById('siteNav');
+window.addEventListener('scroll', ()=>{
+  navEl.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+// ---- mobile nav ----
+const toggle = document.getElementById('menuToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', ()=> {
+  const isOpen = links.classList.toggle('open');
+  toggle.innerText = isOpen ? '✕' : '☰';
+});
+links.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> {
+  links.classList.remove('open');
+  toggle.innerText = '☰';
+}));
+
+// ---- quote scroll sweep (light -> dark, left to right) ----
+const quoteWrap = document.getElementById('quoteScroll');
+const quoteText = document.getElementById('quoteText');
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(quoteWrap && quoteText && !prefersReduced){
+  let ticking = false;
+  const updateQuote = ()=>{
+    const rect = quoteText.getBoundingClientRect();
+    const startY = window.innerHeight * 0.95;
+    const endY = window.innerHeight * 0.45;
+    const progress = Math.min(1, Math.max(0, (startY - rect.top) / (startY - endY)));
+    quoteText.style.setProperty('--p', progress.toFixed(3));
+    ticking = false;
+  };
+  window.addEventListener('scroll', ()=>{
+    if(!ticking){ requestAnimationFrame(updateQuote); ticking = true; }
+  }, {passive:true});
+  updateQuote();
+}
+
+// ---- reveal on scroll ----
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, {threshold:.15});
+revealEls.forEach(el=> io.observe(el));
+</script>
 </body>
 </html>
