@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=71">
+<link rel="stylesheet" href="style.css?v=72">
 </head>
 <body>
 
@@ -127,7 +127,7 @@ const MENU = [
       {n:"Fried Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Golden, crispy momos with a juicy, flavour-packed centre, served with our signature spicy momo chutney. Crispy outside, juicy inside & made to crunch!"},
       {n:"Tandoori Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Smoky, charred momos tossed in our signature tandoori blend and served with a cool, creamy house dip. Smoky, creamy & packed with flavour!"},
       {n:"Chilli Chilli Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Juicy momos tossed with onions and bell peppers in a bold, spicy-tangy glaze with a creamy house finish. Saucy, fiery & full of flavour!"},
-      {n:"Momo Platter", p:"Veg $25.99 | Chicken $28.99", d:"Four flavours. One epic platter! 3 each of our Steam, Tandoori, Chilli Chilli & Kurkure momos, served with house momo chutney and creamy mayo to bring out every delicious flavour. Steamy, smoky, saucy & crispy. The ultimate momo feast!"}
+      {n:"Momo Platter", p:"Veg $25.99 | Chicken $28.99", d:"Four flavours. One epic platter! 3 each of our Steam, Tandoori, Chilli Chilli & Kurkure momos, served with house momo chutney and creamy mayo to bring out every delicious flavour. Steamy, smoky, saucy & crispy. The ultimate momo feast!", center:true}
     ],
     deal:{
       title:"MOMO + SIP DEAL",
@@ -161,7 +161,7 @@ const MENU = [
   {
     id:"bowlrito", label:"Biryani Bowlritos", sub:"Biryani, but make it fusion!",
     items:[
-      {n:"Chicken Biryani Burrito Bowl", p:"$18.99", d:"A bold Indian-Mexican fusion bowl loaded with fragrant biryani rice, tender chicken and fresh veggies, served with our creamy Mexican sour cream dip for the perfect cool, tangy finish. Biryani meets burrito vibes. Hearty, saucy & seriously satisfying!"}
+      {n:"Chicken Biryani Burrito Bowl", p:"$18.99", d:"A bold Indian-Mexican fusion bowl loaded with fragrant biryani rice, tender chicken and fresh veggies, served with our creamy Mexican sour cream dip for the perfect cool, tangy finish. Biryani meets burrito vibes. Hearty, saucy & seriously satisfying!", center:true}
     ]
   },
   {
@@ -236,7 +236,8 @@ MENU.forEach((cat, i)=>{
         ${it.desc ? `<div class="menu-deal-desc">${it.desc}</div>` : ''}
       </div>`;
     } else {
-      html += `<div class="menu-item">
+      const isCenter = it.center ? ' center-item' : '';
+      html += `<div class="menu-item${isCenter}">
         <div class="row"><span class="name">${it.n}</span><span class="leader"></span><span class="price">${it.p}</span></div>
         <div class="desc">${it.d}</div>
         ${it.tag ? `<span class="tag">${it.tag}</span>` : ''}

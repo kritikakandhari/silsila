@@ -356,6 +356,12 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   display:inline-block; margin-top:10px; font-size:.7rem; letter-spacing:.06em; color:var(--maroon-black);
   background:var(--gold-light); padding:4px 10px; border-radius:999px; font-weight:600;
 }
+.menu-item.center-item{
+  grid-column: 1 / -1;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
 .menu-note{
   text-align:center; margin-top:36px; color:var(--gold-light); font-family:'Times New Roman', Times, serif;
   font-style:italic; font-size:1.05rem;
