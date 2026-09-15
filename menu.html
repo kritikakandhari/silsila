@@ -52,8 +52,8 @@
   <div class="wrap" style="position:relative;">
     <div class="section-head reveal">
       <div class="eyebrow deva">एक सौ ग्यारह</div>
-      <h2><img src="images/logo.webp?v=3" alt="" class="menu-emblem-inline" width="32" height="32" decoding="async">The Menu</h2>
-      <p>Fusion built for takeout — every bowl, wrap and box designed to travel as beautifully as it tastes.</p>
+      <h2><img src="images/logo.webp?v=3" alt="" class="menu-emblem-inline" width="32" height="32" decoding="async">MENU</h2>
+      <p>Fusion built for takeout. Every bowl, wrap and box designed to travel as beautifully as it tastes.</p>
 
     </div>
 
@@ -220,6 +220,7 @@ MENU.forEach((cat, i)=>{
   panel.className = 'menu-panel' + (i===0 ? ' active' : '');
   panel.id = 'panel-' + cat.id;
   let html = '';
+  html += `<h2 style="text-align: center; color: var(--gold-light); font-family: 'Cinzel', serif; margin-bottom: 12px; font-size: 2rem;">${cat.label}</h2>`;
   if(cat.sub){ html += `<p class="panel-sub">${cat.sub}</p>`; }
   html += '<div class="menu-grid">';
   cat.items.forEach(it=>{
