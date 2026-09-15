@@ -353,7 +353,23 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 }
 .menu-item.center-item{
   grid-column: 1 / -1;
+  max-width: 650px;
   width: 100%;
+  margin: 12px auto 0;
+  text-align: center;
+}
+.menu-item.center-item .row{
+  justify-content: center;
+  gap: 14px;
+}
+.menu-item.center-item .leader{
+  display: none;
+}
+.menu-item.center-item .desc{
+  max-width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .menu-note{
   text-align:center; margin-top:36px; color:var(--gold-light); font-family:'Times New Roman', Times, serif;
