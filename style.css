@@ -304,15 +304,16 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 }
 
 .menu-tabs{
-  display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:50px;
-  border-bottom:1px solid rgba(200,162,78,.25); padding-bottom:26px;
+  display:flex; gap:10px; flex-wrap:nowrap; justify-content:center; align-items:center;
+  margin-bottom:45px; border-bottom:1px solid rgba(200,162,78,.25); padding-bottom:24px;
 }
 .menu-tab{
   background:transparent; border:1px solid rgba(200,162,78,.4); color:var(--gold-light);
-  padding:9px 18px; font-family:'Times New Roman', Times, serif; font-size:.74rem; letter-spacing:.12em;
+  padding:10px 16px; font-family:'Times New Roman', Times, serif; font-size:.76rem; letter-spacing:.09em;
   text-transform:uppercase; border-radius:999px; cursor:pointer; transition:all .25s ease;
+  white-space:nowrap; display:inline-flex; align-items:center; justify-content:center; text-align:center;
 }
-.menu-tab:hover{border-color:var(--gold); color:var(--ivory);}
+.menu-tab:hover{border-color:var(--gold); color:var(--ivory); transform:translateY(-1px);}
 .menu-tab.active{background:var(--gold); color:var(--maroon-black); border-color:var(--gold); font-weight:600;}
 
 /* Dropdown replaces the tab-pills on tablet/mobile so there's nothing to discover by scrolling */
@@ -601,10 +602,24 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   .story .wrap{gap:48px;}
   .gallery-grid{gap:16px;}
 
-  /* Small sleek category pills on mobile/tablet */
+  /* Symmetric 3-column category grid on tablet */
   .menu-select{display:none !important;}
-  .menu-tabs{display:flex; gap:6px; margin-bottom:26px; padding-bottom:18px;}
-  .menu-tab{padding:5px 12px; font-size:.66rem; letter-spacing:.05em;}
+  .menu-tabs{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(130px, 1fr));
+    gap:10px;
+    max-width:680px;
+    margin:0 auto 30px;
+    padding-bottom:20px;
+  }
+  .menu-tab{
+    width:100%;
+    padding:10px 8px;
+    font-size:.70rem;
+    letter-spacing:.05em;
+    text-align:center;
+    justify-content:center;
+  }
 }
 
 @media (max-width:960px){
@@ -696,9 +711,25 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   footer .wrap{gap:32px;}
   .menu-item .name{white-space:normal;}
   .menu-item .leader{display:none;}
-  .menu-item .row{flex-wrap:wrap; justify-content:space-between;}
-  .menu-tabs{gap:5px; margin-bottom:20px; padding-bottom:14px;}
-  .menu-tab{padding:4px 10px; font-size:.62rem; letter-spacing:.03em;}
+  .menu-tabs{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:8px;
+    max-width:380px;
+    margin:0 auto 24px;
+    padding-bottom:16px;
+  }
+  .menu-tab{
+    width:100%;
+    padding:9px 6px;
+    font-size:.66rem;
+    letter-spacing:.04em;
+    min-height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
   .menu-download-btn{padding:7px 16px; font-size:.64rem; gap:6px; margin-top:18px;}
   .menu-download-btn svg{width:11px; height:11px;}
   .menu-emblem-inline{width:26px; height:26px; vertical-align:-6px; margin-right:7px;}
