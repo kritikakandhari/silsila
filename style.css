@@ -351,6 +351,89 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   font-style:italic; font-size:1.05rem;
 }
 
+/* Subheadings within menu tabs (e.g. OH MY FRIES, NACHO NACHOS, etc.) */
+.menu-subhead{
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 32px 0 10px;
+  position: relative;
+}
+.menu-subhead h3{
+  font-family: 'Cinzel', serif;
+  color: var(--gold-light);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  font-weight: 600;
+}
+.menu-subhead h3::before, .menu-subhead h3::after{
+  content: '';
+  display: inline-block;
+  width: clamp(20px, 3.5vw, 40px);
+  height: 1px;
+  background: rgba(200, 162, 78, 0.45);
+}
+.menu-subhead p{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #d9c6b4;
+  margin-top: 4px;
+  letter-spacing: 0.02em;
+}
+
+/* Featured Deal / Meal Box Card (e.g. MOMO + SIP, ANY BURGER MEAL BOX, ANY ROLL MEAL BOX) */
+.menu-deal-card{
+  grid-column: 1 / -1;
+  max-width: 580px;
+  width: 100%;
+  margin: 28px auto 14px;
+  padding: 20px 24px;
+  border: 1.5px solid rgba(200, 162, 78, 0.75);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(45, 10, 18, 0.9) 0%, rgba(20, 4, 7, 0.95) 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(200, 162, 78, 0.15);
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-deal-card:hover{
+  transform: translateY(-2px);
+  border-color: var(--gold-light);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6), 0 0 28px rgba(200, 162, 78, 0.28);
+}
+.menu-deal-title{
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.menu-deal-price{
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.4rem, 3.2vw, 1.85rem);
+  color: #e6b756;
+  font-weight: 700;
+  margin: 4px 0 6px;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.menu-deal-desc{
+  font-size: clamp(0.86rem, 1.6vw, 0.98rem);
+  color: #f0dfcb;
+  line-height: 1.5;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
 .menu-download-btn{
   margin-top:22px; display:inline-flex; align-items:center; justify-content:center; gap:7px;
   padding:9px 20px; font-size:.72rem; letter-spacing:.1em; min-width:auto; min-height:auto;

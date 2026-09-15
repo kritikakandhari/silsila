@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=67">
+<link rel="stylesheet" href="style.css?v=69">
 </head>
 <body>
 
@@ -129,15 +129,21 @@ const MENU = [
       {n:"Chilli Chilli Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Juicy momos tossed with onions and bell peppers in a bold, spicy-tangy glaze with a creamy house finish. Saucy, fiery & full of flavour!"},
       {n:"Momo Platter", p:"Veg $25.99 | Chicken $28.99", d:"Four flavours. One epic platter! 3 each of our Steam, Tandoori, Chilli Chilli & Kurkure momos, served with house momo chutney and creamy mayo to bring out every delicious flavour. Steamy, smoky, saucy & crispy. The ultimate momo feast!"}
     ],
-    note:"MOMO + SIP DEAL: Add any Fizz & Refresher to your favourite momos for just $4.99"
+    deal:{
+      title:"MOMO + SIP DEAL",
+      desc:"Add any Fizz & Refresher to your favourite momos for just",
+      price:"$4.99"
+    }
   },
   {
     id:"streetbites", label:"Loaded Street Bites", sub:"Crunchy. Cheesy. Seriously craveable.",
     items:[
+      {type:"subhead", title:"OH MY FRIES"},
       {n:"The OG Fries", p:"$9.99", d:"Crispy golden fries tossed in our signature house seasoning for that perfect savoury crunch. Simple, crispy & seasoned the SILSILA way!"},
       {n:"Fiery Peri Fries", p:"$10.99", d:"Hot, crispy fries tossed in a bold peri-peri seasoning with a bright, zesty kick. Fiery, crunchy & seriously addictive!"},
       {n:"SILSILA Loaded Fries", p:"$14.99", d:"Golden seasoned fries piled high with fresh veggies, jalapeños, sweet corn, creamy house sauce & grated mozzarella. Loaded, chatpata & full-on SILSILA flavour!"},
       {n:"Chicken Jalwa Fries", p:"$15.99", d:"Crispy seasoned fries loaded with tender chicken, fresh veggies, creamy house sauce & grated mozzarella. Cheesy, saucy & loaded with full-on jalwa!"},
+      {type:"subhead", title:"NACHO NACHOS"},
       {n:"House Loaded Nachos", p:"$16.99", d:"Crispy tortilla chips loaded with fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces, finished with a fresh garnish. Crunchy, cheesy, saucy & seriously loaded!"},
       {n:"The Paneer Stack", p:"$18.99", d:"Crispy tortilla chips piled high with seasoned paneer, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Crunchy, cheesy & stacked with paneer goodness!"},
       {n:"Chicken Nacho Meltdown", p:"$20.99", d:"Crunchy tortilla chips loaded with flavourful chicken, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Cheesy, saucy & seriously loaded!"}
@@ -161,27 +167,33 @@ const MENU = [
   {
     id:"burgers_rolls", label:"Burgers & Rolls", sub:"Big bites. Zero regrets.",
     items:[
+      {type:"subhead", title:"BIG BITE BURGERS"},
       {n:"Crunchin’ Paneer Overload", p:"$13.99", d:"A fully loaded sesame bun stacked with a crispy paneer patty, creamy coleslaw, cheese, fresh veggies, creamy Indian-style macaroni and smoky house sauce. Big, bold & seriously satisfying. ONE WILD BITE!"},
       {n:"Flamin’ Chicken Burger", p:"$14.99", d:"Crispy chicken coated in a fiery garlicky glaze, layered with creamy coleslaw and seasoned veggies inside a soft toasted bun. Hot, crunchy, garlicky & seriously craveable!"},
-      {n:"Any Burger Meal Box", p:"$19.99", d:"Includes OG Fries + a can of pop."},
+      {type:"deal", title:"ANY BURGER MEAL BOX", price:"$19.99", desc:"Includes OG Fries + a can of pop."},
+      {type:"subhead", title:"ROCK & ROLLIN'", sub:"Desi classics. Rolled up SILSILA style."},
       {n:"Chilli Paneer Roll", p:"$15.99", d:"Bold chilli paneer wrapped in warm, soft naan with fresh veggies and a creamy house finish. Spicy, saucy, creamy & loaded with paneer flavour!"},
       {n:"Butter Chicken Roll", p:"$16.99", d:"Tender butter chicken wrapped in warm, soft naan with fresh veggies and a creamy house finish. Rich, creamy, saucy & packed with butter chicken goodness!"},
-      {n:"Any Roll Meal Box", p:"$20.99", d:"Includes OG Fries + a can of pop."}
+      {type:"deal", title:"ANY ROLL MEAL BOX", price:"$20.99", desc:"Includes OG Fries + a can of pop."}
     ]
   },
   {
     id:"sips", label:"Sippin' Silsila", sub:"Desi Sips, Happy Trips!",
     items:[
+      {type:"subhead", title:"COFFEE & SHAKES"},
       {n:"Desi Bean Hot Coffee", p:"$4.99", d:"Rich, frothy Indian-style coffee with a smooth, comforting finish. Bold, warm & full of desi soul!", tag:"Hot Edition"},
       {n:"Cold Coffee Ho Jaye?", p:"$6.99", d:"A chilled, creamy coffee blended smooth and frothy for the perfect cool-down. Creamy, refreshing & full-on coffee vibes!", tag:"Cold Edition"},
+      {type:"subhead", title:"FIZZ & REFRESHERS"},
       {n:"Lemon Mint Mojito", p:"$6.99", d:"A cool citrus refresher with fresh mint and a sparkling finish. Fresh, zesty & super refreshing!", tag:"Refresher"},
       {n:"Masala Mojito", p:"$7.99", d:"A fizzy, chatpata refresher with citrusy zing and a bold desi twist. Tangy, bubbly & full-on refreshing!", tag:"Refresher"},
       {n:"Masala Cola Magic", p:"$7.99", d:"Classic fizzy cola gets a tangy desi makeover with a lively citrus kick. Bold, bubbly & full of masala magic!", tag:"Refresher"},
-      {n:"Strawberry Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. (Add EXTRA BOBA +$0.99). Sweet, fruity & bursting with berry vibes!", tag:"Refresher"},
-      {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. (Add EXTRA BOBA +$0.99). Sweet, bubbly & sunset-ready!", tag:"Refresher"},
-      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. (Add EXTRA BOBA +$0.99). Sweet, tangy & bursting with mango magic!", tag:"Refresher"},
+      {n:"Strawberry Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. (Add EXTRA BOBA +$0.99). Sweet, fruity & bursting with berry vibes!", tag:"Boba Refresher"},
+      {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. (Add EXTRA BOBA +$0.99). Sweet, bubbly & sunset-ready!", tag:"Boba Refresher"},
+      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. (Add EXTRA BOBA +$0.99). Sweet, tangy & bursting with mango magic!", tag:"Boba Refresher"},
+      {type:"subhead", title:"SILSILA MATCHA MANIA"},
       {n:"Mango Matcha", p:"$8.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. (Add extra Mango chunks +$1.99). Earthy, creamy & loaded with mango magic!", tag:"Matcha Mania"},
       {n:"Strawberry Matcha", p:"$8.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. (Add extra strawberry chunks +$1.99). Earthy, creamy & bursting with berry goodness!", tag:"Matcha Mania"},
+      {type:"subhead", title:"COLD DRINKS"},
       {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops. Crack it. Sip it. Chill!", tag:"Cold Edition"}
     ]
   }
@@ -211,13 +223,33 @@ MENU.forEach((cat, i)=>{
   if(cat.sub){ html += `<p class="panel-sub">${cat.sub}</p>`; }
   html += '<div class="menu-grid">';
   cat.items.forEach(it=>{
-    html += `<div class="menu-item">
-      <div class="row"><span class="name">${it.n}</span><span class="leader"></span><span class="price">${it.p}</span></div>
-      <div class="desc">${it.d}</div>
-      ${it.tag ? `<span class="tag">${it.tag}</span>` : ''}
-    </div>`;
+    if(it.type === 'subhead'){
+      html += `<div class="menu-subhead">
+        <h3>${it.title}</h3>
+        ${it.sub ? `<p>${it.sub}</p>` : ''}
+      </div>`;
+    } else if(it.type === 'deal'){
+      html += `<div class="menu-deal-card">
+        <div class="menu-deal-title">${it.title}</div>
+        ${it.price ? `<div class="menu-deal-price">${it.price}</div>` : ''}
+        ${it.desc ? `<div class="menu-deal-desc">${it.desc}</div>` : ''}
+      </div>`;
+    } else {
+      html += `<div class="menu-item">
+        <div class="row"><span class="name">${it.n}</span><span class="leader"></span><span class="price">${it.p}</span></div>
+        <div class="desc">${it.d}</div>
+        ${it.tag ? `<span class="tag">${it.tag}</span>` : ''}
+      </div>`;
+    }
   });
   html += '</div>';
+  if(cat.deal){
+    html += `<div class="menu-deal-card" style="margin-top:36px;">
+      <div class="menu-deal-title">${cat.deal.title}</div>
+      ${cat.deal.desc ? `<div class="menu-deal-desc">${cat.deal.desc}</div>` : ''}
+      ${cat.deal.price ? `<div class="menu-deal-price">${cat.deal.price}</div>` : ''}
+    </div>`;
+  }
   if(cat.note){ html += `<p class="menu-note" style="margin-top:32px; text-align:center; font-family:'Times New Roman', serif; font-style:italic; color:var(--gold-light); font-size:clamp(0.85rem, 2vw, 0.98rem); opacity:0.9;">${cat.note}</p>`; }
   panel.innerHTML = html;
   panelsEl.appendChild(panel);
