@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=74">
+<link rel="stylesheet" href="style.css?v=75">
 </head>
 <body>
 
@@ -187,12 +187,12 @@ const MENU = [
       {n:"Jeera Masala Mojito", p:"$7.99", d:"A fizzy, chatpata refresher with citrusy zing and a bold desi twist. Tangy, bubbly & full-on refreshing!"},
       {n:"Masala Cola Magic", p:"$7.99", d:"Classic fizzy cola gets a tangy desi makeover with a lively citrus kick. Bold, bubbly & full of masala magic!", center:true},
       {type:"subhead", title:"SILSILA’S SIGNATURE BOBA DRINKS"},
-      {n:"The Pink Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. (ADD EXTRA SCOOP OF BOBA +$0.99) Sweet, fruity & bursting with berry vibes!"},
-      {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. (ADD EXTRA SCOOP OF BOBA +$0.99) Sweet, bubbly & sunset-ready!"},
-      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. (ADD EXTRA SCOOP OF BOBA +$0.99 | ADD MANGO CHUNKS +$1.99) Sweet, tangy & bursting with mango magic!", center:true},
+      {n:"The Pink Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. Sweet, fruity & bursting with berry vibes!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99"},
+      {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. Sweet, bubbly & sunset-ready!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99"},
+      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. Sweet, tangy & bursting with mango magic!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99 | ADD MANGO CHUNKS +$1.99", center:true},
       {type:"subhead", title:"SILSILA MATCHA MANIA"},
-      {n:"Mango Matcha Iced Latte", p:"$8.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. (ADD MANGO CHUNKS +$1.99) Earthy, creamy & loaded with mango magic!"},
-      {n:"Pink Matcha Iced Latte", p:"$8.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. (ADD STRAWBERRY CHUNKS +$1.99) Earthy, creamy & bursting with berry goodness!"},
+      {n:"Mango Matcha Iced Latte", p:"$8.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. Earthy, creamy & loaded with mango magic!", addon:"ADD MANGO CHUNKS +$1.99"},
+      {n:"Pink Matcha Iced Latte", p:"$8.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. Earthy, creamy & bursting with berry goodness!", addon:"ADD STRAWBERRY CHUNKS +$1.99"},
       {type:"subhead", title:"COLD DRINKS"},
       {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops. Crack it. Sip it. Chill!", center:true}
     ]
@@ -241,6 +241,7 @@ MENU.forEach((cat, i)=>{
         <div class="row"><span class="name">${it.n}</span><span class="leader"></span><span class="price">${it.p}</span></div>
         <div class="desc">${it.d}</div>
         ${it.tag ? `<span class="tag">${it.tag}</span>` : ''}
+        ${it.addon ? `<span class="addon-box">${it.addon}</span>` : ''}
       </div>`;
     }
   });
