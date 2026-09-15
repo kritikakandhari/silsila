@@ -258,7 +258,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .story-pillars div{text-align:left;}
 .story-pillars .k{font-family:'Times New Roman', Times, serif; font-size:.82rem; letter-spacing:.1em; color:var(--maroon); display:block; margin-bottom:4px;}
 .story-pillars .v{font-size:.86rem; color:var(--ink-soft);}
-.story-sign{margin-top:34px; font-family:'Times New Roman', Times, serif; font-style:italic; font-size:1.4rem; color:var(--maroon); text-transform:uppercase;}
+.story-sign{margin-top:34px; font-family:'Times New Roman', Times, serif; font-style:normal; font-size:1.4rem; color:var(--maroon); text-transform:uppercase;}
 
 /* ---------- QUOTE SCROLL (signature moment) ---------- */
 .quote-scroll{
