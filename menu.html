@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=72">
+<link rel="stylesheet" href="style.css?v=73">
 </head>
 <body>
 
@@ -52,7 +52,7 @@
   <div class="wrap" style="position:relative;">
     <div class="section-head reveal">
       <div class="eyebrow deva">एक सौ ग्यारह</div>
-      <h2><img src="images/logo.webp?v=3" alt="" class="menu-emblem-inline" width="32" height="32" decoding="async">MENU</h2>
+      <h2><img src="images/logo.webp?v=3" alt="" class="menu-emblem-inline" width="32" height="32" decoding="async">OUR MENU</h2>
       <p>Fusion built for takeout. Every bowl, wrap and box designed to travel as beautifully as it tastes.</p>
 
     </div>
@@ -135,7 +135,7 @@ const MENU = [
     }
   },
   {
-    id:"streetbites", label:"Loaded Street Bites", sub:"Crunchy. Cheesy. Seriously craveable.",
+    id:"streetbites", label:"Loaded Street Bites", sub:"Crunchy, cheesy, seriously craveable!",
     items:[
       {type:"subhead", title:"OH MY FRIES"},
       {n:"The OG Fries", p:"$9.99", d:"Crispy golden fries tossed in our signature house seasoning for that perfect savoury crunch. Simple, crispy & seasoned the SILSILA way!"},
@@ -145,16 +145,16 @@ const MENU = [
       {type:"subhead", title:"NACHO NACHOS"},
       {n:"House Loaded Nachos", p:"$16.99", d:"Crispy tortilla chips loaded with fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces, finished with a fresh garnish. Crunchy, cheesy, saucy & seriously loaded!"},
       {n:"The Paneer Stack", p:"$18.99", d:"Crispy tortilla chips piled high with seasoned paneer, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Crunchy, cheesy & stacked with paneer goodness!"},
-      {n:"Chicken Nacho Meltdown", p:"$20.99", d:"Crunchy tortilla chips loaded with flavourful chicken, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Cheesy, saucy & seriously loaded!"}
+      {n:"Chicken Nacho Meltdown", p:"$20.99", d:"Crunchy tortilla chips loaded with flavourful chicken, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Cheesy, saucy & seriously loaded!", center:true}
     ]
   },
   {
-    id:"snacks", label:"Desi Snack Corner", sub:"Small bites. Big desi flavour.",
+    id:"snacks", label:"Desi Snack Corner", sub:"Small bites, big desi flavour!",
     items:[
       {n:"Beer Buddy Peanut Chaat", p:"$12.99", d:"Crunchy masala peanuts tossed with fresh veggies, herbs, zesty lime and a punch of bold Indian spices. Crunchy, tangy, spicy & full of desi punch!"},
       {n:"Crispy Veggie Cigars", p:"$13.99", d:"Golden, crunchy rolls filled with a flavourful mix of seasoned veggies and aromatic spices, fried until perfectly crisp and served with a zesty house dip. Crispy outside, flavour-packed inside!"},
-      {n:"Paneer Cheese Pull", p:"$14.99", d:"Toasty garlic bread loaded with smoky paneer tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"},
-      {n:"Chicken Cheese Pull", p:"$15.99", d:"Toasty garlic bread loaded with flavourful chicken tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"}
+      {n:"Paneer Tikka Garlic Bread Bites", p:"$14.99", d:"Toasty garlic bread loaded with smoky paneer tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"},
+      {n:"Chicken Tikka Garlic Bread Bites", p:"$15.99", d:"Toasty garlic bread loaded with flavourful chicken tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"}
     ]
   },
   {
@@ -169,31 +169,31 @@ const MENU = [
       {type:"subhead", title:"BIG BITE BURGERS"},
       {n:"Crunchin’ Paneer Overload", p:"$13.99", d:"A fully loaded sesame bun stacked with a crispy paneer patty, creamy coleslaw, cheese, fresh veggies, creamy Indian-style macaroni and smoky house sauce. Big, bold & seriously satisfying. ONE WILD BITE!"},
       {n:"Flamin’ Chicken Burger", p:"$14.99", d:"Crispy chicken coated in a fiery garlicky glaze, layered with creamy coleslaw and seasoned veggies inside a soft toasted bun. Hot, crunchy, garlicky & seriously craveable!"},
-      {type:"deal", title:"ANY BURGER MEAL BOX", price:"$19.99", desc:"Includes OG Fries + a can of pop."},
-      {type:"subhead", title:"ROCK & ROLLIN'", sub:"Desi classics. Rolled up SILSILA style."},
+      {type:"deal", title:"ANY BURGER MEAL BOX", price:"$19.99", desc:"Includes Your Choice Of Burger, OG Fries & Your Choice Of Canned Pop."},
+      {type:"subhead", title:"ROCK & ROLLIN'"},
       {n:"Chilli Paneer Roll", p:"$15.99", d:"Bold chilli paneer wrapped in warm, soft naan with fresh veggies and a creamy house finish. Spicy, saucy, creamy & loaded with paneer flavour!"},
       {n:"Butter Chicken Roll", p:"$16.99", d:"Tender butter chicken wrapped in warm, soft naan with fresh veggies and a creamy house finish. Rich, creamy, saucy & packed with butter chicken goodness!"},
-      {type:"deal", title:"ANY ROLL MEAL BOX", price:"$20.99", desc:"Includes OG Fries + a can of pop."}
+      {type:"deal", title:"ANY ROLL MEAL BOX", price:"$20.99", desc:"Includes Your Choice Of Roll, OG Fries & Your Choice Of Canned Pop."}
     ]
   },
   {
     id:"sips", label:"Sippin' Silsila", sub:"Desi Sips, Happy Trips!",
     items:[
       {type:"subhead", title:"COFFEE & SHAKES"},
-      {n:"Desi Bean Hot Coffee", p:"$4.99", d:"Rich, frothy Indian-style coffee with a smooth, comforting finish. Bold, warm & full of desi soul!", tag:"Hot Edition"},
-      {n:"Cold Coffee Ho Jaye?", p:"$6.99", d:"A chilled, creamy coffee blended smooth and frothy for the perfect cool-down. Creamy, refreshing & full-on coffee vibes!", tag:"Cold Edition"},
+      {n:"Desi Bean Hot Coffee", p:"$4.99", d:"Rich, frothy Indian-style coffee with a smooth, comforting finish. Bold, warm & full of desi soul!"},
+      {n:"Cold Coffee Ho Jaye?", p:"$6.99", d:"A chilled, creamy coffee blended smooth and frothy for the perfect cool-down. Creamy, refreshing & full-on coffee vibes!"},
       {type:"subhead", title:"FIZZ & REFRESHERS"},
-      {n:"Lemon Mint Mojito", p:"$6.99", d:"A cool citrus refresher with fresh mint and a sparkling finish. Fresh, zesty & super refreshing!", tag:"Refresher"},
-      {n:"Masala Mojito", p:"$7.99", d:"A fizzy, chatpata refresher with citrusy zing and a bold desi twist. Tangy, bubbly & full-on refreshing!", tag:"Refresher"},
-      {n:"Masala Cola Magic", p:"$7.99", d:"Classic fizzy cola gets a tangy desi makeover with a lively citrus kick. Bold, bubbly & full of masala magic!", tag:"Refresher"},
-      {n:"Strawberry Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. (Add EXTRA BOBA +$0.99). Sweet, fruity & bursting with berry vibes!", tag:"Boba Refresher"},
-      {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. (Add EXTRA BOBA +$0.99). Sweet, bubbly & sunset-ready!", tag:"Boba Refresher"},
-      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. (Add EXTRA BOBA +$0.99). Sweet, tangy & bursting with mango magic!", tag:"Boba Refresher"},
+      {n:"Lemon Mint Mojito", p:"$6.99", d:"A cool citrus refresher with fresh mint and a sparkling finish. Fresh, zesty & super refreshing!"},
+      {n:"Masala Mojito", p:"$7.99", d:"A fizzy, chatpata refresher with citrusy zing and a bold desi twist. Tangy, bubbly & full-on refreshing!"},
+      {n:"Masala Cola Magic", p:"$7.99", d:"Classic fizzy cola gets a tangy desi makeover with a lively citrus kick. Bold, bubbly & full of masala magic!"},
+      {n:"Strawberry Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. (Add EXTRA BOBA +$0.99). Sweet, fruity & bursting with berry vibes!"},
+      {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. (Add EXTRA BOBA +$0.99). Sweet, bubbly & sunset-ready!"},
+      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. (Add EXTRA BOBA +$0.99). Sweet, tangy & bursting with mango magic!"},
       {type:"subhead", title:"SILSILA MATCHA MANIA"},
-      {n:"Mango Matcha", p:"$8.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. (Add extra Mango chunks +$1.99). Earthy, creamy & loaded with mango magic!", tag:"Matcha Mania"},
-      {n:"Strawberry Matcha", p:"$8.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. (Add extra strawberry chunks +$1.99). Earthy, creamy & bursting with berry goodness!", tag:"Matcha Mania"},
+      {n:"Mango Matcha", p:"$8.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. (Add extra Mango chunks +$1.99). Earthy, creamy & loaded with mango magic!"},
+      {n:"Strawberry Matcha", p:"$8.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. (Add extra strawberry chunks +$1.99). Earthy, creamy & bursting with berry goodness!"},
       {type:"subhead", title:"COLD DRINKS"},
-      {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops. Crack it. Sip it. Chill!", tag:"Cold Edition"}
+      {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops. Crack it. Sip it. Chill!"}
     ]
   }
 ];

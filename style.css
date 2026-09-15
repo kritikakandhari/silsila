@@ -224,15 +224,10 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .section-head h2{font-size:clamp(2.1rem,4vw,2.9rem); color:var(--maroon); margin-top:8px;}
 .section-head p{color:var(--ink-soft); font-size:1.02rem; margin-top:14px; line-height:1.7;}
 .section-head h2::after{
-  content:""; display:block; width:70px; height:10px; margin:16px auto 0;
-  background:
-    radial-gradient(circle, var(--gold) 0 3px, transparent 3.5px) center/10px 10px no-repeat,
-    linear-gradient(90deg, transparent, var(--gold) 40%, transparent 60%, transparent) center/100% 1px no-repeat;
+  display: none;
 }
 .menu-section .section-head h2::after{
-  background:
-    radial-gradient(circle, var(--gold-light) 0 3px, transparent 3.5px) center/10px 10px no-repeat,
-    linear-gradient(90deg, transparent, var(--gold-light) 40%, transparent 60%, transparent) center/100% 1px no-repeat;
+  display: none;
 }
 
 .story{background:var(--paper);}
@@ -358,9 +353,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 }
 .menu-item.center-item{
   grid-column: 1 / -1;
-  max-width: 680px;
   width: 100%;
-  margin: 0 auto;
 }
 .menu-note{
   text-align:center; margin-top:36px; color:var(--gold-light); font-family:'Times New Roman', Times, serif;
