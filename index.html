@@ -285,11 +285,13 @@
           
           b.addEventListener('click', (e)=>{
             e.preventDefault();
+            e.stopPropagation();
             v.muted = !v.muted;
             if(v.muted){
               iconMuted.style.display = 'block';
               iconUnmuted.style.display = 'none';
             }else{
+              v.volume = 1.0;
               iconMuted.style.display = 'none';
               iconUnmuted.style.display = 'block';
               if(v.paused) v.play();
