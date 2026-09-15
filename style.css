@@ -610,20 +610,138 @@ a.high-card:hover { border-color: rgba(233,208,143,.5); }
 .hours .row{display:flex; justify-content:space-between; font-size:.9rem; color:#efe1cf; padding:6px 0; border-bottom:1px dashed rgba(233,208,143,.25);}
 
 /* ---------- FOOTER ---------- */
-footer{background:var(--maroon-black); color:#cbb59f; padding:60px 0 30px;}
-footer .wrap{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:40px;}
-.footer-brand{display:flex; flex-direction:column; gap:12px; align-items:center; text-align:center;}
-.footer-brand img{width:96px !important; height:96px !important;}
-.footer-brand svg{width:34px; height:34px; color:var(--gold-light);}
-.footer-brand .word{font-family:'Times New Roman', Times, serif; letter-spacing:.22em; color:var(--ivory); font-size:1.55rem; font-weight:600;}
-.footer-brand .sub{font-family:'Times New Roman', Times, serif; font-style:normal; font-size:.85rem; letter-spacing:.14em; color:var(--gold-light); margin-top:2px;}
-.footer-links{display:flex; gap:40px; flex-wrap:wrap;}
-.footer-links div .t{font-family:'Times New Roman', Times, serif; font-size:.74rem; letter-spacing:.12em; color:var(--gold-light); margin-bottom:12px; text-transform:uppercase;}
-.footer-links a{display:block; color:#cbb59f; text-decoration:none; font-size:.86rem; margin-bottom:8px;}
-.footer-links a:hover{color:var(--gold-light);}
+footer{
+  background: radial-gradient(circle at 50% 0%, #200a0d 0%, #0d0304 100%);
+  color: #cbb59f;
+  padding: 64px 0 28px;
+  border-top: 1px solid rgba(200, 162, 78, 0.35);
+  box-shadow: inset 0 10px 20px rgba(0,0,0,0.3);
+}
+footer .wrap{
+  display: grid;
+  grid-template-columns: 1.3fr repeat(4, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+@media (max-width: 992px) {
+  footer .wrap{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+@media (max-width: 600px) {
+  footer .wrap{
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+}
+
+.footer-brand{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .footer-brand{
+    align-items: center;
+    text-align: center;
+  }
+}
+.footer-brand img{
+  width: 86px !important;
+  height: 86px !important;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(200,162,78,0.7), 0 8px 20px rgba(0,0,0,0.6);
+  object-fit: cover;
+}
+.footer-brand .word{
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.22em;
+  color: var(--ivory);
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.footer-brand .sub{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--gold-light);
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+.footer-brand .tagline{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #bfa892;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.footer-links{
+  display: contents;
+}
+.footer-col{
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 600px) {
+  .footer-col{
+    align-items: center;
+  }
+}
+.footer-col .t{
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(200, 162, 78, 0.2);
+  display: inline-block;
+  width: 100%;
+}
+.footer-col a{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbb59f;
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+  transition: all 0.25s ease;
+  line-height: 1.4;
+}
+.footer-col a:hover{
+  color: var(--gold-light);
+  transform: translateX(4px);
+}
+.footer-col a svg{
+  transition: transform 0.25s ease;
+}
+.footer-col a:hover svg{
+  transform: scale(1.1);
+}
+
 .footer-bottom{
-  max-width:1180px; margin:50px auto 0; padding:22px clamp(20px,5vw,56px) 0; border-top:1px solid rgba(200,162,78,.18);
-  display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.76rem; letter-spacing:.04em;
+  max-width: 1180px;
+  margin: 48px auto 0;
+  padding: 20px clamp(20px,5vw,56px) 0;
+  border-top: 1px solid rgba(200,162,78,.18);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: #a89481;
 }
 
 /* ---------- FAQ ---------- */
