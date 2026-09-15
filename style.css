@@ -351,18 +351,28 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   display:inline-block; margin-top:10px; font-size:.7rem; letter-spacing:.06em; color:var(--maroon-black);
   background:var(--gold-light); padding:4px 10px; border-radius:999px; font-weight:600;
 }
+.menu-item .addon-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.menu-item.center-item .addon-wrap{
+  justify-content: center;
+}
 .menu-item .addon-box{
-  display: inline-block;
-  margin-top: 10px;
-  padding: 4px 12px;
-  border: 1px solid rgba(200, 162, 78, 0.5);
-  background: rgba(200, 162, 78, 0.1);
-  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border: 1.5px solid var(--gold);
+  background: rgba(200, 162, 78, 0.18);
+  border-radius: 6px;
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   letter-spacing: 0.05em;
-  color: var(--gold-light);
-  font-weight: 600;
+  color: #fff3db;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
 }
 .menu-item.center-item{
   grid-column: 1 / -1;
