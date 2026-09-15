@@ -640,14 +640,8 @@ footer .wrap{
 .footer-brand{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-@media (max-width: 600px) {
-  .footer-brand{
-    align-items: center;
-    text-align: center;
-  }
+  align-items: center;
+  text-align: center;
 }
 .footer-brand img{
   width: 86px !important;
