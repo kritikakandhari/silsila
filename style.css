@@ -698,7 +698,12 @@ footer .wrap{
 }
 @media (max-width: 600px) {
   .footer-col{
-    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  .footer-col .t {
+    text-align: center;
   }
 }
 .footer-col .t{
