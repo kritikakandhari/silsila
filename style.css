@@ -881,6 +881,8 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   .scroll-cue{bottom:48px;}
   .scroll-cue .lotus-cue{width:32px;}
   .story-sign { font-size: 1.15rem; margin-top: 32px; text-align: center; }
+  .quote-text{font-size:clamp(1.35rem, 5vw, 1.75rem); line-height:1.3; padding:0 16px;}
+  .quote-sign{font-size:0.75rem; margin-top:18px;}
   .gallery-grid{gap:12px;}
   section{padding:76px 0;}
   .visit-card{padding:32px 24px;}
