@@ -189,6 +189,42 @@
             <div class="frame-sub">Travels as beautifully as it tastes</div>
           </div>
         </figure>
+
+<figure class="gallery-card" data-title="The Silsila Feast" data-sub="A spread of our finest fusion creations">
+          <span class="frame-tag">&#10022; Feast</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_feast.webp" alt="A full spread of Silsila fusion dishes" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">The Silsila Feast</div>
+            <div class="frame-sub">A spread of our finest fusion creations</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Grand Opening" data-sub="Silsila's grand debut in Edmonton">
+          <span class="frame-tag">&#10022; Launch</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/grand_opening_poster.webp" alt="Silsila grand opening poster" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Grand Opening</div>
+            <div class="frame-sub">Silsila's grand debut in Edmonton</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Grand Opening Flyer" data-sub="The invitation that started it all">
+          <span class="frame-tag">&#10022; Debut</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/grand_opening_flyer.webp" alt="Silsila grand opening flyer" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Grand Opening Flyer</div>
+            <div class="frame-sub">The invitation that started it all</div>
+          </div>
+        </figure>
 </div>
   </div>
 </section>
@@ -230,6 +266,24 @@
   </div>
 </footer>
 
+<!-- Designer Gallery Lightbox Modal -->
+<div id="galleryLightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="Enlarged gallery photo">
+    </div>
+    <div class="lightbox-meta">
+      <div id="lightboxCounter" class="lightbox-counter">01 / 12</div>
+      <div id="lightboxCap" class="lightbox-caption"></div>
+      <div id="lightboxSub" class="lightbox-sub"></div>
+    </div>
+  </div>
+</div>
+
 <script>
 // mobile nav
 const toggle = document.getElementById('menuToggle');
@@ -238,10 +292,10 @@ toggle.addEventListener('click', ()=> {
   const isOpen = links.classList.toggle('open');
   toggle.innerText = isOpen ? '✕' : '☰';
 });
-</script>
+
 // ---- Gallery Wall & Designer Lightbox ----
 (function(){
-  const allPhotoFrames = Array.from(document.querySelectorAll('.gallery-wall .gallery-frame'));
+  const allPhotoFrames = Array.from(document.querySelectorAll('.gallery-wall .gallery-card'));
   const lightbox = document.getElementById('galleryLightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxCap = document.getElementById('lightboxCap');
@@ -251,6 +305,8 @@ toggle.addEventListener('click', ()=> {
   const lightboxBackdrop = document.getElementById('lightboxBackdrop');
   const lightboxPrev = document.getElementById('lightboxPrev');
   const lightboxNext = document.getElementById('lightboxNext');
+
+  if(!lightbox || !allPhotoFrames.length) return;
 
   let activeIndex = 0;
 
@@ -262,6 +318,7 @@ toggle.addEventListener('click', ()=> {
 
     const frame = allPhotoFrames[activeIndex];
     const img = frame.querySelector('img');
+    if(!img) return;
     const title = frame.getAttribute('data-title') || frame.querySelector('.frame-title')?.textContent || '';
     const sub = frame.getAttribute('data-sub') || frame.querySelector('.frame-sub')?.textContent || '';
 
@@ -316,22 +373,5 @@ toggle.addEventListener('click', ()=> {
   }, {passive:true});
 })();
 </script>
-<!-- Designer Gallery Lightbox Modal -->
-<div id="galleryLightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image preview">
-  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
-  <div class="lightbox-dialog">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
-    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
-    <div class="lightbox-img-wrap">
-      <img id="lightboxImg" src="" alt="Enlarged gallery photo">
-    </div>
-    <div class="lightbox-meta">
-      <div id="lightboxCounter" class="lightbox-counter">01 / 08</div>
-      <div id="lightboxCap" class="lightbox-caption"></div>
-      <div id="lightboxSub" class="lightbox-sub"></div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
