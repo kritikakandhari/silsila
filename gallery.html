@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Gallery — SILSILA | Indian Fusion Kitchen, Edmonton</title>
+<meta name="description" content="View Silsila's gallery of handcrafted flavours, authentic heritage, and moments in motion.">
+<link rel="icon" type="image/webp" href="images/logo.webp?v=3">
+<link rel="apple-touch-icon" href="images/logo.webp?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=72">
+</head>
+<body>
+
+<!-- decorative lotus icon (reused) -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="lotus-icon" viewBox="0 0 100 100">
+    <path fill="currentColor" d="M50 10c4 12 4 24 0 34-4-10-4-22 0-34zm-18 8c8 9 13 20 13 31-10-5-17-15-19-27 2-1 4-2 6-4zm36 0c2 2 4 3 6 4-2 12-9 22-19 27 0-11 5-22 13-31zM14 34c10 3 19 10 24 20-12 1-23-5-29-15 2-2 3-3 5-5zm72 0c2 2 3 3 5 5-6 10-17 16-29 15 5-10 14-17 24-20zM50 46c9 0 17 4 22 11-9 5-19 5-22 5s-13 0-22-5c5-7 13-11 22-11zm0 20c14 0 26 6 32 15-10 6-22 6-32 3-10 3-22 3-32-3 6-9 18-15 32-15z"/>
+  </symbol>
+</svg>
+
+<header class="site-nav" id="siteNav" style="background:var(--maroon-black); box-shadow:0 4px 20px rgba(0,0,0,.4);">
+  <div class="wrap">
+    <a href="index.html#top" class="nav-logo">
+      <img src="images/logo.webp?v=3" alt="Silsila emblem" class="nav-emblem" width="44" height="44" decoding="async">
+      <span class="wordmark">SILSILA</span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="menu.html">Menu</a>
+      <a href="faq.html">FAQ</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#order" class="nav-cta">Order Now</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<div style="height:70px; background:var(--maroon-black);"></div> <!-- spacer for fixed nav -->
+
+<section class="gallery" id="gallery">
+  <div class="wrap gallery-wall-wrap">
+    <div class="section-head reveal" style="text-align:center; margin-bottom: 36px;">
+      <div class="eyebrow">&diams; Behind The Cloche &diams;</div>
+      <h2>A Peek Inside Silsila</h2>
+      <p style="font-size:1.05rem; color:#856447; margin-top:8px;">A curated lookbook of handcrafted flavours, authentic heritage, and moments in motion.</p>
+    </div>
+
+    <!-- Salon Gallery Wall: Center Video Reel Flanked by Bada-Chhota Photo Frames -->
+    <div class="gallery-wall reveal" id="galleryWall">
+<figure class="gallery-card" data-title="The Kitchen Craft" data-sub="Raw whole spices &amp; pure culinary tradition">
+          <span class="frame-tag">&#10022; The Craft</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/image_-7201957162183258406.webp" alt="Silsila branded apron laid flat with spices" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">The Kitchen Craft</div>
+            <div class="frame-sub">Raw whole spices &amp; pure tradition</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Silsila In Motion" data-sub="Moments in motion at Silsila">
+          <span class="frame-tag" style="background:rgba(67,10,20,0.92); border-color:var(--gold);">&#10022; In Motion</span>
+          <a href="https://www.instagram.com/reel/DcAMa1YpN-q/" target="_blank" rel="noopener" style="display:block; width:100%; height:100%;" title="Watch full reel on Instagram">
+            <video id="reelVideo" src="images/reel_clean.mp4" poster="images/reel_poster_clean.webp" preload="metadata" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+          </a>
+          <button id="reelMuteBtn" aria-label="Toggle Sound" style="position:absolute; bottom:16px; right:16px; z-index:10; background:rgba(20,4,7,0.78); color:var(--ivory); border:1.5px solid var(--gold); border-radius:50%; width:44px; height:44px; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); transition:all .25s ease;" onmouseover="this.style.background='rgba(67,10,20,0.95)';" onmouseout="this.style.background='rgba(20,4,7,0.78)';">
+            <svg id="icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+            <svg id="icon-unmuted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </button>
+          <script>
+            const v = document.getElementById('reelVideo');
+            const b = document.getElementById('reelMuteBtn');
+            const iconMuted = document.getElementById('icon-muted');
+            const iconUnmuted = document.getElementById('icon-unmuted');
+            b.addEventListener('click', (e)=>{
+              e.preventDefault();
+              e.stopPropagation();
+              v.muted = !v.muted;
+              if(v.muted){
+                iconMuted.style.display = 'block';
+                iconUnmuted.style.display = 'none';
+              }else{
+                v.volume = 1.0;
+                iconMuted.style.display = 'none';
+                iconUnmuted.style.display = 'block';
+                if(v.paused) v.play();
+              }
+            });
+          </script>
+          <div class="frame-info" style="pointer-events:none;">
+            <div class="frame-title" style="font-size:0.96rem;">Silsila In Motion</div>
+            <div class="frame-sub">Tap to watch on Instagram &bull; Sound available</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Sealed With Silsila" data-sub="The hallmark of fine hospitality">
+          <span class="frame-tag">&#10022; Heritage</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/image_-6444842097604006462.webp" alt="Wax-sealed Silsila envelope" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Sealed With Silsila</div>
+            <div class="frame-sub">The hallmark of fine hospitality</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Crispy Momo Showmo" data-sub="Golden dumplings with fiery sesame chutney">
+          <span class="frame-tag">&#10022; Momo Showmo</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_momos.webp" alt="Crispy fried momos in Silsila takeout box with sauces" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Crispy Momo Showmo</div>
+            <div class="frame-sub">Golden dumplings &amp; fiery chutney</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Sunset Mantra Refresher" data-sub="Tropical citrus fizz &amp; burst of popping boba">
+          <span class="frame-tag">&#10022; Sparkling</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_sunset_boba.webp" alt="Sunset Mantra sparkling fruit boba refresher with fresh mint" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Sunset Mantra</div>
+            <div class="frame-sub">Tropical citrus fizz &amp; popping boba</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Crafted Burgers &amp; Rolls" data-sub="Toasted brioche, crisp slaw &amp; spiced patty">
+          <span class="frame-tag">&#10022; Street Fusion</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_burger.webp" alt="Freshly made Silsila burger with coleslaw and sauce" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Crafted Burgers &amp; Rolls</div>
+            <div class="frame-sub">Toasted brioche &amp; crisp spiced patty</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Pink Matcha Iced Latte" data-sub="Sweet strawberry puree &amp; whipped matcha">
+          <span class="frame-tag">&#10022; Matcha</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_matcha.webp" alt="Pink Matcha Iced Latte garnished with fresh strawberries" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Pink Matcha Latte</div>
+            <div class="frame-sub">Sweet strawberry puree &amp; matcha</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Biryani Bowlritos &amp; Tacos" data-sub="Crisp taco shell, spiced rice &amp; fresh crema">
+          <span class="frame-tag">&#10022; Bowlritos</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_bowlritos.webp" alt="Silsila signature fusion burrito and taco bowl" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Biryani Bowlritos &amp; Tacos</div>
+            <div class="frame-sub">Crisp taco shell &amp; spiced rice</div>
+          </div>
+        </figure>
+
+<figure class="gallery-card" data-title="Unbox Silsila" data-sub="Every box travels as beautifully as it tastes">
+          <span class="frame-tag">&#10022; Takeout</span>
+          <div class="frame-zoom-icon" aria-label="Enlarge image">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_takeout.webp" alt="Unboxing Silsila takeout meal bag" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Unbox Silsila</div>
+            <div class="frame-sub">Travels as beautifully as it tastes</div>
+          </div>
+        </figure>
+</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="images/logo.webp?v=3" alt="Silsila emblem" loading="lazy" decoding="async" width="86" height="86">
+      <div class="word">SILSILA</div>
+      <div class="sub">A CULINARY AFFAIRE</div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <div class="t">Explore</div>
+        <a href="index.html#story"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M5.5 6a2.5 2.5 0 0 1 2.5-2.5h3v13h-3A2.5 2.5 0 0 0 5.5 19V6zm11 0a2.5 2.5 0 0 0-2.5-2.5h-3v13h3A2.5 2.5 0 0 1 16.5 19V6z" stroke="#e9d08f" stroke-width="1.3" stroke-linejoin="round"/></svg><span>Our Story</span></a>
+        <a href="menu.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M5.5 5.5h11v11h-11z" stroke="#e9d08f" stroke-width="1.3" rx="1.5"/><path d="M8.5 9h5m-5 3h3" stroke="#e9d08f" stroke-width="1.3" stroke-linecap="round"/></svg><span>Menu</span></a>
+        <a href="faq.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><circle cx="11" cy="11" r="5.5" stroke="#e9d08f" stroke-width="1.3"/><path d="M9.5 9.5a1.5 1.5 0 0 1 2.7-1c.5.5.3 1.2 0 1.5-.4.4-.7.6-.7 1.2v.3m0 2h.01" stroke="#e9d08f" stroke-width="1.3" stroke-linecap="round"/></svg><span>FAQ</span></a>
+        <a href="gallery.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><rect x="5" y="5.5" width="12" height="11" rx="2" stroke="#e9d08f" stroke-width="1.3"/><circle cx="8.5" cy="8.5" r="1.2" fill="#e9d08f"/><path d="M5 14l3.5-3.5 2.5 2.5 2-2 4 4" stroke="#e9d08f" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gallery</span></a>
+      </div>
+      <div class="footer-col">
+        <div class="t">Order</div>
+        <a href="https://www.ubereats.com/store-browse-uuid/f5e829a9-1c4e-5f1b-96e7-2592c04acdda?diningMode=DELIVERY" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M7 6v5m2.5-5v5m-2.5 0a2.5 2.5 0 0 0 2.5 2.5v3.5m2.5-6v3.5m3.5-8.5v4.5a1.5 1.5 0 0 0 1.5 1.5v2.5" stroke="#e9d08f" stroke-width="1.5" stroke-linecap="round"/></svg><span>UberEats</span></a>
+        <a href="https://www.doordash.com/store/49898169?utm_source=mx_share&aw=J10P4JOh0CunYYS1" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M5 11h9a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 0-3.5 3.5v3.5zm0 0l3.5 3.5" stroke="#e9d08f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>DoorDash</span></a>
+      </div>
+      <div class="footer-col">
+        <div class="t">Connect</div>
+        <a href="https://instagram.com/silsilacanada" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><rect x="5.5" y="5.5" width="11" height="11" rx="3" stroke="#e9d08f" stroke-width="1.4"/><circle cx="11" cy="11" r="2.8" stroke="#e9d08f" stroke-width="1.4"/><circle cx="14.2" cy="7.8" r="0.7" fill="#e9d08f"/></svg><span>@silsilacanada</span></a>
+        <a href="mailto:admin@silsilayeg.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><rect x="4.5" y="6.5" width="13" height="9" rx="1.8" stroke="#e9d08f" stroke-width="1.4"/><path d="M4.5 7.5l6.5 4.5 6.5-4.5" stroke="#e9d08f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>admin@silsilayeg.com</span></a>
+        <a href="tel:+18255220908"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M6.5 5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-.5a9 9 0 0 0 6.5 6.5v-.5a1.5 1.5 0 0 1 1.5-1.5h1.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5C10 18 4 12 4 6.5z" fill="#e9d08f" transform="scale(0.85) translate(1.5,1.5)"/></svg><span>+1 825 522 0908</span></a>
+      </div>
+      <div class="footer-col">
+        <div class="t">Location</div>
+        <a href="https://maps.google.com/?q=15355+111+Ave+NW,+Edmonton,+Alberta,+Canada+T5P+0R7" target="_blank" rel="noopener" style="align-items:flex-start;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0; margin-top:2px;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M11 5a4 4 0 0 0-4 4c0 3 4 7 4 7s4-4 4-7a4 4 0 0 0-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e9d08f" transform="translate(0,0.5)"/></svg><span>15355 111 Ave NW,<br>Edmonton, AB T5P 0R7</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SILSILA — A CULINARY AFFAIRE. Edmonton, Alberta.</span>
+  </div>
+</footer>
+
+<script>
+// mobile nav
+const toggle = document.getElementById('menuToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', ()=> {
+  const isOpen = links.classList.toggle('open');
+  toggle.innerText = isOpen ? '✕' : '☰';
+});
+</script>
+// ---- Gallery Wall & Designer Lightbox ----
+(function(){
+  const allPhotoFrames = Array.from(document.querySelectorAll('.gallery-wall .gallery-frame'));
+  const lightbox = document.getElementById('galleryLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCap');
+  const lightboxSub = document.getElementById('lightboxSub');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+
+  let activeIndex = 0;
+
+  function updateLightboxContent(idx){
+    if(!allPhotoFrames.length) return;
+    if(idx < 0) idx = allPhotoFrames.length - 1;
+    if(idx >= allPhotoFrames.length) idx = 0;
+    activeIndex = idx;
+
+    const frame = allPhotoFrames[activeIndex];
+    const img = frame.querySelector('img');
+    const title = frame.getAttribute('data-title') || frame.querySelector('.frame-title')?.textContent || '';
+    const sub = frame.getAttribute('data-sub') || frame.querySelector('.frame-sub')?.textContent || '';
+
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || title;
+    lightboxCap.textContent = title;
+    lightboxSub.textContent = sub;
+    lightboxCounter.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(allPhotoFrames.length).padStart(2, '0')}`;
+  }
+
+  function openLightbox(frame){
+    const idx = allPhotoFrames.indexOf(frame);
+    if(idx === -1) return;
+    updateLightboxContent(idx);
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  allPhotoFrames.forEach(frame => {
+    frame.addEventListener('click', () => openLightbox(frame));
+  });
+
+  if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if(lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+  if(lightboxPrev) lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); updateLightboxContent(activeIndex - 1); });
+  if(lightboxNext) lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); updateLightboxContent(activeIndex + 1); });
+
+  document.addEventListener('keydown', (e) => {
+    if(!lightbox || !lightbox.classList.contains('active')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') updateLightboxContent(activeIndex - 1);
+    if(e.key === 'ArrowRight') updateLightboxContent(activeIndex + 1);
+  });
+
+  // Touch swipe support on mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive:true});
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if(touchEndX < touchStartX - 50) updateLightboxContent(activeIndex + 1);
+    if(touchEndX > touchStartX + 50) updateLightboxContent(activeIndex - 1);
+  }, {passive:true});
+})();
+</script>
+<!-- Designer Gallery Lightbox Modal -->
+<div id="galleryLightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="Enlarged gallery photo">
+    </div>
+    <div class="lightbox-meta">
+      <div id="lightboxCounter" class="lightbox-counter">01 / 08</div>
+      <div id="lightboxCap" class="lightbox-caption"></div>
+      <div id="lightboxSub" class="lightbox-sub"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
