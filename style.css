@@ -531,13 +531,8 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   background:#140407; cursor:pointer;
   transition:transform .4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .4s ease, border-color .4s ease, opacity .3s ease;
   aspect-ratio:4 / 5; display:flex; align-items:center; justify-content:center;
+  width:100%;
 }
-.gallery-grid figure.tall,
-.gallery-grid figure.hero-card{
-  aspect-ratio:9 / 16;
-  background:#000;
-}
-.gallery-grid figure.tall-video{cursor:default;}
 .gallery-grid figure:hover{
   transform:translateY(-6px); border-color:var(--gold);
   box-shadow:0 20px 42px rgba(20,4,7,0.22), 0 0 0 1px var(--gold);
@@ -546,12 +541,31 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   width:100%; height:100%; object-fit:cover; display:block;
   transition:transform .7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.gallery-grid figure.tall img,
-.gallery-grid figure.hero-card img,
-.gallery-grid video{
-  object-fit:contain;
+.gallery-grid figure:hover img{transform:scale(1.06);}
+
+/* Center Hero Video */
+.gallery-grid figure.tall-video{
+  aspect-ratio:9 / 16;
+  max-width:380px;
+  justify-self:center;
+  cursor:default;
+  background:#140407;
 }
-.gallery-grid figure:hover img{transform:scale(1.08);}
+.gallery-grid figure.tall-video video{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+
+/* Left & Right Flanking Hero Cards (The Craft Apron & Sealed Envelope) */
+.gallery-grid figure.hero-side-card{
+  aspect-ratio:4 / 5;
+  max-width:340px;
+  justify-self:center;
+  align-self:center;
+  background:#140407;
+}
+.gallery-grid figure.hero-side-card img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
 
 .gallery-tag{
   position:absolute; top:14px; left:14px; z-index:3;
