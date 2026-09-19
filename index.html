@@ -256,168 +256,166 @@
 
 <section class="gallery" id="gallery">
   <div class="wrap">
-    <div class="section-head reveal" style="text-align:center; margin-bottom: 24px;">
+    <div class="section-head reveal" style="text-align:center; margin-bottom: 32px;">
       <div class="eyebrow">&diams; Behind The Cloche &diams;</div>
       <h2>A Peek Inside Silsila</h2>
-      <p style="font-size:1.02rem; color:#856447; margin-top:8px;">A culinary lookbook of handcrafted flavours, authentic heritage, and moments in motion.</p>
+      <p style="font-size:1.02rem; color:#856447; margin-top:8px;">A curated lookbook of handcrafted flavours, authentic heritage, and moments in motion.</p>
     </div>
 
-    <!-- Designer Filter Tabs -->
-    <div class="gallery-filters reveal" id="galleryFilters">
-      <button class="gallery-filter-btn active" data-filter="all">All</button>
-      <button class="gallery-filter-btn" data-filter="food">Signature Bites</button>
-      <button class="gallery-filter-btn" data-filter="drinks">Sips &amp; Boba</button>
-      <button class="gallery-filter-btn" data-filter="story">Brand &amp; Craft</button>
-    </div>
+    <!-- Salon Gallery Wall: Center Video Reel Flanked by Varied Photo Frames -->
+    <div class="gallery-wall reveal" id="galleryWall">
+      
+      <!-- Left Wing Frames -->
+      <div class="gallery-wall-side left">
+        <!-- Frame 1: The Kitchen Craft (Wide Landscape Frame) -->
+        <figure class="gallery-frame frame-wide" data-title="The Kitchen Craft" data-sub="Raw whole spices &amp; pure culinary tradition">
+          <span class="frame-tag">&#10022; The Craft</span>
+          <div class="frame-zoom-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/image_-7201957162183258406.webp" alt="Silsila branded apron laid flat with spices" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">The Kitchen Craft</div>
+            <div class="frame-sub">Raw whole spices &amp; pure tradition</div>
+          </div>
+        </figure>
 
-    <div class="gallery-grid reveal" id="galleryGrid">
-      <!-- Item 1: The Kitchen Craft -->
-      <figure class="hero-card hero-side-card" data-category="story" data-title="The Kitchen Craft" data-sub="Raw whole spices &amp; pure culinary tradition">
-        <span class="gallery-tag">&#10022; The Craft</span>
-        <div class="gallery-zoom-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <img src="images/image_-7201957162183258406.webp" alt="Silsila branded apron laid flat with spices" loading="lazy" decoding="async" width="1100" height="1312">
-        <div class="gallery-info">
-          <div class="gallery-title">The Kitchen Craft</div>
-          <div class="gallery-sub">Raw whole spices &amp; pure culinary tradition</div>
-        </div>
-      </figure>
+        <!-- Frame 2: Crispy Momo Showmo (Square Frame) -->
+        <figure class="gallery-frame frame-square" data-title="Crispy Momo Showmo" data-sub="Golden dumplings with fiery sesame chutney">
+          <span class="frame-tag">&#10022; Momo Showmo</span>
+          <div class="frame-zoom-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_momos.webp" alt="Crispy fried momos in Silsila takeout box with sauces" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Crispy Momo Showmo</div>
+          </div>
+        </figure>
 
-      <!-- Item 2: Video Reel (Center Hero) -->
-      <figure class="tall-video hero-card" data-category="story" style="border-radius:14px; overflow:hidden; position:relative;">
-        <span class="gallery-tag" style="background:rgba(67,10,20,0.85); border-color:var(--gold);">&#10022; In Motion</span>
-        <a href="https://www.instagram.com/reel/DcAMa1YpN-q/" target="_blank" rel="noopener" style="display:block; width:100%; height:100%;">
-          <video id="reelVideo" src="images/reel_new.mp4" poster="images/reel_poster.webp" preload="metadata" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video>
-        </a>
-        <button id="reelMuteBtn" aria-label="Toggle Sound" style="position:absolute; bottom:14px; right:14px; z-index:10; background:rgba(20,4,7,0.7); color:var(--ivory); border:1px solid rgba(233,208,143,0.4); border-radius:50%; width:42px; height:42px; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); transition:all .25s ease;" onmouseover="this.style.background='rgba(67,10,20,0.95)'; this.style.borderColor='var(--gold)';" onmouseout="this.style.background='rgba(20,4,7,0.7)'; this.style.borderColor='rgba(233,208,143,0.4)';">
-          <svg id="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-            <line x1="23" y1="9" x2="17" y2="15"></line>
-            <line x1="17" y1="9" x2="23" y2="15"></line>
-          </svg>
-          <svg id="icon-unmuted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-          </svg>
-        </button>
-        <script>
-          const v = document.getElementById('reelVideo');
-          const b = document.getElementById('reelMuteBtn');
-          const iconMuted = document.getElementById('icon-muted');
-          const iconUnmuted = document.getElementById('icon-unmuted');
-          
-          b.addEventListener('click', (e)=>{
-            e.preventDefault();
-            e.stopPropagation();
-            v.muted = !v.muted;
-            if(v.muted){
-              iconMuted.style.display = 'block';
-              iconUnmuted.style.display = 'none';
-            }else{
-              v.volume = 1.0;
-              iconMuted.style.display = 'none';
-              iconUnmuted.style.display = 'block';
-              if(v.paused) v.play();
-            }
-          });
-        </script>
-        <div class="gallery-info" style="pointer-events:none;">
-          <div class="gallery-title">Silsila In Motion</div>
-          <div class="gallery-sub">Tap to watch on Instagram</div>
-        </div>
-      </figure>
+        <!-- Frame 3: Crafted Burgers & Rolls (Square Frame) -->
+        <figure class="gallery-frame frame-square" data-title="Crafted Burgers &amp; Rolls" data-sub="Toasted brioche, crisp slaw &amp; spiced patty">
+          <span class="frame-tag">&#10022; Street Fusion</span>
+          <div class="frame-zoom-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_burger.webp" alt="Freshly made Silsila burger with coleslaw and sauce" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Crafted Burgers &amp; Rolls</div>
+          </div>
+        </figure>
 
-      <!-- Item 3: Sealed With Silsila -->
-      <figure class="hero-card hero-side-card" data-category="story" data-title="Sealed With Silsila" data-sub="The hallmark of fine hospitality">
-        <span class="gallery-tag">&#10022; Heritage</span>
-        <div class="gallery-zoom-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <img src="images/image_-6444842097604006462.webp" alt="Wax-sealed Silsila envelope" loading="lazy" decoding="async" width="900" height="1124">
-        <div class="gallery-info">
-          <div class="gallery-title">Sealed With Silsila</div>
-          <div class="gallery-sub">The hallmark of fine hospitality</div>
-        </div>
-      </figure>
+        <!-- Frame 4: Biryani Bowlritos & Tacos (Wide Landscape Frame) -->
+        <figure class="gallery-frame frame-wide" data-title="Biryani Bowlritos &amp; Tacos" data-sub="Crisp taco shell, spiced rice &amp; fresh crema">
+          <span class="frame-tag">&#10022; Bowlritos</span>
+          <div class="frame-zoom-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_bowlritos.webp" alt="Silsila signature fusion burrito and taco bowl" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Biryani Bowlritos &amp; Tacos</div>
+            <div class="frame-sub">Crisp taco shell &amp; spiced rice</div>
+          </div>
+        </figure>
+      </div>
 
-      <!-- Item 4: Crispy Momo Showmo -->
-      <figure data-category="food" data-title="Crispy Momo Showmo" data-sub="Golden dumplings with fiery sesame chutney">
-        <span class="gallery-tag">&#10022; Momo Showmo</span>
-        <div class="gallery-zoom-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <img src="images/gallery_momos.webp" alt="Crispy fried momos in Silsila takeout box with sauces" loading="lazy" decoding="async" width="1024" height="1024">
-        <div class="gallery-info">
-          <div class="gallery-title">Crispy Momo Showmo</div>
-          <div class="gallery-sub">Golden dumplings with fiery sesame chutney</div>
-        </div>
-      </figure>
+      <!-- Centerpiece: Silsila In Motion (Video Reel) -->
+      <div class="gallery-wall-center">
+        <figure class="gallery-frame-center" data-title="Silsila In Motion" data-sub="Moments in motion at Silsila">
+          <span class="frame-tag" style="background:rgba(67,10,20,0.88); border-color:var(--gold);">&#10022; In Motion</span>
+          <a href="https://www.instagram.com/reel/DcAMa1YpN-q/" target="_blank" rel="noopener" style="display:block; width:100%; height:100%;">
+            <video id="reelVideo" src="images/reel_new.mp4" poster="images/reel_poster.webp" preload="metadata" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+          </a>
+          <button id="reelMuteBtn" aria-label="Toggle Sound" style="position:absolute; bottom:14px; right:14px; z-index:10; background:rgba(20,4,7,0.7); color:var(--ivory); border:1px solid rgba(233,208,143,0.4); border-radius:50%; width:42px; height:42px; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); transition:all .25s ease;" onmouseover="this.style.background='rgba(67,10,20,0.95)'; this.style.borderColor='var(--gold)';" onmouseout="this.style.background='rgba(20,4,7,0.7)'; this.style.borderColor='rgba(233,208,143,0.4)';">
+            <svg id="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+            <svg id="icon-unmuted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </button>
+          <script>
+            const v = document.getElementById('reelVideo');
+            const b = document.getElementById('reelMuteBtn');
+            const iconMuted = document.getElementById('icon-muted');
+            const iconUnmuted = document.getElementById('icon-unmuted');
+            b.addEventListener('click', (e)=>{
+              e.preventDefault();
+              e.stopPropagation();
+              v.muted = !v.muted;
+              if(v.muted){
+                iconMuted.style.display = 'block';
+                iconUnmuted.style.display = 'none';
+              }else{
+                v.volume = 1.0;
+                iconMuted.style.display = 'none';
+                iconUnmuted.style.display = 'block';
+                if(v.paused) v.play();
+              }
+            });
+          </script>
+          <div class="frame-info" style="pointer-events:none;">
+            <div class="frame-title">Silsila In Motion</div>
+            <div class="frame-sub">Tap to watch on Instagram</div>
+          </div>
+        </figure>
+      </div>
 
-      <!-- Item 5: Crafted Burgers -->
-      <figure data-category="food" data-title="Crafted Burgers &amp; Rolls" data-sub="Toasted brioche, crisp slaw &amp; spiced patty">
-        <span class="gallery-tag">&#10022; Street Fusion</span>
-        <div class="gallery-zoom-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <img src="images/gallery_burger.webp" alt="Freshly made Silsila burger with coleslaw and sauce" loading="lazy" decoding="async" width="1024" height="819">
-        <div class="gallery-info">
-          <div class="gallery-title">Crafted Burgers &amp; Rolls</div>
-          <div class="gallery-sub">Toasted brioche, crisp slaw &amp; spiced patty</div>
-        </div>
-      </figure>
+      <!-- Right Wing Frames -->
+      <div class="gallery-wall-side right">
+        <!-- Frame 5: Sealed With Silsila (Portrait Frame spanning 2 rows) -->
+        <figure class="gallery-frame frame-portrait" data-title="Sealed With Silsila" data-sub="The hallmark of fine hospitality">
+          <span class="frame-tag">&#10022; Heritage</span>
+          <div class="frame-zoom-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/image_-6444842097604006462.webp" alt="Wax-sealed Silsila envelope" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Sealed With Silsila</div>
+            <div class="frame-sub">Fine hospitality</div>
+          </div>
+        </figure>
 
-      <!-- Item 6: Biryani Bowlritos & Tacos -->
-      <figure data-category="food" data-title="Biryani Bowlritos &amp; Tacos" data-sub="Crisp taco shell, spiced rice &amp; fresh crema">
-        <span class="gallery-tag">&#10022; Bowlritos</span>
-        <div class="gallery-zoom-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <img src="images/gallery_bowlritos.webp" alt="Silsila signature fusion burrito and taco bowl" loading="lazy" decoding="async" width="1024" height="1024">
-        <div class="gallery-info">
-          <div class="gallery-title">Biryani Bowlritos &amp; Tacos</div>
-          <div class="gallery-sub">Crisp taco shell, spiced rice &amp; fresh crema</div>
-        </div>
-      </figure>
+        <!-- Frame 6: Sunset Mantra Boba (Square Frame) -->
+        <figure class="gallery-frame frame-square" data-title="Sunset Mantra Refresher" data-sub="Tropical citrus fizz &amp; burst of popping boba">
+          <span class="frame-tag">&#10022; Sparkling</span>
+          <div class="frame-zoom-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_sunset_boba.webp" alt="Sunset Mantra sparkling fruit boba refresher with fresh mint" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Sunset Mantra</div>
+          </div>
+        </figure>
 
-      <!-- Item 7: Sunset Mantra Boba -->
-      <figure data-category="drinks" data-title="Sunset Mantra Refresher" data-sub="Tropical citrus fizz &amp; burst of popping boba">
-        <span class="gallery-tag">&#10022; Sparkling Sips</span>
-        <div class="gallery-zoom-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <img src="images/gallery_sunset_boba.webp" alt="Sunset Mantra sparkling fruit boba refresher with fresh mint" loading="lazy" decoding="async" width="1024" height="1024">
-        <div class="gallery-info">
-          <div class="gallery-title">Sunset Mantra Refresher</div>
-          <div class="gallery-sub">Tropical citrus fizz &amp; burst of popping boba</div>
-        </div>
-      </figure>
+        <!-- Frame 7: Pink Matcha Iced Latte (Square Frame) -->
+        <figure class="gallery-frame frame-square" data-title="Pink Matcha Iced Latte" data-sub="Sweet strawberry puree &amp; whipped matcha">
+          <span class="frame-tag">&#10022; Matcha</span>
+          <div class="frame-zoom-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_matcha.webp" alt="Pink Matcha Iced Latte garnished with fresh strawberries" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Pink Matcha</div>
+          </div>
+        </figure>
 
-      <!-- Item 8: Pink Matcha Iced Latte -->
-      <figure data-category="drinks" data-title="Pink Matcha Iced Latte" data-sub="Sweet strawberry puree &amp; whipped matcha">
-        <span class="gallery-tag">&#10022; Matcha Mania</span>
-        <div class="gallery-zoom-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <img src="images/gallery_matcha.webp" alt="Pink Matcha Iced Latte garnished with fresh strawberries" loading="lazy" decoding="async" width="912" height="1024">
-        <div class="gallery-info">
-          <div class="gallery-title">Pink Matcha Iced Latte</div>
-          <div class="gallery-sub">Sweet strawberry puree &amp; whipped matcha</div>
-        </div>
-      </figure>
+        <!-- Frame 8: Unbox Silsila (Wide Landscape Frame) -->
+        <figure class="gallery-frame frame-wide" data-title="Unbox Silsila" data-sub="Every box travels as beautifully as it tastes">
+          <span class="frame-tag">&#10022; Takeout</span>
+          <div class="frame-zoom-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <img src="images/gallery_takeout.webp" alt="Unboxing Silsila takeout meal bag" loading="lazy" decoding="async">
+          <div class="frame-info">
+            <div class="frame-title">Unbox Silsila</div>
+            <div class="frame-sub">Travels as beautifully as it tastes</div>
+          </div>
+        </figure>
+      </div>
 
-      <!-- Item 9: Unbox Silsila -->
-      <figure data-category="food" data-title="Unbox Silsila" data-sub="Every box travels as beautifully as it tastes">
-        <span class="gallery-tag">&#10022; Takeout Magic</span>
-        <div class="gallery-zoom-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <img src="images/gallery_takeout.webp" alt="Unboxing Silsila takeout meal bag" loading="lazy" decoding="async" width="768" height="1024">
-        <div class="gallery-info">
-          <div class="gallery-title">Unbox Silsila</div>
-          <div class="gallery-sub">Every box travels as beautifully as it tastes</div>
-        </div>
-      </figure>
     </div>
   </div>
 </section>
@@ -580,10 +578,9 @@ const io = new IntersectionObserver((entries)=>{
 }, {threshold:.15});
 revealEls.forEach(el=> io.observe(el));
 
-// ---- Gallery Filtering & Designer Lightbox ----
+// ---- Gallery Wall & Designer Lightbox ----
 (function(){
-  const filterBtns = document.querySelectorAll('#galleryFilters .gallery-filter-btn');
-  const allFigures = Array.from(document.querySelectorAll('#galleryGrid figure'));
+  const allPhotoFrames = Array.from(document.querySelectorAll('.gallery-wall .gallery-frame'));
   const lightbox = document.getElementById('galleryLightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxCap = document.getElementById('lightboxCap');
@@ -594,66 +591,28 @@ revealEls.forEach(el=> io.observe(el));
   const lightboxPrev = document.getElementById('lightboxPrev');
   const lightboxNext = document.getElementById('lightboxNext');
 
-  let activeFilter = 'all';
   let activeIndex = 0;
 
-  // Get currently visible photos (excluding video reel)
-  function getActivePhotoFigures(){
-    return allFigures.filter(fig => {
-      const isVideo = fig.classList.contains('tall-video') || fig.querySelector('video');
-      const isVisible = fig.style.display !== 'none';
-      return !isVideo && isVisible && fig.querySelector('img');
-    });
-  }
-
-  // Filter tab buttons
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeFilter = btn.getAttribute('data-filter') || 'all';
-
-      allFigures.forEach(fig => {
-        const cat = fig.getAttribute('data-category');
-        const matches = (activeFilter === 'all') || (cat === activeFilter);
-        if(matches){
-          fig.style.display = '';
-          fig.style.opacity = '0';
-          fig.style.transform = 'scale(0.96)';
-          setTimeout(() => {
-            fig.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-            fig.style.opacity = '1';
-            fig.style.transform = 'scale(1)';
-          }, 20);
-        } else {
-          fig.style.display = 'none';
-        }
-      });
-    });
-  });
-
   function updateLightboxContent(idx){
-    const photos = getActivePhotoFigures();
-    if(!photos.length) return;
-    if(idx < 0) idx = photos.length - 1;
-    if(idx >= photos.length) idx = 0;
+    if(!allPhotoFrames.length) return;
+    if(idx < 0) idx = allPhotoFrames.length - 1;
+    if(idx >= allPhotoFrames.length) idx = 0;
     activeIndex = idx;
 
-    const fig = photos[activeIndex];
-    const img = fig.querySelector('img');
-    const title = fig.getAttribute('data-title') || fig.querySelector('.gallery-title')?.textContent || '';
-    const sub = fig.getAttribute('data-sub') || fig.querySelector('.gallery-sub')?.textContent || '';
+    const frame = allPhotoFrames[activeIndex];
+    const img = frame.querySelector('img');
+    const title = frame.getAttribute('data-title') || frame.querySelector('.frame-title')?.textContent || '';
+    const sub = frame.getAttribute('data-sub') || frame.querySelector('.frame-sub')?.textContent || '';
 
     lightboxImg.src = img.currentSrc || img.src;
     lightboxImg.alt = img.alt || title;
     lightboxCap.textContent = title;
     lightboxSub.textContent = sub;
-    lightboxCounter.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
+    lightboxCounter.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(allPhotoFrames.length).padStart(2, '0')}`;
   }
 
-  function openLightbox(fig){
-    const photos = getActivePhotoFigures();
-    const idx = photos.indexOf(fig);
+  function openLightbox(frame){
+    const idx = allPhotoFrames.indexOf(frame);
     if(idx === -1) return;
     updateLightboxContent(idx);
     lightbox.classList.add('active');
@@ -667,10 +626,8 @@ revealEls.forEach(el=> io.observe(el));
     document.body.style.overflow = '';
   }
 
-  // Click figure to open lightbox (except video)
-  allFigures.forEach(fig => {
-    if(fig.classList.contains('tall-video') || fig.querySelector('video')) return;
-    fig.addEventListener('click', () => openLightbox(fig));
+  allPhotoFrames.forEach(frame => {
+    frame.addEventListener('click', () => openLightbox(frame));
   });
 
   if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);

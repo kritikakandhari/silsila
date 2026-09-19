@@ -503,98 +503,202 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .menu-download-btn svg{width:13px; height:13px; flex-shrink:0;}
 
 /* ---------- DESIGNER GALLERY ---------- */
-.gallery{background:var(--paper); padding:100px 0;}
-.gallery-filters{
-  display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap;
-  margin:0 auto 36px; max-width:640px;
-}
-.gallery-filter-btn{
-  background:transparent; border:1px solid rgba(200,162,78,0.35); color:var(--ink-soft);
-  font-family:'Cinzel', serif; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase;
-  padding:8px 18px; border-radius:24px; cursor:pointer; transition:all .25s ease;
-}
-.gallery-filter-btn:hover{
-  border-color:var(--gold); color:var(--maroon); background:rgba(233,208,143,0.15);
-}
-.gallery-filter-btn.active{
-  background:var(--maroon); color:var(--gold-light); border-color:var(--maroon);
-  box-shadow:0 4px 14px rgba(67,10,20,0.25);
+/* ---------- SALON GALLERY WALL COLLAGE ---------- */
+.gallery{background:var(--paper); padding:90px 0;}
+.gallery-wall{
+  display:grid;
+  grid-template-columns:1fr 340px 1fr;
+  gap:18px;
+  align-items:center;
+  max-width:1280px;
+  margin:0 auto;
 }
 
-.gallery-grid{
-  display:grid; grid-template-columns:repeat(3, 1fr); gap:26px;
-  max-width:1200px; margin:0 auto;
+.gallery-wall-side{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 }
-.gallery-grid figure{
-  margin:0; position:relative; overflow:hidden; border-radius:14px;
-  box-shadow:0 10px 28px rgba(20,4,7,0.08); border:1px solid rgba(233,208,143,0.35);
-  background:#140407; cursor:pointer;
-  transition:transform .4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .4s ease, border-color .4s ease, opacity .3s ease;
-  aspect-ratio:4 / 5; display:flex; align-items:center; justify-content:center;
+
+/* Left Wing Grid */
+.gallery-wall-side.left .frame-wide{
+  grid-column:span 2;
+  aspect-ratio:16 / 9;
+}
+.gallery-wall-side.left .frame-square{
+  grid-column:span 1;
+  aspect-ratio:1 / 1;
+}
+
+/* Center Hero Video Frame */
+.gallery-wall-center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.gallery-frame-center{
   width:100%;
+  aspect-ratio:9 / 16;
+  border-radius:16px;
+  overflow:hidden;
+  position:relative;
+  background:#140407;
+  border:2px solid var(--gold);
+  box-shadow:0 22px 50px rgba(0,0,0,0.5), 0 0 24px rgba(200,162,78,0.22);
+  cursor:default;
 }
-.gallery-grid figure:hover{
-  transform:translateY(-6px); border-color:var(--gold);
-  box-shadow:0 20px 42px rgba(20,4,7,0.22), 0 0 0 1px var(--gold);
+.gallery-frame-center video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
-.gallery-grid img{
-  width:100%; height:100%; object-fit:cover; display:block;
+
+/* Right Wing Grid */
+.gallery-wall-side.right .frame-portrait{
+  grid-column:1;
+  grid-row:1 / span 2;
+  aspect-ratio:3 / 4;
+}
+.gallery-wall-side.right .frame-square{
+  grid-column:2;
+  aspect-ratio:1 / 1;
+}
+.gallery-wall-side.right .frame-wide{
+  grid-column:span 2;
+  aspect-ratio:16 / 9;
+}
+
+/* Common Frame Styling (Luxury Hanging Frames) */
+.gallery-frame{
+  position:relative;
+  border-radius:12px;
+  overflow:hidden;
+  background:#140407;
+  border:1.5px solid rgba(233,208,143,0.38);
+  box-shadow:0 10px 24px rgba(20,4,7,0.14);
+  cursor:pointer;
+  transition:transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s ease, border-color .35s ease;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.gallery-frame:hover{
+  transform:translateY(-5px) scale(1.02);
+  border-color:var(--gold);
+  box-shadow:0 18px 38px rgba(20,4,7,0.28), 0 0 16px rgba(200,162,78,0.2);
+  z-index:2;
+}
+.gallery-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
   transition:transform .7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.gallery-grid figure:hover img{transform:scale(1.06);}
-
-/* Center Hero Video */
-.gallery-grid figure.tall-video{
-  aspect-ratio:9 / 16;
-  max-width:380px;
-  justify-self:center;
-  cursor:default;
-  background:#140407;
-}
-.gallery-grid figure.tall-video video{
-  width:100%; height:100%; object-fit:cover; display:block;
+.gallery-frame:hover img{
+  transform:scale(1.08);
 }
 
-/* Left & Right Flanking Hero Cards (The Craft Apron & Sealed Envelope) */
-.gallery-grid figure.hero-side-card{
-  aspect-ratio:4 / 5;
-  max-width:340px;
-  justify-self:center;
-  align-self:center;
-  background:#140407;
+/* Frame Overlays */
+.frame-tag{
+  position:absolute;
+  top:10px;
+  left:10px;
+  z-index:3;
+  font-family:'Cinzel', serif;
+  font-size:0.58rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--gold-light);
+  background:rgba(14,2,5,0.82);
+  border:1px solid rgba(233,208,143,0.45);
+  padding:3px 9px;
+  border-radius:16px;
+  backdrop-filter:blur(6px);
+  pointer-events:none;
 }
-.gallery-grid figure.hero-side-card img{
-  width:100%; height:100%; object-fit:cover; display:block;
+.frame-zoom-icon{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:rgba(14,2,5,0.82);
+  border:1px solid rgba(233,208,143,0.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold-light);
+  opacity:0;
+  transform:scale(0.8);
+  transition:all .25s ease;
+  z-index:3;
+  pointer-events:none;
+}
+.gallery-frame:hover .frame-zoom-icon{
+  opacity:1;
+  transform:scale(1);
+}
+.frame-info{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:22px 12px 10px;
+  background:linear-gradient(0deg, rgba(14,2,5,0.96) 0%, rgba(14,2,5,0.6) 60%, transparent 100%);
+  color:var(--ivory);
+  z-index:3;
+  pointer-events:none;
+  transform:translateY(2px);
+  transition:all .3s ease;
+}
+.gallery-frame:hover .frame-info,
+.gallery-frame-center:hover .frame-info{
+  transform:translateY(0);
+}
+.frame-title{
+  font-family:'Cinzel', serif;
+  font-size:0.78rem;
+  letter-spacing:0.08em;
+  color:var(--ivory);
+  font-weight:600;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.frame-sub{
+  font-size:0.65rem;
+  color:#d9c6b4;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  opacity:0.85;
+  margin-top:2px;
 }
 
-.gallery-tag{
-  position:absolute; top:14px; left:14px; z-index:3;
-  font-family:'Cinzel', serif; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase;
-  color:var(--gold-light); background:rgba(20,4,7,0.76); border:1px solid rgba(233,208,143,0.45);
-  padding:4px 12px; border-radius:20px; backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
-  pointer-events:none; box-shadow:0 2px 8px rgba(0,0,0,0.35);
+@media (max-width:1100px){
+  .gallery-wall{
+    grid-template-columns:1fr 290px 1fr;
+    gap:14px;
+  }
 }
-.gallery-zoom-icon{
-  position:absolute; top:14px; right:14px; width:34px; height:34px; border-radius:50%;
-  background:rgba(20,4,7,0.76); border:1px solid rgba(233,208,143,0.45);
-  display:flex; align-items:center; justify-content:center; color:var(--gold-light);
-  opacity:0; transform:scale(0.8); transition:all .3s ease; z-index:3; pointer-events:none;
-}
-.gallery-grid figure:hover .gallery-zoom-icon{opacity:1; transform:scale(1);}
-
-.gallery-info{
-  position:absolute; left:0; right:0; bottom:0; padding:28px 16px 16px;
-  background:linear-gradient(0deg, rgba(14,2,5,0.96) 0%, rgba(14,2,5,0.65) 60%, transparent 100%);
-  color:var(--ivory); z-index:3; pointer-events:none;
-  transform:translateY(3px); transition:all .35s ease;
-}
-.gallery-grid figure:hover .gallery-info{transform:translateY(0);}
-.gallery-title{
-  font-family:'Cinzel', serif; font-size:0.88rem; letter-spacing:0.08em;
-  color:var(--ivory); margin-bottom:3px; font-weight:600;
-}
-.gallery-sub{
-  font-size:0.72rem; color:#d9c6b4; line-height:1.35; letter-spacing:0.02em; opacity:0.88;
+@media (max-width:860px){
+  .gallery-wall{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    max-width:440px;
+    margin:0 auto;
+  }
+  .gallery-frame-center{
+    max-width:320px;
+    margin:0 auto;
+  }
+  .gallery-wall-side{
+    width:100%;
+  }
 }
 
 /* Lightbox Modal */
