@@ -551,7 +551,8 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .gallery-frame-center{
   width:100%;
   max-width:460px;
-  height:501px;
+  height:auto;
+  aspect-ratio:1 / 1;
   border-radius:18px;
   overflow:hidden;
   position:relative;
@@ -682,7 +683,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
     gap:14px;
   }
   .gallery-frame-center{
-    height:460px;
+    height:auto;
     max-width:380px;
   }
   .gallery-frame.frame-wide{ height:210px; }
