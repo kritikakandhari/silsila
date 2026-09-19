@@ -515,11 +515,10 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 }
 .gallery-wall{
   display:grid;
-  grid-template-columns:minmax(0, 320px) 460px minmax(0, 320px);
-  justify-content:center;
-  gap:20px;
+  grid-template-columns:1fr 460px 1fr;
+  gap:32px; /* Slightly wider gap for breathing room */
   align-items:center;
-  max-width:1440px;
+  max-width:1200px; /* Constrain max width so 1fr doesn't become huge */
   margin:0 auto;
 }
 
@@ -527,6 +526,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   display:flex;
   flex-direction:column;
   gap:14px;
+  min-width:0;
 }
 
 /* BADA frames — tall portrait tiles (Kitchen Craft, Bowlritos, Sealed, Unbox) */
@@ -547,6 +547,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   justify-content:center;
   align-items:center;
   width:100%;
+  min-width:0;
 }
 .gallery-frame-center{
   width:100%;
