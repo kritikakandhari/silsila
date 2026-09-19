@@ -300,6 +300,14 @@
         </script>
       </figure>
       <figure><img src="images/image_-6444842097604006462.webp" alt="Wax-sealed Silsila envelope" loading="lazy" decoding="async" width="900" height="1124"><figcaption>Sealed With Silsila</figcaption></figure>
+
+      <figure><img src="images/gallery_momos.webp" alt="Crispy fried momos in Silsila takeout box with sauces" loading="lazy" decoding="async" width="1024" height="1024"><figcaption>Crispy Momo Showmo</figcaption></figure>
+      <figure><img src="images/gallery_burger.webp" alt="Freshly made Silsila burger with coleslaw and sauce" loading="lazy" decoding="async" width="1024" height="819"><figcaption>Crafted Burgers &amp; Rolls</figcaption></figure>
+      <figure><img src="images/gallery_bowlritos.webp" alt="Silsila signature fusion burrito and taco bowl" loading="lazy" decoding="async" width="1024" height="1024"><figcaption>Biryani Bowlritos &amp; Tacos</figcaption></figure>
+
+      <figure><img src="images/gallery_sunset_boba.webp" alt="Sunset Mantra sparkling fruit boba refresher with fresh mint" loading="lazy" decoding="async" width="1024" height="1024"><figcaption>Sunset Mantra Refresher</figcaption></figure>
+      <figure><img src="images/gallery_matcha.webp" alt="Pink Matcha Iced Latte garnished with fresh strawberries" loading="lazy" decoding="async" width="912" height="1024"><figcaption>Pink Matcha Iced Latte</figcaption></figure>
+      <figure><img src="images/gallery_takeout.webp" alt="Unboxing Silsila takeout meal bag" loading="lazy" decoding="async" width="768" height="1024"><figcaption>Unbox Silsila</figcaption></figure>
     </div>
   </div>
 </section>
@@ -461,6 +469,55 @@ const io = new IntersectionObserver((entries)=>{
   });
 }, {threshold:.15});
 revealEls.forEach(el=> io.observe(el));
+
+// ---- Gallery Lightbox Functionality ----
+const lightbox = document.getElementById('galleryLightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCap = document.getElementById('lightboxCap');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+
+function openLightbox(imgEl, captionText){
+  lightboxImg.src = imgEl.currentSrc || imgEl.src;
+  lightboxImg.alt = imgEl.alt || captionText || 'Silsila';
+  lightboxCap.textContent = captionText || '';
+  lightbox.classList.add('active');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(){
+  lightbox.classList.remove('active');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.gallery-grid figure').forEach(fig=>{
+  const img = fig.querySelector('img');
+  if(!img) return;
+  fig.addEventListener('click', ()=>{
+    const cap = fig.querySelector('figcaption')?.textContent || '';
+    openLightbox(img, cap);
+  });
+});
+
+if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if(lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape' && lightbox && lightbox.classList.contains('active')){
+    closeLightbox();
+  }
+});
 </script>
+
+<!-- Gallery Lightbox Modal -->
+<div id="galleryLightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
+    <img id="lightboxImg" src="" alt="Enlarged gallery photo">
+    <div id="lightboxCap" class="lightbox-caption"></div>
+  </div>
+</div>
 </body>
 </html>
