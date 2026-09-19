@@ -256,17 +256,41 @@
 
 <section class="gallery" id="gallery">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Behind The Cloche</div>
+    <div class="section-head reveal" style="text-align:center; margin-bottom: 24px;">
+      <div class="eyebrow">&diams; Behind The Cloche &diams;</div>
       <h2>A Peek Inside Silsila</h2>
+      <p style="font-size:1.02rem; color:#856447; margin-top:8px;">A culinary lookbook of handcrafted flavours, authentic heritage, and moments in motion.</p>
     </div>
-    <div class="gallery-grid reveal">
-      <figure><img src="images/image_-7201957162183258406.webp" alt="Silsila branded apron laid flat with spices" loading="lazy" decoding="async" width="1100" height="1312"><figcaption>The Kitchen Craft</figcaption></figure>
-      <figure class="tall" style="border-radius:12px; overflow:hidden; position:relative;">
+
+    <!-- Designer Filter Tabs -->
+    <div class="gallery-filters reveal" id="galleryFilters">
+      <button class="gallery-filter-btn active" data-filter="all">All</button>
+      <button class="gallery-filter-btn" data-filter="food">Signature Bites</button>
+      <button class="gallery-filter-btn" data-filter="drinks">Sips &amp; Boba</button>
+      <button class="gallery-filter-btn" data-filter="story">Brand &amp; Craft</button>
+    </div>
+
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <!-- Item 1: The Kitchen Craft -->
+      <figure class="tall hero-card" data-category="story" data-title="The Kitchen Craft" data-sub="Raw whole spices &amp; pure culinary tradition">
+        <span class="gallery-tag">&#10022; The Craft</span>
+        <div class="gallery-zoom-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <img src="images/image_-7201957162183258406.webp" alt="Silsila branded apron laid flat with spices" loading="lazy" decoding="async" width="1100" height="1312">
+        <div class="gallery-info">
+          <div class="gallery-title">The Kitchen Craft</div>
+          <div class="gallery-sub">Raw whole spices &amp; pure culinary tradition</div>
+        </div>
+      </figure>
+
+      <!-- Item 2: Video Reel (Center Hero) -->
+      <figure class="tall tall-video hero-card" data-category="story" style="border-radius:14px; overflow:hidden; position:relative;">
+        <span class="gallery-tag" style="background:rgba(67,10,20,0.85); border-color:var(--gold);">&#10022; In Motion</span>
         <a href="https://www.instagram.com/reel/DcAMa1YpN-q/" target="_blank" rel="noopener" style="display:block; width:100%; height:100%;">
-          <video id="reelVideo" src="images/reel_new.mp4" poster="images/reel_poster.webp" preload="metadata" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;"></video>
+          <video id="reelVideo" src="images/reel_new.mp4" poster="images/reel_poster.webp" preload="metadata" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:contain; display:block;"></video>
         </a>
-        <button id="reelMuteBtn" aria-label="Toggle Sound" style="position:absolute; bottom:12px; right:12px; z-index:10; background:rgba(20,4,7,0.6); color:var(--ivory); border:1px solid rgba(233,208,143,0.3); border-radius:50%; width:40px; height:40px; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); transition:all .25s ease;" onmouseover="this.style.background='rgba(20,4,7,0.9)'; this.style.borderColor='var(--gold)';" onmouseout="this.style.background='rgba(20,4,7,0.6)'; this.style.borderColor='rgba(233,208,143,0.3)';">
+        <button id="reelMuteBtn" aria-label="Toggle Sound" style="position:absolute; bottom:14px; right:14px; z-index:10; background:rgba(20,4,7,0.7); color:var(--ivory); border:1px solid rgba(233,208,143,0.4); border-radius:50%; width:42px; height:42px; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); transition:all .25s ease;" onmouseover="this.style.background='rgba(67,10,20,0.95)'; this.style.borderColor='var(--gold)';" onmouseout="this.style.background='rgba(20,4,7,0.7)'; this.style.borderColor='rgba(233,208,143,0.4)';">
           <svg id="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
             <line x1="23" y1="9" x2="17" y2="15"></line>
@@ -298,16 +322,102 @@
             }
           });
         </script>
+        <div class="gallery-info" style="pointer-events:none;">
+          <div class="gallery-title">Silsila In Motion</div>
+          <div class="gallery-sub">Tap to watch on Instagram</div>
+        </div>
       </figure>
-      <figure><img src="images/image_-6444842097604006462.webp" alt="Wax-sealed Silsila envelope" loading="lazy" decoding="async" width="900" height="1124"><figcaption>Sealed With Silsila</figcaption></figure>
 
-      <figure><img src="images/gallery_momos.webp" alt="Crispy fried momos in Silsila takeout box with sauces" loading="lazy" decoding="async" width="1024" height="1024"><figcaption>Crispy Momo Showmo</figcaption></figure>
-      <figure><img src="images/gallery_burger.webp" alt="Freshly made Silsila burger with coleslaw and sauce" loading="lazy" decoding="async" width="1024" height="819"><figcaption>Crafted Burgers &amp; Rolls</figcaption></figure>
-      <figure><img src="images/gallery_bowlritos.webp" alt="Silsila signature fusion burrito and taco bowl" loading="lazy" decoding="async" width="1024" height="1024"><figcaption>Biryani Bowlritos &amp; Tacos</figcaption></figure>
+      <!-- Item 3: Sealed With Silsila -->
+      <figure class="tall hero-card" data-category="story" data-title="Sealed With Silsila" data-sub="The hallmark of fine hospitality">
+        <span class="gallery-tag">&#10022; Heritage</span>
+        <div class="gallery-zoom-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <img src="images/image_-6444842097604006462.webp" alt="Wax-sealed Silsila envelope" loading="lazy" decoding="async" width="900" height="1124">
+        <div class="gallery-info">
+          <div class="gallery-title">Sealed With Silsila</div>
+          <div class="gallery-sub">The hallmark of fine hospitality</div>
+        </div>
+      </figure>
 
-      <figure><img src="images/gallery_sunset_boba.webp" alt="Sunset Mantra sparkling fruit boba refresher with fresh mint" loading="lazy" decoding="async" width="1024" height="1024"><figcaption>Sunset Mantra Refresher</figcaption></figure>
-      <figure><img src="images/gallery_matcha.webp" alt="Pink Matcha Iced Latte garnished with fresh strawberries" loading="lazy" decoding="async" width="912" height="1024"><figcaption>Pink Matcha Iced Latte</figcaption></figure>
-      <figure><img src="images/gallery_takeout.webp" alt="Unboxing Silsila takeout meal bag" loading="lazy" decoding="async" width="768" height="1024"><figcaption>Unbox Silsila</figcaption></figure>
+      <!-- Item 4: Crispy Momo Showmo -->
+      <figure data-category="food" data-title="Crispy Momo Showmo" data-sub="Golden dumplings with fiery sesame chutney">
+        <span class="gallery-tag">&#10022; Momo Showmo</span>
+        <div class="gallery-zoom-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <img src="images/gallery_momos.webp" alt="Crispy fried momos in Silsila takeout box with sauces" loading="lazy" decoding="async" width="1024" height="1024">
+        <div class="gallery-info">
+          <div class="gallery-title">Crispy Momo Showmo</div>
+          <div class="gallery-sub">Golden dumplings with fiery sesame chutney</div>
+        </div>
+      </figure>
+
+      <!-- Item 5: Crafted Burgers -->
+      <figure data-category="food" data-title="Crafted Burgers &amp; Rolls" data-sub="Toasted brioche, crisp slaw &amp; spiced patty">
+        <span class="gallery-tag">&#10022; Street Fusion</span>
+        <div class="gallery-zoom-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <img src="images/gallery_burger.webp" alt="Freshly made Silsila burger with coleslaw and sauce" loading="lazy" decoding="async" width="1024" height="819">
+        <div class="gallery-info">
+          <div class="gallery-title">Crafted Burgers &amp; Rolls</div>
+          <div class="gallery-sub">Toasted brioche, crisp slaw &amp; spiced patty</div>
+        </div>
+      </figure>
+
+      <!-- Item 6: Biryani Bowlritos & Tacos -->
+      <figure data-category="food" data-title="Biryani Bowlritos &amp; Tacos" data-sub="Crisp taco shell, spiced rice &amp; fresh crema">
+        <span class="gallery-tag">&#10022; Bowlritos</span>
+        <div class="gallery-zoom-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <img src="images/gallery_bowlritos.webp" alt="Silsila signature fusion burrito and taco bowl" loading="lazy" decoding="async" width="1024" height="1024">
+        <div class="gallery-info">
+          <div class="gallery-title">Biryani Bowlritos &amp; Tacos</div>
+          <div class="gallery-sub">Crisp taco shell, spiced rice &amp; fresh crema</div>
+        </div>
+      </figure>
+
+      <!-- Item 7: Sunset Mantra Boba -->
+      <figure data-category="drinks" data-title="Sunset Mantra Refresher" data-sub="Tropical citrus fizz &amp; burst of popping boba">
+        <span class="gallery-tag">&#10022; Sparkling Sips</span>
+        <div class="gallery-zoom-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <img src="images/gallery_sunset_boba.webp" alt="Sunset Mantra sparkling fruit boba refresher with fresh mint" loading="lazy" decoding="async" width="1024" height="1024">
+        <div class="gallery-info">
+          <div class="gallery-title">Sunset Mantra Refresher</div>
+          <div class="gallery-sub">Tropical citrus fizz &amp; burst of popping boba</div>
+        </div>
+      </figure>
+
+      <!-- Item 8: Pink Matcha Iced Latte -->
+      <figure data-category="drinks" data-title="Pink Matcha Iced Latte" data-sub="Sweet strawberry puree &amp; whipped matcha">
+        <span class="gallery-tag">&#10022; Matcha Mania</span>
+        <div class="gallery-zoom-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <img src="images/gallery_matcha.webp" alt="Pink Matcha Iced Latte garnished with fresh strawberries" loading="lazy" decoding="async" width="912" height="1024">
+        <div class="gallery-info">
+          <div class="gallery-title">Pink Matcha Iced Latte</div>
+          <div class="gallery-sub">Sweet strawberry puree &amp; whipped matcha</div>
+        </div>
+      </figure>
+
+      <!-- Item 9: Unbox Silsila -->
+      <figure data-category="food" data-title="Unbox Silsila" data-sub="Every box travels as beautifully as it tastes">
+        <span class="gallery-tag">&#10022; Takeout Magic</span>
+        <div class="gallery-zoom-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <img src="images/gallery_takeout.webp" alt="Unboxing Silsila takeout meal bag" loading="lazy" decoding="async" width="768" height="1024">
+        <div class="gallery-info">
+          <div class="gallery-title">Unbox Silsila</div>
+          <div class="gallery-sub">Every box travels as beautifully as it tastes</div>
+        </div>
+      </figure>
     </div>
   </div>
 </section>
@@ -470,53 +580,140 @@ const io = new IntersectionObserver((entries)=>{
 }, {threshold:.15});
 revealEls.forEach(el=> io.observe(el));
 
-// ---- Gallery Lightbox Functionality ----
-const lightbox = document.getElementById('galleryLightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxCap = document.getElementById('lightboxCap');
-const lightboxClose = document.getElementById('lightboxClose');
-const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+// ---- Gallery Filtering & Designer Lightbox ----
+(function(){
+  const filterBtns = document.querySelectorAll('#galleryFilters .gallery-filter-btn');
+  const allFigures = Array.from(document.querySelectorAll('#galleryGrid figure'));
+  const lightbox = document.getElementById('galleryLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCap');
+  const lightboxSub = document.getElementById('lightboxSub');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
 
-function openLightbox(imgEl, captionText){
-  lightboxImg.src = imgEl.currentSrc || imgEl.src;
-  lightboxImg.alt = imgEl.alt || captionText || 'Silsila';
-  lightboxCap.textContent = captionText || '';
-  lightbox.classList.add('active');
-  lightbox.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
+  let activeFilter = 'all';
+  let activeIndex = 0;
 
-function closeLightbox(){
-  lightbox.classList.remove('active');
-  lightbox.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
-
-document.querySelectorAll('.gallery-grid figure').forEach(fig=>{
-  const img = fig.querySelector('img');
-  if(!img) return;
-  fig.addEventListener('click', ()=>{
-    const cap = fig.querySelector('figcaption')?.textContent || '';
-    openLightbox(img, cap);
-  });
-});
-
-if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-if(lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
-document.addEventListener('keydown', (e)=>{
-  if(e.key === 'Escape' && lightbox && lightbox.classList.contains('active')){
-    closeLightbox();
+  // Get currently visible photos (excluding video reel)
+  function getActivePhotoFigures(){
+    return allFigures.filter(fig => {
+      const isVideo = fig.classList.contains('tall-video') || fig.querySelector('video');
+      const isVisible = fig.style.display !== 'none';
+      return !isVideo && isVisible && fig.querySelector('img');
+    });
   }
-});
+
+  // Filter tab buttons
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-filter') || 'all';
+
+      allFigures.forEach(fig => {
+        const cat = fig.getAttribute('data-category');
+        const matches = (activeFilter === 'all') || (cat === activeFilter);
+        if(matches){
+          fig.style.display = '';
+          fig.style.opacity = '0';
+          fig.style.transform = 'scale(0.96)';
+          setTimeout(() => {
+            fig.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+            fig.style.opacity = '1';
+            fig.style.transform = 'scale(1)';
+          }, 20);
+        } else {
+          fig.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  function updateLightboxContent(idx){
+    const photos = getActivePhotoFigures();
+    if(!photos.length) return;
+    if(idx < 0) idx = photos.length - 1;
+    if(idx >= photos.length) idx = 0;
+    activeIndex = idx;
+
+    const fig = photos[activeIndex];
+    const img = fig.querySelector('img');
+    const title = fig.getAttribute('data-title') || fig.querySelector('.gallery-title')?.textContent || '';
+    const sub = fig.getAttribute('data-sub') || fig.querySelector('.gallery-sub')?.textContent || '';
+
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || title;
+    lightboxCap.textContent = title;
+    lightboxSub.textContent = sub;
+    lightboxCounter.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
+  }
+
+  function openLightbox(fig){
+    const photos = getActivePhotoFigures();
+    const idx = photos.indexOf(fig);
+    if(idx === -1) return;
+    updateLightboxContent(idx);
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Click figure to open lightbox (except video)
+  allFigures.forEach(fig => {
+    if(fig.classList.contains('tall-video') || fig.querySelector('video')) return;
+    fig.addEventListener('click', () => openLightbox(fig));
+  });
+
+  if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if(lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+  if(lightboxPrev) lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); updateLightboxContent(activeIndex - 1); });
+  if(lightboxNext) lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); updateLightboxContent(activeIndex + 1); });
+
+  document.addEventListener('keydown', (e) => {
+    if(!lightbox || !lightbox.classList.contains('active')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') updateLightboxContent(activeIndex - 1);
+    if(e.key === 'ArrowRight') updateLightboxContent(activeIndex + 1);
+  });
+
+  // Touch swipe support on mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive:true});
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if(touchEndX < touchStartX - 50) updateLightboxContent(activeIndex + 1);
+    if(touchEndX > touchStartX + 50) updateLightboxContent(activeIndex - 1);
+  }, {passive:true});
+})();
 </script>
 
-<!-- Gallery Lightbox Modal -->
+<!-- Designer Gallery Lightbox Modal -->
 <div id="galleryLightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image preview">
   <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
   <div class="lightbox-dialog">
     <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
-    <img id="lightboxImg" src="" alt="Enlarged gallery photo">
-    <div id="lightboxCap" class="lightbox-caption"></div>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="Enlarged gallery photo">
+    </div>
+    <div class="lightbox-meta">
+      <div id="lightboxCounter" class="lightbox-counter">01 / 08</div>
+      <div id="lightboxCap" class="lightbox-caption"></div>
+      <div id="lightboxSub" class="lightbox-sub"></div>
+    </div>
   </div>
 </div>
 </body>
