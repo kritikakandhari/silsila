@@ -514,15 +514,17 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   padding:0 clamp(12px, 2.5vw, 32px);
 }
 .gallery-wall{
-  display:grid;
-  grid-template-columns:1fr 460px 1fr;
-  gap:32px; /* Slightly wider gap for breathing room */
+  display:flex;
+  justify-content:center;
   align-items:center;
-  max-width:1200px; /* Constrain max width so 1fr doesn't become huge */
+  gap:32px;
+  max-width:1200px;
   margin:0 auto;
 }
 
 .gallery-wall-side{
+  flex: 1 1 320px;
+  max-width: 320px;
   display:flex;
   flex-direction:column;
   gap:14px;
@@ -543,10 +545,11 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 
 /* Center Hero Video Frame - BIG, FULL REEL, ZERO CUT-OFF */
 .gallery-wall-center{
+  flex: 0 0 460px;
+  max-width: 460px;
   display:flex;
   justify-content:center;
   align-items:center;
-  width:100%;
   min-width:0;
 }
 .gallery-frame-center{
@@ -678,10 +681,14 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 }
 
 @media (max-width:1150px){
-  .gallery-wall{
-    grid-template-columns:minmax(0, 260px) 380px minmax(0, 260px);
-    justify-content:center;
-    gap:14px;
+  .gallery-wall { gap: 20px; }
+  .gallery-wall-side{
+    flex: 1 1 260px;
+    max-width: 260px;
+  }
+  .gallery-wall-center{
+    flex: 0 0 380px;
+    max-width: 380px;
   }
   .gallery-frame-center{
     height:auto;
@@ -701,6 +708,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   }
   .gallery-wall-center{
     order:-1;
+    flex: auto;
     max-width:100%;
     width:100%;
   }
@@ -711,6 +719,8 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
     max-width:100%;
   }
   .gallery-wall-side{
+    flex: auto;
+    max-width:100%;
     width:100%;
   }
 }
