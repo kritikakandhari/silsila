@@ -504,54 +504,53 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 
 /* ---------- DESIGNER GALLERY ---------- */
 /* ---------- DESIGNER GALLERY ---------- */
+/* ---------- DESIGNER GALLERY ---------- */
 /* ---------- SALON GALLERY WALL COLLAGE ---------- */
 .gallery{background:var(--paper); padding:80px 0;}
 .gallery-wall-wrap{
-  max-width:1480px;
+  max-width:1440px;
   width:96%;
   margin:0 auto;
   padding:0 clamp(12px, 2.5vw, 32px);
 }
 .gallery-wall{
   display:grid;
-  grid-template-columns:1fr 340px 1fr;
-  gap:18px;
-  align-items:stretch;
-  max-width:1480px;
+  grid-template-columns:1fr 460px 1fr;
+  gap:20px;
+  align-items:center;
+  max-width:1440px;
   margin:0 auto;
 }
 
 .gallery-wall-side{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:190px 175px 190px;
+  display:flex;
+  flex-direction:column;
   gap:14px;
 }
 
-/* Wide Frames (BADA - Panoramic) */
-.gallery-wall-side .frame-wide{
-  grid-column:span 2;
-  height:190px;
-  min-height:190px;
+/* BADA frames — tall portrait tiles (Kitchen Craft, Bowlritos, Sealed, Unbox) */
+.gallery-frame.frame-wide{
+  width:100%;
+  height:240px;
 }
 
-/* Square Frames (CHHOTA - Wide Square Focus) */
-.gallery-wall-side .frame-square{
-  grid-column:span 1;
-  height:175px;
-  min-height:175px;
+/* CHHOTA frames — medium square tiles (Momos, Burger, Boba, Matcha) */
+.gallery-frame.frame-square{
+  width:100%;
+  height:195px;
 }
 
-/* Center Hero Video Frame - BIG IN CENTER */
+/* Center Hero Video Frame - BIG, FULL REEL, ZERO CUT-OFF */
 .gallery-wall-center{
   display:flex;
+  justify-content:center;
+  align-items:center;
   width:100%;
-  height:100%;
 }
 .gallery-frame-center{
   width:100%;
-  height:100%;
-  min-height:583px;
+  max-width:460px;
+  height:501px;
   border-radius:18px;
   overflow:hidden;
   position:relative;
@@ -570,6 +569,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 /* Common Frame Styling (Luxury Hanging Frames) */
 .gallery-frame{
   position:relative;
+  width:100%;
   border-radius:14px;
   overflow:hidden;
   background:#140407;
@@ -598,17 +598,17 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   transform:scale(1.06);
 }
 
-/* Specific Image Alignments to show the food and envelopes perfectly */
-.gallery-frame[data-title="The Kitchen Craft"] img{ object-position: center 38%; }
-.gallery-frame[data-title="Sealed With Silsila"] img{ object-position: center 42%; }
-.gallery-frame[data-title="Unbox Silsila"] img{ object-position: center 25%; }
+/* Exact Native Object Positions so NO food is cut off */
+.gallery-frame[data-title="The Kitchen Craft"] img{ object-position: center; }
+.gallery-frame[data-title="Sealed With Silsila"] img{ object-position: center; }
+.gallery-frame[data-title="Unbox Silsila"] img{ object-position: center 20%; }
 .gallery-frame[data-title="Crispy Momo Showmo"] img{ object-position: center; }
-.gallery-frame[data-title="Crafted Burgers & Rolls"] img{ object-position: center 55%; }
+.gallery-frame[data-title="Crafted Burgers & Rolls"] img{ object-position: center; }
 .gallery-frame[data-title="Sunset Mantra Refresher"] img{ object-position: center; }
 .gallery-frame[data-title="Pink Matcha Iced Latte"] img{ object-position: center; }
 .gallery-frame[data-title="Biryani Bowlritos & Tacos"] img{ object-position: center; }
 
-/* Hide Top Badge Tags completely */
+/* Hide Cluttering Top Badges */
 .frame-tag{
   display:none !important;
 }
@@ -645,7 +645,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   left:0;
   right:0;
   bottom:0;
-  padding:16px 12px 8px;
+  padding:20px 14px 10px;
   background:linear-gradient(0deg, rgba(14,2,5,0.85) 0%, rgba(14,2,5,0.2) 65%, transparent 100%);
   color:var(--ivory);
   z-index:3;
@@ -659,10 +659,8 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   letter-spacing:0.05em;
   color:var(--ivory);
   font-weight:600;
-  line-height:1.2;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+  line-height:1.25;
+  white-space:normal;
   text-shadow:0 2px 4px rgba(0,0,0,0.9);
 }
 .frame-sub{
@@ -670,9 +668,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   font-size:0.65rem;
   color:#e2d2c2;
   margin-top:2px;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+  white-space:normal;
 }
 .gallery-frame:hover .frame-sub{
   display:block;
@@ -680,26 +676,34 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 
 @media (max-width:1150px){
   .gallery-wall{
-    grid-template-columns:1fr 300px 1fr;
+    grid-template-columns:1fr 380px 1fr;
     gap:14px;
   }
+  .gallery-frame-center{
+    height:460px;
+    max-width:380px;
+  }
+  .gallery-frame.frame-wide{ height:210px; }
+  .gallery-frame.frame-square{ height:170px; }
 }
 @media (max-width:880px){
   .gallery-wall{
     display:flex;
     flex-direction:column;
     gap:24px;
-    max-width:480px;
+    max-width:440px;
     margin:0 auto;
   }
   .gallery-wall-center{
     order:-1;
-    max-width:340px;
+    max-width:380px;
     margin:0 auto;
   }
   .gallery-frame-center{
-    min-height:500px;
-    aspect-ratio:9 / 14;
+    width:100%;
+    height:auto;
+    aspect-ratio:1 / 1;
+    max-width:380px;
   }
   .gallery-wall-side{
     width:100%;
