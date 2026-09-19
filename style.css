@@ -503,41 +503,43 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .menu-download-btn svg{width:13px; height:13px; flex-shrink:0;}
 
 /* ---------- DESIGNER GALLERY ---------- */
+/* ---------- DESIGNER GALLERY ---------- */
 /* ---------- SALON GALLERY WALL COLLAGE ---------- */
-.gallery{background:var(--paper); padding:90px 0;}
+.gallery{background:var(--paper); padding:80px 0;}
 .gallery-wall-wrap{
-  max-width:1420px;
+  max-width:1480px;
+  width:96%;
   margin:0 auto;
-  padding:0 clamp(16px, 3.5vw, 40px);
+  padding:0 clamp(12px, 2.5vw, 32px);
 }
 .gallery-wall{
   display:grid;
-  grid-template-columns:1fr 420px 1fr;
-  gap:20px;
+  grid-template-columns:1fr 340px 1fr;
+  gap:18px;
   align-items:stretch;
-  max-width:1420px;
+  max-width:1480px;
   margin:0 auto;
 }
 
 .gallery-wall-side{
   display:grid;
   grid-template-columns:1fr 1fr;
-  grid-template-rows:220px 240px 220px;
-  gap:16px;
+  grid-template-rows:190px 175px 190px;
+  gap:14px;
 }
 
 /* Wide Frames (BADA - Panoramic) */
 .gallery-wall-side .frame-wide{
   grid-column:span 2;
-  height:100%;
-  min-height:220px;
+  height:190px;
+  min-height:190px;
 }
 
-/* Square Frames (CHHOTA - Food & Drink Focus) */
+/* Square Frames (CHHOTA - Wide Square Focus) */
 .gallery-wall-side .frame-square{
   grid-column:span 1;
-  height:100%;
-  min-height:240px;
+  height:175px;
+  min-height:175px;
 }
 
 /* Center Hero Video Frame - BIG IN CENTER */
@@ -549,7 +551,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .gallery-frame-center{
   width:100%;
   height:100%;
-  min-height:712px;
+  min-height:583px;
   border-radius:18px;
   overflow:hidden;
   position:relative;
@@ -568,11 +570,11 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 /* Common Frame Styling (Luxury Hanging Frames) */
 .gallery-frame{
   position:relative;
-  border-radius:16px;
+  border-radius:14px;
   overflow:hidden;
   background:#140407;
   border:1.5px solid rgba(233,208,143,0.38);
-  box-shadow:0 12px 28px rgba(20,4,7,0.18);
+  box-shadow:0 10px 24px rgba(20,4,7,0.16);
   cursor:pointer;
   transition:transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s ease, border-color .35s ease;
   display:flex;
@@ -580,9 +582,9 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   justify-content:center;
 }
 .gallery-frame:hover{
-  transform:translateY(-6px) scale(1.02);
+  transform:translateY(-5px) scale(1.02);
   border-color:var(--gold);
-  box-shadow:0 22px 45px rgba(20,4,7,0.32), 0 0 20px rgba(200,162,78,0.25);
+  box-shadow:0 18px 38px rgba(20,4,7,0.28), 0 0 18px rgba(200,162,78,0.22);
   z-index:2;
 }
 .gallery-frame img{
@@ -596,7 +598,17 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   transform:scale(1.06);
 }
 
-/* HIDE TOP BADGE TAGS COMPLETELY SO FOOD IS 100% VISIBLE! */
+/* Specific Image Alignments to show the food and envelopes perfectly */
+.gallery-frame[data-title="The Kitchen Craft"] img{ object-position: center 38%; }
+.gallery-frame[data-title="Sealed With Silsila"] img{ object-position: center 42%; }
+.gallery-frame[data-title="Unbox Silsila"] img{ object-position: center 25%; }
+.gallery-frame[data-title="Crispy Momo Showmo"] img{ object-position: center; }
+.gallery-frame[data-title="Crafted Burgers & Rolls"] img{ object-position: center 55%; }
+.gallery-frame[data-title="Sunset Mantra Refresher"] img{ object-position: center; }
+.gallery-frame[data-title="Pink Matcha Iced Latte"] img{ object-position: center; }
+.gallery-frame[data-title="Biryani Bowlritos & Tacos"] img{ object-position: center; }
+
+/* Hide Top Badge Tags completely */
 .frame-tag{
   display:none !important;
 }
@@ -604,10 +616,10 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 /* Sleek Floating Zoom Icon on Hover */
 .frame-zoom-icon{
   position:absolute;
-  top:12px;
-  right:12px;
-  width:32px;
-  height:32px;
+  top:10px;
+  right:10px;
+  width:28px;
+  height:28px;
   border-radius:50%;
   background:rgba(14,2,5,0.75);
   border:1px solid rgba(233,208,143,0.45);
@@ -627,39 +639,35 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   transform:scale(1);
 }
 
-/* Crystal-Clear Frame Info: Sleek Minimal Bottom Bar (Does NOT cover the photo!) */
+/* Crystal-Clear Frame Info: Slim Bottom Bar */
 .frame-info{
   position:absolute;
   left:0;
   right:0;
   bottom:0;
-  padding:20px 14px 10px;
-  background:linear-gradient(0deg, rgba(14,2,5,0.82) 0%, rgba(14,2,5,0.3) 60%, transparent 100%);
+  padding:16px 12px 8px;
+  background:linear-gradient(0deg, rgba(14,2,5,0.85) 0%, rgba(14,2,5,0.2) 65%, transparent 100%);
   color:var(--ivory);
   z-index:3;
   pointer-events:none;
   transform:translateY(0);
   transition:all .3s ease;
 }
-.gallery-frame:hover .frame-info,
-.gallery-frame-center:hover .frame-info{
-  transform:translateY(0);
-}
 .frame-title{
   font-family:'Cinzel', serif;
-  font-size:0.86rem;
-  letter-spacing:0.06em;
+  font-size:0.82rem;
+  letter-spacing:0.05em;
   color:var(--ivory);
   font-weight:600;
   line-height:1.2;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  text-shadow:0 2px 4px rgba(0,0,0,0.8);
+  text-shadow:0 2px 4px rgba(0,0,0,0.9);
 }
 .frame-sub{
   display:none;
-  font-size:0.68rem;
+  font-size:0.65rem;
   color:#e2d2c2;
   margin-top:2px;
   white-space:nowrap;
@@ -672,7 +680,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 
 @media (max-width:1150px){
   .gallery-wall{
-    grid-template-columns:1fr 340px 1fr;
+    grid-template-columns:1fr 300px 1fr;
     gap:14px;
   }
 }
@@ -686,11 +694,11 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
   }
   .gallery-wall-center{
     order:-1;
-    max-width:380px;
+    max-width:340px;
     margin:0 auto;
   }
   .gallery-frame-center{
-    min-height:480px;
+    min-height:500px;
     aspect-ratio:9 / 14;
   }
   .gallery-wall-side{
