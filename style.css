@@ -524,6 +524,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 .gallery-card {
   position:relative;
   width:100%;
+  min-width:0;
   aspect-ratio: 9 / 14;
   border-radius:14px;
   overflow:hidden;
@@ -567,6 +568,19 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
     grid-template-columns:repeat(3, 1fr);
     gap: 8px;
     max-width: 100%;
+  }
+  .frame-info {
+    padding: 8px 6px 4px;
+  }
+  .frame-title {
+    font-size: 0.55rem;
+  }
+  .frame-zoom-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .gallery-card {
+    border-radius: 8px;
   }
 }
 
