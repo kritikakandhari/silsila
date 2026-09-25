@@ -558,15 +558,15 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 
 @media (max-width:900px){
   .gallery-wall {
-    grid-template-columns:repeat(3, 1fr);
-    gap: 12px;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 16px;
   }
 }
 @media (max-width:600px){
   .gallery-wall {
-    grid-template-columns:repeat(3, 1fr);
-    gap: 8px;
-    max-width: 100%;
+    grid-template-columns:1fr;
+    gap: 20px;
+    max-width: 440px;
   }
 }
 
@@ -1217,8 +1217,6 @@ details.faq-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft
   display: block;
 }
 
-
- 
- . s i t e - n a v   . l i n k s   a . a c t i v e   {   b o r d e r - b o t t o m :   1 . 5 p x   s o l i d   v a r ( - - g o l d ) ;   p a d d i n g - b o t t o m :   2 p x ;   } 
- 
+ 
+ . s i t e - n a v   . l i n k s   a . a c t i v e   {   b o r d e r - b o t t o m :   1 . 5 p x   s o l i d   v a r ( - - g o l d ) ;   p a d d i n g - b o t t o m :   2 p x ;   }  
  

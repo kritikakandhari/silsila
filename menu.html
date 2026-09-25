@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SILSILA — A Culinary Affaire | Indian Fusion Kitchen, Edmonton</title>
+<meta name="description" content="SILSILA — A Culinary Affaire. Indian fusion cloud kitchen in Edmonton, Alberta. Bold flavours, global inspiration, Indian soul. Order via UberEats or DoorDash.">
+<link rel="icon" type="image/webp" href="images/logo.webp?v=3">
+<link rel="apple-touch-icon" href="images/logo.webp?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=76">
+</head>
+<body>
+
+<!-- decorative lotus icon (reused) -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="lotus-icon" viewBox="0 0 100 100">
+    <path fill="currentColor" d="M50 10c4 12 4 24 0 34-4-10-4-22 0-34zm-18 8c8 9 13 20 13 31-10-5-17-15-19-27 2-1 4-2 6-4zm36 0c2 2 4 3 6 4-2 12-9 22-19 27 0-11 5-22 13-31zM14 34c10 3 19 10 24 20-12 1-23-5-29-15 2-2 3-3 5-5zm72 0c2 2 3 3 5 5-6 10-17 16-29 15 5-10 14-17 24-20zM50 46c9 0 17 4 22 11-9 5-19 5-22 5s-13 0-22-5c5-7 13-11 22-11zm0 20c14 0 26 6 32 15-10 6-22 6-32 3-10 3-22 3-32-3 6-9 18-15 32-15z"/>
+  </symbol>
+</svg>
+
+<header class="site-nav" id="siteNav">
+  <div class="wrap">
+    <a href="index.html#top" class="nav-logo">
+      <img src="images/logo.webp?v=3" alt="Silsila emblem" class="nav-emblem" width="44" height="44" decoding="async">
+      <span class="wordmark">SILSILA</span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="faq.html">FAQ</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#order" class="nav-cta">Order Now</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+<section class="menu-section" id="menu">
+  <div class="mandala-bg"></div>
+  <div class="wrap" style="position:relative;">
+    <div class="section-head reveal">
+      <div class="eyebrow deva">एक सौ ग्यारह</div>
+      <h2><img src="images/logo.webp?v=3" alt="" class="menu-emblem-inline" width="32" height="32" decoding="async">OUR MENU</h2>
+      <p>Fusion built for takeout. Every bowl, wrap and box designed to travel as beautifully as it tastes.</p>
+
+    </div>
+
+    <div class="menu-tabs-wrap reveal">
+      <div class="menu-tabs" id="menuTabs"></div>
+      <select class="menu-select" id="menuSelect" aria-label="Choose menu category"></select>
+    </div>
+    <div id="menuPanels"></div>
+  </div>
+</section>
+
+
+
+
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="images/logo.webp?v=3" alt="Silsila emblem" loading="lazy" decoding="async" width="86" height="86">
+      <div class="word">SILSILA</div>
+      <div class="sub">A CULINARY AFFAIRE</div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <div class="t">Explore</div>
+        <a href="index.html#story"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M5.5 6a2.5 2.5 0 0 1 2.5-2.5h3v13h-3A2.5 2.5 0 0 0 5.5 19V6zm11 0a2.5 2.5 0 0 0-2.5-2.5h-3v13h3A2.5 2.5 0 0 1 16.5 19V6z" stroke="#e9d08f" stroke-width="1.3" stroke-linejoin="round"/></svg><span>Our Story</span></a>
+        <a href="#menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M5.5 5.5h11v11h-11z" stroke="#e9d08f" stroke-width="1.3" rx="1.5"/><path d="M8.5 9h5m-5 3h3" stroke="#e9d08f" stroke-width="1.3" stroke-linecap="round"/></svg><span>Menu</span></a>
+        <a href="faq.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><circle cx="11" cy="11" r="5.5" stroke="#e9d08f" stroke-width="1.3"/><path d="M9.5 9.5a1.5 1.5 0 0 1 2.7-1c.5.5.3 1.2 0 1.5-.4.4-.7.6-.7 1.2v.3m0 2h.01" stroke="#e9d08f" stroke-width="1.3" stroke-linecap="round"/></svg><span>FAQ</span></a>
+        <a href="gallery.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><rect x="5" y="5.5" width="12" height="11" rx="2" stroke="#e9d08f" stroke-width="1.3"/><circle cx="8.5" cy="8.5" r="1.2" fill="#e9d08f"/><path d="M5 14l3.5-3.5 2.5 2.5 2-2 4 4" stroke="#e9d08f" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gallery</span></a>
+      </div>
+      <div class="footer-col">
+        <div class="t">Order</div>
+        <a href="https://www.ubereats.com/store-browse-uuid/f5e829a9-1c4e-5f1b-96e7-2592c04acdda?diningMode=DELIVERY" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M7 6v5m2.5-5v5m-2.5 0a2.5 2.5 0 0 0 2.5 2.5v3.5m2.5-6v3.5m3.5-8.5v4.5a1.5 1.5 0 0 0 1.5 1.5v2.5" stroke="#e9d08f" stroke-width="1.5" stroke-linecap="round"/></svg><span>UberEats</span></a>
+        <a href="https://www.doordash.com/store/49898169?utm_source=mx_share&aw=J10P4JOh0CunYYS1" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M5 11h9a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 0-3.5 3.5v3.5zm0 0l3.5 3.5" stroke="#e9d08f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>DoorDash</span></a>
+      </div>
+      <div class="footer-col">
+        <div class="t">Connect</div>
+        <a href="https://instagram.com/silsilacanada" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><rect x="5.5" y="5.5" width="11" height="11" rx="3" stroke="#e9d08f" stroke-width="1.4"/><circle cx="11" cy="11" r="2.8" stroke="#e9d08f" stroke-width="1.4"/><circle cx="14.2" cy="7.8" r="0.7" fill="#e9d08f"/></svg><span>@silsilacanada</span></a>
+        <a href="mailto:admin@silsilayeg.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><rect x="4.5" y="6.5" width="13" height="9" rx="1.8" stroke="#e9d08f" stroke-width="1.4"/><path d="M4.5 7.5l6.5 4.5 6.5-4.5" stroke="#e9d08f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>admin@silsilayeg.com</span></a>
+        <a href="tel:+18255220908"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M6.5 5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-.5a9 9 0 0 0 6.5 6.5v-.5a1.5 1.5 0 0 1 1.5-1.5h1.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5C10 18 4 12 4 6.5z" fill="#e9d08f" transform="scale(0.85) translate(1.5,1.5)"/></svg><span>+1 825 522 0908</span></a>
+      </div>
+      <div class="footer-col">
+        <div class="t">Location</div>
+        <a href="https://maps.google.com/?q=15355+111+Ave+NW,+Edmonton,+Alberta,+Canada+T5P+0R7" target="_blank" rel="noopener" style="align-items:flex-start;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0; margin-top:2px;"><rect width="22" height="22" rx="6" fill="rgba(200,162,78,0.12)" stroke="rgba(200,162,78,0.35)" stroke-width="1"/><path d="M11 5a4 4 0 0 0-4 4c0 3 4 7 4 7s4-4 4-7a4 4 0 0 0-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e9d08f" transform="translate(0,0.5)"/></svg><span>15355 111 Ave NW,<br>Edmonton, AB T5P 0R7</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SILSILA — A CULINARY AFFAIRE. Edmonton, Alberta.</span>
+  </div>
+</footer>
+
+<script>
+// ---- mobile viewport height fix (iOS Safari address-bar jump) ----
+const setVH = ()=>{
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+};
+setVH();
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', setVH);
+
+// ---- Menu data ----
+const MENU = [
+  {
+    id:"momo", label:"Momo Showmo", sub:"Momo cravings? Let the Showmo begin!",
+    items:[
+      {n:"Steam Momo Showmo", p:"Veg $13.99 | Chicken $15.99", d:"Soft, juicy steamed momos packed with flavour and served with our signature momo chutney. Simple, comforting & seriously satisfying!"},
+      {n:"Fried Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Golden, crispy momos with a juicy, flavour-packed centre, served with our signature spicy momo chutney. Crispy outside, juicy inside & made to crunch!"},
+      {n:"Tandoori Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Smoky, charred momos tossed in our signature tandoori blend and served with a cool, creamy house dip. Smoky, creamy & packed with flavour!"},
+      {n:"Chilli Chilli Momo Showmo", p:"Veg $14.99 | Chicken $16.99", d:"Juicy momos tossed with onions and bell peppers in a bold, spicy-tangy glaze with a creamy house finish. Saucy, fiery & full of flavour!"},
+      {n:"Momo Platter", p:"Veg $25.99 | Chicken $28.99", d:"Four flavours. One epic platter! 3 each of our Steam, Tandoori, Chilli Chilli & Kurkure momos, served with house momo chutney and creamy mayo to bring out every delicious flavour. Steamy, smoky, saucy & crispy. The ultimate momo feast!", center:true}
+    ],
+    deal:{
+      title:"MOMO + SIP DEAL",
+      desc:"Add any Fizz & Refresher to your favourite momos for just",
+      price:"$4.99"
+    }
+  },
+  {
+    id:"streetbites", label:"Loaded Street Bites", sub:"Crunchy, cheesy, seriously craveable!",
+    items:[
+      {type:"subhead", title:"OH MY FRIES"},
+      {n:"The OG Fries", p:"$9.99", d:"Crispy golden fries tossed in our signature house seasoning for that perfect savoury crunch. Simple, crispy & seasoned the SILSILA way!"},
+      {n:"Fiery Peri Fries", p:"$10.99", d:"Hot, crispy fries tossed in a bold peri-peri seasoning with a bright, zesty kick. Fiery, crunchy & seriously addictive!"},
+      {n:"SILSILA Loaded Fries", p:"$14.99", d:"Golden seasoned fries piled high with fresh veggies, jalapeños, sweet corn, creamy house sauce & grated mozzarella. Loaded, chatpata & full-on SILSILA flavour!"},
+      {n:"Chicken Jalwa Fries", p:"$15.99", d:"Crispy seasoned fries loaded with tender chicken, fresh veggies, creamy house sauce & grated mozzarella. Cheesy, saucy & loaded with full-on jalwa!"},
+      {type:"subhead", title:"NACHO NACHOS"},
+      {n:"House Loaded Nachos", p:"$16.99", d:"Crispy tortilla chips loaded with fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces, finished with a fresh garnish. Crunchy, cheesy, saucy & seriously loaded!"},
+      {n:"The Paneer Stack", p:"$18.99", d:"Crispy tortilla chips piled high with seasoned paneer, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Crunchy, cheesy & stacked with paneer goodness!"},
+      {n:"Chicken Nacho Meltdown", p:"$20.99", d:"Crunchy tortilla chips loaded with flavourful chicken, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Cheesy, saucy & seriously loaded!", center:true}
+    ]
+  },
+  {
+    id:"snacks", label:"Desi Snack Corner", sub:"Small bites, big desi flavour!",
+    items:[
+      {n:"Beer Buddy Peanut Chaat", p:"$12.99", d:"Crunchy masala peanuts tossed with fresh veggies, herbs, zesty lime and a punch of bold Indian spices. Crunchy, tangy, spicy & full of desi punch!"},
+      {n:"Crispy Veggie Cigars", p:"$13.99", d:"Golden, crunchy rolls filled with a flavourful mix of seasoned veggies and aromatic spices, fried until perfectly crisp and served with a zesty house dip. Crispy outside, flavour-packed inside!"},
+      {n:"Paneer Tikka Garlic Bread Bites", p:"$14.99", d:"Toasty garlic bread loaded with smoky paneer tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"},
+      {n:"Chicken Tikka Garlic Bread Bites", p:"$15.99", d:"Toasty garlic bread loaded with flavourful chicken tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"}
+    ]
+  },
+  {
+    id:"bowlrito", label:"Biryani Bowlritos", sub:"Biryani, but make it fusion!",
+    items:[
+      {n:"Chicken Biryani Burrito Bowl", p:"$18.99", d:"A bold Indian-Mexican fusion bowl loaded with fragrant biryani rice, tender chicken and fresh veggies, served with our creamy Mexican sour cream dip for the perfect cool, tangy finish. Biryani meets burrito vibes. Hearty, saucy & seriously satisfying!", center:true}
+    ]
+  },
+  {
+    id:"burgers_rolls", label:"Burgers & Rolls", sub:"Big bites. Zero regrets.",
+    items:[
+      {type:"subhead", title:"BIG BITE BURGERS"},
+      {n:"Crunchin’ Paneer Overload", p:"$13.99", d:"A fully loaded sesame bun stacked with a crispy paneer patty, creamy coleslaw, cheese, fresh veggies, creamy Indian-style macaroni and smoky house sauce. Big, bold & seriously satisfying. ONE WILD BITE!"},
+      {n:"Flamin’ Chicken Burger", p:"$14.99", d:"Crispy chicken coated in a fiery garlicky glaze, layered with creamy coleslaw and seasoned veggies inside a soft toasted bun. Hot, crunchy, garlicky & seriously craveable!"},
+      {type:"deal", title:"ANY BURGER MEAL BOX", price:"$19.99", desc:"Includes Your Choice Of Burger, OG Fries & Your Choice Of Canned Pop."},
+      {type:"subhead", title:"ROCK & ROLLIN'"},
+      {n:"Chilli Paneer Roll", p:"$15.99", d:"Bold chilli paneer wrapped in warm, soft naan with fresh veggies and a creamy house finish. Spicy, saucy, creamy & loaded with paneer flavour!"},
+      {n:"Butter Chicken Roll", p:"$16.99", d:"Tender butter chicken wrapped in warm, soft naan with fresh veggies and a creamy house finish. Rich, creamy, saucy & packed with butter chicken goodness!"},
+      {type:"deal", title:"ANY ROLL MEAL BOX", price:"$20.99", desc:"Includes Your Choice Of Roll, OG Fries & Your Choice Of Canned Pop."}
+    ]
+  },
+  {
+    id:"sips", label:"Sippin' Silsila", sub:"Silsila Sips, Happy Trips!",
+    items:[
+      {type:"subhead", title:"COFFEE & SHAKES"},
+      {n:"Desi Bean Hot Coffee", p:"$4.99", d:"Rich, frothy Indian-style coffee with a smooth, comforting finish. Bold, warm & full of desi soul!"},
+      {n:"Cold Coffee Ho Jaye?", p:"$6.99", d:"A chilled, creamy coffee blended smooth and frothy for the perfect cool-down. Creamy, refreshing & full-on coffee vibes!"},
+      {type:"subhead", title:"FIZZ & REFRESHERS"},
+      {n:"Lemon Mint Mojito", p:"$6.99", d:"A cool citrus refresher with fresh mint and a sparkling finish. Fresh, zesty & super refreshing!"},
+      {n:"Jeera Masala Mojito", p:"$7.99", d:"A fizzy, chatpata refresher with citrusy zing and a bold desi twist. Tangy, bubbly & full-on refreshing!"},
+      {n:"Masala Cola Magic", p:"$7.99", d:"Classic fizzy cola gets a tangy desi makeover with a lively citrus kick. Bold, bubbly & full of masala magic!", center:true},
+      {type:"subhead", title:"SILSILA’S SIGNATURE BOBA DRINKS"},
+      {n:"The Pink Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. Sweet, fruity & bursting with berry vibes!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99"},
+      {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. Sweet, bubbly & sunset-ready!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99"},
+      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. Sweet, tangy & bursting with mango magic!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99 | ADD MANGO CHUNKS +$1.99", center:true},
+      {type:"subhead", title:"SILSILA MATCHA MANIA"},
+      {n:"Mango Matcha Iced Latte", p:"$8.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. Earthy, creamy & loaded with mango magic!", addon:"ADD MANGO CHUNKS +$1.99"},
+      {n:"Pink Matcha Iced Latte", p:"$8.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. Earthy, creamy & bursting with berry goodness!", addon:"ADD STRAWBERRY CHUNKS +$1.99"},
+      {type:"subhead", title:"COLD DRINKS"},
+      {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops. Crack it. Sip it. Chill!", center:true}
+    ]
+  }
+];
+
+const tabsEl = document.getElementById('menuTabs');
+const selectEl = document.getElementById('menuSelect');
+const panelsEl = document.getElementById('menuPanels');
+
+MENU.forEach((cat, i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'menu-tab' + (i===0 ? ' active' : '');
+  btn.textContent = cat.label;
+  btn.dataset.target = cat.id;
+  btn.addEventListener('click', ()=> switchTab(cat.id));
+  tabsEl.appendChild(btn);
+
+  const opt = document.createElement('option');
+  opt.value = cat.id;
+  opt.textContent = cat.label;
+  selectEl.appendChild(opt);
+
+  const panel = document.createElement('div');
+  panel.className = 'menu-panel' + (i===0 ? ' active' : '');
+  panel.id = 'panel-' + cat.id;
+  let html = '';
+  html += `<h2 style="text-align: center; color: var(--gold-light); font-family: 'Cinzel', serif; margin-bottom: 12px; font-size: 2rem;">${cat.label}</h2>`;
+  if(cat.sub){ html += `<p class="panel-sub">${cat.sub}</p>`; }
+  html += '<div class="menu-grid">';
+  cat.items.forEach(it=>{
+    if(it.type === 'subhead'){
+      html += `<div class="menu-subhead">
+        <h3>${it.title}</h3>
+        ${it.sub ? `<p>${it.sub}</p>` : ''}
+      </div>`;
+    } else if(it.type === 'deal'){
+      html += `<div class="menu-deal-card">
+        <div class="menu-deal-title">${it.title}</div>
+        ${it.price ? `<div class="menu-deal-price">${it.price}</div>` : ''}
+        ${it.desc ? `<div class="menu-deal-desc">${it.desc}</div>` : ''}
+      </div>`;
+    } else {
+      const isCenter = it.center ? ' center-item' : '';
+      let addonHtml = '';
+      if(it.addon){
+        const list = Array.isArray(it.addon) ? it.addon : it.addon.split(' | ');
+        addonHtml = `<div class="addon-wrap">${list.map(a => `<span class="addon-box">${a}</span>`).join('')}</div>`;
+      }
+      html += `<div class="menu-item${isCenter}">
+        <div class="row"><span class="name">${it.n}</span><span class="leader"></span><span class="price">${it.p}</span></div>
+        <div class="desc">${it.d}</div>
+        ${it.tag ? `<span class="tag">${it.tag}</span>` : ''}
+        ${addonHtml}
+      </div>`;
+    }
+  });
+  html += '</div>';
+  if(cat.deal){
+    html += `<div class="menu-deal-card" style="margin-top:36px;">
+      <div class="menu-deal-title">${cat.deal.title}</div>
+      ${cat.deal.desc ? `<div class="menu-deal-desc">${cat.deal.desc}</div>` : ''}
+      ${cat.deal.price ? `<div class="menu-deal-price">${cat.deal.price}</div>` : ''}
+    </div>`;
+  }
+  if(cat.note){ html += `<p class="menu-note" style="margin-top:32px; text-align:center; font-family:'Times New Roman', serif; font-style:italic; color:var(--gold-light); font-size:clamp(0.85rem, 2vw, 0.98rem); opacity:0.9;">${cat.note}</p>`; }
+  panel.innerHTML = html;
+  panelsEl.appendChild(panel);
+});
+
+function switchTab(id){
+  document.querySelectorAll('.menu-tab').forEach(b=> b.classList.toggle('active', b.dataset.target===id));
+  document.querySelectorAll('.menu-panel').forEach(p=> p.classList.toggle('active', p.id==='panel-'+id));
+  if(selectEl.value !== id){ selectEl.value = id; }
+}
+selectEl.addEventListener('change', ()=> switchTab(selectEl.value));
+
+// ---- open tab from URL hash (e.g. menu.html#fries) ----
+const urlHash = window.location.hash.replace('#','');
+if(urlHash && document.getElementById('panel-'+urlHash)){
+  switchTab(urlHash);
+}
+
+// ---- nav scroll state ----
+const navEl = document.getElementById('siteNav');
+window.addEventListener('scroll', ()=>{
+  navEl.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+// ---- mobile nav ----
+const toggle = document.getElementById('menuToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', ()=> {
+  const isOpen = links.classList.toggle('open');
+  toggle.innerText = isOpen ? '✕' : '☰';
+});
+links.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> {
+  links.classList.remove('open');
+  toggle.innerText = '☰';
+}));
+
+// ---- quote scroll sweep (light -> dark, left to right) ----
+const quoteWrap = document.getElementById('quoteScroll');
+const quoteText = document.getElementById('quoteText');
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(quoteWrap && quoteText && !prefersReduced){
+  let ticking = false;
+  const updateQuote = ()=>{
+    const rect = quoteText.getBoundingClientRect();
+    const startY = window.innerHeight * 0.95;
+    const endY = window.innerHeight * 0.45;
+    const progress = Math.min(1, Math.max(0, (startY - rect.top) / (startY - endY)));
+    quoteText.style.setProperty('--p', progress.toFixed(3));
+    ticking = false;
+  };
+  window.addEventListener('scroll', ()=>{
+    if(!ticking){ requestAnimationFrame(updateQuote); ticking = true; }
+  }, {passive:true});
+  updateQuote();
+}
+
+// ---- reveal on scroll ----
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, {threshold:.15});
+revealEls.forEach(el=> io.observe(el));
+</script>
+</body>
+</html>
