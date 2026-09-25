@@ -522,6 +522,7 @@ section{position:relative; padding:110px 0; scroll-margin-top: 90px;}
 }
 
 .gallery-card {
+  margin:0;
   position:relative;
   width:100%;
   min-width:0;
