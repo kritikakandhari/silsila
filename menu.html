@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=81">
+<link rel="stylesheet" href="style.css?v=82">
 </head>
 <body>
 
@@ -40,21 +40,13 @@
   </div>
 </header>
 
-
-
-
-
-
-
-
 <section class="menu-section" id="menu">
   <div class="mandala-bg"></div>
   <div class="wrap" style="position:relative;">
     <div class="section-head reveal">
       <div class="eyebrow deva">एक सौ ग्यारह</div>
       <h2><img src="images/logo.webp?v=3" alt="" class="menu-emblem-inline" width="32" height="32" decoding="async">OUR MENU</h2>
-      <p>Fusion built for takeout. Every bowl, wrap and box designed to travel as beautifully as it tastes.</p>
-
+      <p>Fusion built for takeout. Every bowl, bite, pizza and burger designed to travel as beautifully as it tastes.</p>
     </div>
 
     <div class="menu-tabs-wrap reveal">
@@ -64,10 +56,6 @@
     <div id="menuPanels"></div>
   </div>
 </section>
-
-
-
-
 
 <footer>
   <div class="wrap">
@@ -118,80 +106,93 @@ window.addEventListener('orientationchange', setVH);
 // ---- Menu data ----
 const MENU = [
   {
+    id:"snacks", label:"Desi Snack Corner", sub:"Small bites. Big desi flavour.",
+    items:[
+      {n:"Punjabi Aloo Samosa", p:"$3.99", d:"2 pcs, Crispy, golden pastry stuffed with spiced potatoes, green peas, and aromatic Indian spices, served with tangy chutney."},
+      {n:"Bun Samosa", p:"$7.99", d:"Crispy Punjabi aloo samosa tucked inside a soft, buttery bun, layered with tangy chutneys and flavourful spices. Crunchy, buttery & full of desi flavour!"},
+      {n:"Peanut Masala Chaat", p:"$7.99", d:"Crunchy masala peanuts tossed with fresh veggies, herbs, zesty lime, and bold Indian spices. Crunchy, tangy, spicy & full of desi punch!"},
+      {n:"Bhalla Papdi Chaat", p:"$9.99", d:"Crispy papri over fresh lentil bhalla, topped with creamy yogurt, tangy chutneys, and a sprinkle of aromatic spices for a perfect burst of sweet, spicy, and tangy flavours. Crispy, Tangy & Delicious!"},
+      {n:"Samosa Chaat", p:"$11.99", d:"Crispy Punjabi samosas topped with spiced chickpea curry, creamy yogurt, tangy chutneys, fresh onions, and chaat masala. A perfect blend of sweet, spicy, tangy & crunchy flavours!"},
+      {n:"Veggi Pakora", p:"$11.99", d:"Crispy, golden-fried fritters made with fresh mixed vegetables, chickpea flour, and aromatic Indian spices, served with tangy chutney. Crunchy, flavourful & perfectly spiced!"},
+      {n:"Aloo Tikki Chaat", p:"$11.99", d:"Crispy golden potato patties topped with creamy yogurt, tangy chutneys, and aromatic spices for the perfect burst of Indian street-food flavours. Crispy, Tangy & Irresistibly Delicious!"},
+      {n:"Crispy Veggie Cigar Roll", p:"$13.99", d:"Golden, crunchy rolls filled with a flavourful mix of seasoned veggies and aromatic spices, fried until perfectly crisp and served with a zesty house dip. Crispy outside, flavour-packed inside!"},
+      {n:"Chicken Tikka Garlic Bread Bites", p:"$13.99", d:"Toasty garlic bread loaded with flavourful chicken tikka, creamy garlic sauce, and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"},
+      {n:"Paneer Tikka Garlic Bread Bites", p:"$13.99", d:"Toasty garlic bread loaded with smoky paneer tikka, creamy garlic sauce, and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"}
+    ]
+  },
+  {
     id:"momo", label:"Momo Showmo", sub:"Momo cravings? Let the Showmo begin!",
     items:[
-      {n:"Steam Momo Showmo", p:"Veg $15.99 | Chicken $17.99", d:"Soft, juicy steamed momos packed with flavour and served with our signature momo chutney. Simple, comforting & seriously satisfying!"},
-      {n:"Fried Momo Showmo", p:"Veg $15.99 | Chicken $17.99", d:"Golden, crispy momos with a juicy, flavour-packed centre, served with our signature spicy momo chutney. Crispy outside, juicy inside & made to crunch!"},
-      {n:"Tandoori Momo Showmo", p:"Veg $17.99 | Chicken $19.99", d:"Smoky, charred momos tossed in our signature tandoori blend and served with a cool, creamy house dip. Smoky, creamy & packed with flavour!"},
-      {n:"Chilli Chilli Momo Showmo", p:"Veg $17.99 | Chicken $19.99", d:"Juicy momos tossed with onions and bell peppers in a bold, spicy-tangy glaze with a creamy house finish. Saucy, fiery & full of flavour!"},
-      {n:"Momo Platter", p:"Veg $35.99 | Chicken $37.99", d:"3 each of our Steam, Tandoori, Chilli Chilli & Fried momos, served with house momo chutney and creamy mayo. Steamy, smoky, saucy & crispy. The ultimate momo feast!", center:true}
+      {n:"Steam Momo", p:"Veg $13.99 | Chicken $15.99", d:"Soft, juicy steamed momos packed with flavour and served with our signature momo chutney. Simple, comforting & seriously satisfying!"},
+      {n:"Fried Momo", p:"Veg $15.99 | Chicken $17.99", d:"Golden, crispy momos with a juicy, flavour-packed centre, served with our signature spicy momo chutney. Crispy outside, juicy inside & made to crunch!"},
+      {n:"Kurkure Momos", p:"Veg $15.99 | Chicken $17.99", d:"Crispy, golden-fried momo coated in a crunchy, flavour-packed crust, served with our signature spicy momo chutney and creamy house mayo. Crunchy outside, juicy inside, and bursting with desi flavour!"},
+      {n:"Tandoori Momo", p:"Veg $15.99 | Chicken $17.99", d:"Smoky, charred momos tossed in our signature tandoori blend and served with a cool, creamy house dip. Smoky, creamy & packed with flavour!"},
+      {n:"Hot Chilli Momo", p:"Veg $15.99 | Chicken $17.99", d:"Juicy momos tossed with onions and bell peppers in a bold, spicy-tangy glaze with a creamy house finish. Saucy, fiery & full of flavour!"},
+      {n:"Afgani Malai Momo", p:"Veg $15.99 | Chicken $17.99", d:"Juicy momos smothered in a rich, creamy Afghani-style sauce, infused with aromatic spices and a subtle smoky flavour, finished with a luscious, velvety coating for the perfect melt-in-your-mouth experience. Creamy, smoky & irresistibly delicious!"},
+      {n:"Tangy Achari Momo", p:"Veg $15.99 | Chicken $17.99", d:"Juicy momos tossed in a tangy, spicy Achari sauce infused with bold Indian pickle spices for an explosion of flavour. Tangy, Spicy & Irresistibly Delicious!", center:true}
     ],
     deal:{
       title:"MOMO + SIP DEAL",
       desc:"Add any Fizz & Refresher to your favourite momos for just",
-      price:"$5.99"
+      price:"$6.99"
     }
   },
   {
-    id:"streetbites", label:"Loaded Street Bites", sub:"Crunchy, Cheesy. Seriously craveable.",
+    id:"streetbites", label:"Loaded Street Bites", sub:"Crunchy, cheesy, seriously craveable!",
     items:[
-      {n:"The OG Fries", p:"$11.99", d:"Crispy golden fries tossed in our signature house seasoning. Simple, crispy & seasoned the SILSILA way!"},
-      {n:"Fiery Peri Fries", p:"$13.99", d:"Hot, crispy fries tossed in a bold peri-peri seasoning. Fiery, crunchy & seriously addictive!"},
-      {n:"SILSILA Loaded Fries", p:"$15.99", d:"Golden fries piled high with fresh veggies, jalapeños, sweet corn, creamy house sauce & grated mozzarella. Loaded, chatpata & full-on SILSILA flavour!"},
-      {n:"Chicken Jalwa Fries", p:"$17.99", d:"Crispy seasoned fries loaded with tender chicken, fresh veggies, creamy house sauce & grated mozzarella. Cheesy, saucy & loaded with full-on jalwa!"},
-      {type:"subhead", title:"NACHO NACHOS"},
-      {n:"House Loaded Nachos", p:"$19.99", d:"Crispy tortilla chips loaded with fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Crunchy, cheesy, saucy & seriously loaded!"},
-      {n:"Spicy Paneer Nacho Stack", p:"$23.99", d:"Crispy tortilla chips piled high with seasoned paneer, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Crunchy, cheesy & stacked with paneer goodness!"},
-      {n:"Chicken Nacho Meltdown", p:"$25.99", d:"Crispy tortilla chips loaded with flavourful chicken, fresh veggies, jalapeños, sweet corn, melted cheese and creamy house sauces. Cheesy, saucy & seriously loaded!", center:true}
+      {type:"subhead", title:"OH MY FRIES", sub:"Because it’s Fry-Yay!"},
+      {n:"The OG Fries", p:"$11.99", d:"Crispy golden fries tossed in our signature house seasoning for that perfect savoury crunch. Simple, crispy & seasoned the SILSILA way!"},
+      {n:"Fiery Peri-Peri Masala Fries", p:"$11.99", d:"Hot, crispy fries tossed in a bold peri-peri seasoning with a bright, zesty kick. Fiery, crunchy & seriously addictive!"},
+      {n:"Wild Loaded Fries", p:"$13.99", d:"Golden seasoned fries piled high with fresh veggies, jalapeños, sweet corn, creamy house sauce & grated mozzarella cheese. Loaded, chatpata & full-on SILSILA flavour!"},
+      {n:"Wild Loaded Chicken Fries", p:"$15.99", d:"Crispy seasoned fries loaded with tender chicken, fresh veggies, creamy house sauce & grated mozzarella cheese. Cheesy, saucy & loaded with full-on jalwa!"},
+      {type:"subhead", title:"NACHO NACHOS", sub:"Crunchy, cheesy, loaded and made for sharing!"},
+      {n:"How About Veggie Nachos?", p:"$19.99", d:"Crispy tortilla chips loaded with fresh veggies, sweet corn, melted cheese, and creamy house sauces, finished with a fresh garnish. Crunchy, cheesy, saucy & seriously loaded!"},
+      {n:"The Paneer Stack Nachos", p:"$21.99", d:"Crispy tortilla chips piled high with seasoned paneer, fresh veggies, sweet corn, melted cheese, and creamy house sauces. Crunchy, cheesy & stacked with paneer goodness!"},
+      {n:"Chicken Nachos Meltdown", p:"$23.99", d:"Crunchy tortilla chips loaded with flavourful chicken, fresh veggies, sweet corn, melted cheese, and creamy house sauces. Cheesy, saucy & seriously loaded!", center:true}
     ]
   },
   {
-    id:"snacks", label:"Desi Snack Corner", sub:"Small bites. Big desi flavour.",
+    id:"pizza", label:"The Pizza Corner", sub:"Cheesy, Crispy, with a Little Desi Magic!",
     items:[
-      {n:"Beer Buddy Peanut Chaat", p:"$11.99", d:"Crunchy masala peanuts tossed with fresh veggies, herbs, zesty lime and a punch of bold Indian spices. Crunchy, tangy, spicy & full of desi punch!"},
-      {n:"Vegetable Pakoras", p:"$11.99", d:"Crispy mixed vegetable fritters coated in a spiced gram flour batter, fried golden and served hot for a comforting desi bite. Crispy, comforting & full of desi flavour!"},
-      {n:"Crispy Veggie Cigars", p:"$13.99", d:"Golden, crunchy rolls filled with seasoned veggies and aromatic spices, served with a zesty house dip. Crispy outside, flavour-packed inside!"},
-      {n:"Paneer Tikka Garlic Bread Bites", p:"$15.99", d:"Toasty garlic bread loaded with smoky paneer tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"},
-      {n:"Chicken Tikka Garlic Bread Bites", p:"$17.99", d:"Toasty garlic bread loaded with flavourful chicken tikka, creamy garlic sauce and a generous layer of melted cheese. Smoky, cheesy & seriously craveable!"}
+      {n:"Cheese Pizza", p:"$15.99", d:"Golden flatbread layered with zesty tomato sauce & smothered in melted mozzarella cheese. Classic, cheesy & pure comfort!"},
+      {n:"Veggie Delight Pizza", p:"$17.99", d:"Crispy flatbread topped with fresh veggies, zesty tomato sauce, herbs & melted mozzarella. Fresh, cheesy & delicious!"},
+      {n:"Paneer Tikkalicious Pizza", p:"$19.99", d:"Loaded with smoky paneer tikka, fresh veggies, creamy tikka sauce & melted mozzarella. Smoky, cheesy & full of desi flavour!"},
+      {n:"Chicken Tikkalicious Pizza", p:"$21.99", d:"Loaded with smoky chicken tikka, fresh veggies, creamy tikka sauce & melted mozzarella. Smoky, cheesy & irresistibly delicious!"},
+      {n:"BBQ Chicken Pizza", p:"$19.99", d:"Loaded with smoky chicken, fresh onions, BBQ sauce & melted mozzarella."},
+      {n:"Butter Chicken Pizza", p:"$21.99", d:"Tender, succulent chicken smothered in a velvety, rich tomato gravy, topped with melted mozzarella and traditional fragrant spices on a crisp flatbread."},
+      {n:"Shahi Paneer Pizza", p:"$19.99", d:"Loaded with succulent paneer, fresh veggies, luscious shahi sauce & melted mozzarella. Rich, regal & bursting with desi flavour!", center:true}
     ]
   },
   {
-    id:"bowlrito", label:"Bowlritos", sub:"Biryani, but make it fusion!",
+    id:"burgers", label:"Big Bite Burgers", sub:"Big bites. Zero regrets.",
     items:[
-      {n:"Chicken Biryani Burrito Bowl", p:"$21.99", d:"A bold Indian-Mexican fusion bowl loaded with fragrant biryani rice, tender chicken and fresh veggies, served with our creamy Mexican sour cream dip for the perfect cool, tangy finish. Biryani meets burrito vibes. Hearty, saucy & seriously satisfying!"},
-      {n:"Chilli Chicken Burrito Bowl", p:"$21.99", d:"A flavour-packed fusion bowl with Indian-style fried rice, chilli chicken, fresh vegetables, and a creamy, tangy fusion finish. Spicy, saucy & full of flavour in every bite!"}
-    ]
-  },
-  {
-    id:"burgers_rolls", label:"Burgers & Rolls", sub:"Big bites. Zero regrets.",
-    items:[
-      {type:"subhead", title:"BIG BITE BURGERS"},
-      {n:"Crunchin' Paneer Overload", p:"$15.99", d:"A fully loaded sesame bun with a crispy paneer patty, creamy coleslaw, cheese, fresh veggies, creamy Indian-style macerro and smoky house sauce. Big, bold & seriously satisfying. ONE WILD BITE!"},
-      {n:"Flamin' Chicken Burger", p:"$15.99", d:"Crispy chicken coated in a fiery garlicky glaze, layered with creamy coleslaw and seasoned veggies inside a soft toasted bun. Hot, crunchy, garlicky & seriously craveable!"},
-      {type:"deal", title:"ANY BURGER MEAL BOX", price:"$21.99", desc:"Includes OG Fries + a can of pop."},
-      {type:"subhead", title:"ROCK & ROLLIN'", sub:"Desi classics. Rolled up SILSILA style."},
-      {n:"Spicy Paneer Kathi Roll", p:"$15.99", d:"Flavourful paneer tikka wrapped in a warm, crispy Indian style tortilla with fresh vegetables, and a creamy house dressing sauce. Spicy, saucy, creamy & loaded with paneer flavour!"},
-      {n:"Butter Chicken Kathi Roll", p:"$15.99", d:"Tender butter chicken wrapped in a warm, crispy Indian style tortilla with fresh vegetables, and a creamy house dressing sauce. Rich, creamy, saucy & packed with butter chicken goodness!"},
-      {type:"deal", title:"ANY ROLL MEAL BOX", price:"$23.99", desc:"Includes OG Fries + a can of pop."}
+      {n:"Aloo Tikki Burger", p:"$7.99", d:"A crispy, golden potato patty layered with fresh veggies and creamy sauces, served in a soft, toasted bun for a delicious Indian-style twist. Crispy, Spicy & Full of Flavour!"},
+      {n:"Aloo Tikki Noodle Burger", p:"$11.99", d:"A crispy, golden aloo patty topped with flavourful Indian-style chowmein, served in a soft, toasted bun for the perfect fusion of crunch and spice. Crispy, Spicy & Bursting with Flavour!"},
+      {n:"Cheesy Chicken Burger", p:"$13.99", d:"Hot, crunchy, Cheesy & seriously craveable!"},
+      {n:"Crunchin' Paneer Overload Burger", p:"$13.99", d:"A fully loaded sesame bun stacked with a crispy paneer patty, creamy coleslaw, cheese, fresh veggies, creamy Indian-style macaroni and smoky house sauce. Big, bold & seriously satisfying. ONE WILD BITE!"},
+      {type:"deal", title:"ANY BURGER MEAL BOX", price:"$19.99", desc:"Includes OG Fries + a can of pop."}
     ]
   },
   {
     id:"sips", label:"Sippin' Silsila", sub:"Silsila Sips, Happy Trips!",
     items:[
-      {type:"subhead", title:"COFFEE & SHAKES"},
+      {type:"subhead", title:"CHAI, COFFEE & SHAKES"},
+      {n:"Masala Chai", p:"$1.99", d:"A comforting cup of traditional Indian tea brewed with aromatic spices, rich milk, and perfectly balanced sweetness. Warm, Spiced & Comfort in Every Sip!"},
       {n:"Desi Bean Hot Coffee", p:"$4.99", d:"Rich, frothy Indian-style coffee with a smooth, comforting finish. Bold, warm & full of desi soul!"},
       {n:"Cold Coffee Ho Jaye?", p:"$6.99", d:"A chilled, creamy coffee blended smooth and frothy for the perfect cool-down. Creamy, refreshing & full-on coffee vibes!"},
+      {n:"Maharaja Mango Shake", p:"$7.99", d:"A rich, creamy mango shake blended with ripe mangoes for a smooth, refreshing, royal treat. Thick, Creamy & Mango-Licious!"},
+      {n:"Strawberry Shake", p:"$7.99", d:"A smooth, creamy shake blended with sweet, juicy strawberries for a refreshing burst of fruity flavour in every sip. Sweet, Creamy & Berry Delicious!"},
       {type:"subhead", title:"FIZZ & REFRESHERS"},
-      {n:"Lemon Mint Mojito", p:"$6.99", d:"A cool citrus refresher with fresh mint and a sparkling finish. Fresh, zesty & super refreshing!"},
-      {n:"Jeera Masala Mojito", p:"$7.99", d:"A fizzy, chatpata refresher with citrusy zing and a bold desi twist. Tangy, bubbly & full-on refreshing!"},
-      {n:"Masala Cola Magic", p:"$7.99", d:"Classic fizzy cola gets a tangy desi makeover with a lively citrus kick. Bold, bubbly & full of masala magic!", center:true},
+      {n:"Lemon Mint Mojito", p:"$5.99", d:"A cool citrus refresher with fresh mint and a sparkling finish. Fresh, zesty & super refreshing!"},
+      {n:"Jeera Masala Mojito", p:"$6.99", d:"A fizzy, chatpata refresher with citrusy zing and a bold desi twist. Tangy, bubbly & full-on refreshing!"},
+      {n:"Masala Cola Magic Mojito", p:"$6.99", d:"Classic fizzy cola gets a tangy desi makeover with a lively citrus kick. Bold, bubbly & full of masala magic!", center:true},
       {type:"subhead", title:"SILSILA’S SIGNATURE BOBA DRINKS"},
-      {n:"The Pink Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz and popping boba. Sweet, fruity & bursting with berry vibes!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99"},
+      {n:"The Pink Boba Blast", p:"$7.99", d:"A juicy strawberry refresher with fresh mint, zesty citrus, sparkling fizz, and popping boba. Sweet, fruity & bursting with berry vibes!", addon:"ADD EXTRA BOBA +$0.99"},
       {n:"Sunset Mantra", p:"$7.99", d:"A bright citrus refresher with popping boba and a sparkling finish. Sweet, bubbly & sunset-ready!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99"},
-      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus and sparkling fizz. Sweet, tangy & bursting with mango magic!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99 | ADD MANGO CHUNKS +$1.99", center:true},
-      {type:"subhead", title:"SILSILA MATCHA MANIA"},
-      {n:"Mango Matcha Iced Latte", p:"$8.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. Earthy, creamy & loaded with mango magic!", addon:"ADD MANGO CHUNKS +$1.99"},
-      {n:"Pink Matcha Iced Latte", p:"$8.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. Earthy, creamy & bursting with berry goodness!", addon:"ADD STRAWBERRY CHUNKS +$1.99"},
+      {n:"Mango Tango", p:"$7.99", d:"A tropical mango refresher with fresh mint, zesty citrus, and sparkling fizz. Sweet, tangy & bursting with mango magic!", addon:"ADD EXTRA SCOOP OF BOBA +$0.99 | ADD MANGO CHUNKS +$1.99", center:true},
+      {type:"subhead", title:"SILSILA MATCHA MANIA", sub:"Earthy. Creamy. Fruity. Totally addictive."},
+      {n:"Mango Matcha Iced Latte", p:"$9.99", d:"Smooth matcha layered with chilled milk, real mango chunks and luscious mango purée for a creamy tropical twist. Earthy, creamy & loaded with mango magic!", addon:"ADD MANGO CHUNKS +$1.99"},
+      {n:"Strawberry Matcha Iced Latte", p:"$9.99", d:"Smooth matcha layered with chilled milk and sweet strawberry purée for a creamy, fruity twist. Earthy, creamy & bursting with berry goodness!", addon:"ADD STRAWBERRY CHUNKS +$1.99"},
       {type:"subhead", title:"COLD DRINKS"},
       {n:"Pop It!", p:"$2.99", d:"Choice of assorted canned pops. Crack it. Sip it. Chill!", center:true}
     ]
@@ -271,8 +272,18 @@ selectEl.addEventListener('change', ()=> switchTab(selectEl.value));
 
 // ---- open tab from URL hash (e.g. menu.html#fries) ----
 const urlHash = window.location.hash.replace('#','');
-if(urlHash && document.getElementById('panel-'+urlHash)){
-  switchTab(urlHash);
+const hashAliases = {
+  'fries': 'streetbites',
+  'nachos': 'streetbites',
+  'burgers_rolls': 'burgers',
+  'burger': 'burgers',
+  'pizzas': 'pizza',
+  'flatbread': 'pizza',
+  'bowlrito': 'pizza'
+};
+const targetTab = hashAliases[urlHash] || urlHash;
+if(targetTab && document.getElementById('panel-'+targetTab)){
+  switchTab(targetTab);
 }
 
 // ---- nav scroll state ----
